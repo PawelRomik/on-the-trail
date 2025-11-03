@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.bangers {
+	font-family: "Bangers", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.text-stroke-3 {
+	-webkit-text-stroke: 1px black;
+}

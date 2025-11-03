@@ -1,0 +1,178 @@
+[
+	{
+		"id": 1,
+		"title": "Poeta",
+		"gender": true,
+		"color": "rgb(128, 0, 128)",
+		"age": [20, 60],
+		"desc": "Mówi w metaforach, wierszach i zagadkach. Gdy stres > 60%, częściej mówi prawdę (tchórzy)."
+	},
+	{
+		"id": 2,
+		"title": "Anioł",
+		"gender": false,
+		"color": "rgb(255, 223, 0)",
+		"age": [60, 600],
+		"desc": "Odpowiada łagodnie, z empatią. Nigdy nie kłamie; stres rośnie 0.75× wolniej."
+	},
+	{
+		"id": 3,
+		"title": "Diabeł",
+		"gender": true,
+		"color": "rgb(255, 0, 0)",
+		"age": [60, 600],
+		"desc": "Sarkastyczny, prowokujący ton. Zawsze kłamie, dopóki nie zostanie przyłapany; po przyłapaniu musi powiedzieć prawdę w następnym pytaniu. Gdy inni są zestresowani, jego stres rośnie wolniej."
+	},
+	{
+		"id": 4,
+		"title": "Zombie",
+		"gender": true,
+		"color": "rgb(100, 100, 100)",
+		"age": [30, 150],
+		"desc": "Krótkie, monotonne zdania. Nie pamięta poprzednich pytań, ale pamięta fakty o zdarzeniu."
+	},
+	{
+		"id": 5,
+		"title": "Babcia",
+		"gender": false,
+		"color": "rgb(255, 192, 203)",
+		"age": [60, 100],
+		"desc": "Często odpowiada na inny temat. Mówi częściej prawdę, ale stres rośnie 1.5× szybciej przy presji."
+	},
+	{
+		"id": 6,
+		"title": "Jaskiniowiec",
+		"gender": true,
+		"color": "rgb(139, 69, 19)",
+		"age": [20, 50],
+		"desc": "Mówi bardzo prosto, bez przymiotników. Łatwiej go rozegrać (jest głupi)."
+	},
+	{
+		"id": 7,
+		"title": "Policjant",
+		"gender": true,
+		"color": "rgb(0, 0, 128)",
+		"age": [30, 60],
+		"desc": "Odpowiada twardo i rzeczowo. Wszyscy inni zaczynają z +15% stresu i ich stres rośnie 1.5× szybciej. Sam odporny na stres (jego stres rośnie 0.75× wolniej)."
+	},
+	{
+		"id": 8,
+		"title": "Rycerz",
+		"gender": true,
+		"color": "rgb(192, 192, 192)",
+		"age": [25, 80],
+		"desc": "Mówi z honorem, archaicznie. Kłamie tylko, by chronić innych. Sam odporny na stres (jego stres rośnie 0.75× wolniej)."
+	},
+	{
+		"id": 9,
+		"title": "Narcyz",
+		"gender": true,
+		"color": "rgb(255, 105, 180)",
+		"age": [20, 50],
+		"desc": "Mówi z przesadną pewnością siebie. Częściej oskarża innych, ale stres przy presji rośnie 2× szybciej."
+	},
+	{
+		"id": 10,
+		"title": "Duch",
+		"gender": false,
+		"color": "rgb(200, 200, 255)",
+		"age": [50, 500],
+		"desc": "Mówi cicho, często powtarza słowa innych. Mówi prawdę, jeśli ma najniższy stres; inaczej powtarza po najbardziej odważnym."
+	},
+	{
+		"id": 11,
+		"title": "Święty Mikołaj",
+		"gender": true,
+		"color": "rgb(255, 0, 0)",
+		"age": [100, 1000],
+		"desc": "Pogodny, ciepły ton. Mówi prawdę, jeśli stres < 50%; powyżej kłamie. Obniża stres innych – 0.75x zamiast 1x."
+	},
+	{
+		"id": 12,
+		"title": "Łowca",
+		"gender": true,
+		"color": "rgb(160, 82, 45)",
+		"age": [25, 60],
+		"desc": "Krótki, konkretny styl. Kłamie skuteczniej (+25%). Wie więcej o miejscu zdarzenia – może ujawnić jeden dodatkowy fakt na początku rozmowy."
+	},
+	{
+		"id": 13,
+		"title": "Wadliwy robot",
+		"gender": true,
+		"color": "rgb(128, 128, 128)",
+		"age": [1, 20],
+		"desc": "Mówi rzeczowo, ale z błędami. 1/3 szans, że przerwie odpowiedź w połowie. Po każdym „zawieszeniu” jego stres zmienia się o -20% - +20%."
+	},
+	{
+		"id": 14,
+		"title": "Detektyw",
+		"gender": true,
+		"color": "rgb(0, 0, 0)",
+		"age": [30, 60],
+		"desc": "Sarkastyczny, często odpowiada pytaniem. Częściej oskarża innych."
+	},
+	{
+		"id": 15,
+		"title": "Joker",
+		"gender": true,
+		"color": "rgb(255, 165, 0)",
+		"age": [25, 60],
+		"desc": "Mówi w żartach, często nielogicznie. Naprzemiennie mówi prawdę i kłamie."
+	},
+	{
+		"id": 16,
+		"title": "Szalony naukowiec",
+		"gender": true,
+		"color": "rgb(0, 255, 255)",
+		"age": [30, 70],
+		"desc": "Używa naukowego, technicznego języka. Lubi mówić — stres rośnie wolniej przy długich pytaniach. Dodaje nadmiarowe szczegóły; 25% z nich to prawda, 75% to szum."
+	},
+	{
+		"id": 17,
+		"title": "Filozof",
+		"gender": true,
+		"color": "rgb(128, 0, 128)",
+		"age": [40, 90],
+		"desc": "Mówi refleksyjnie, często w formie pytania retorycznego. Jego odpowiedzi można interpretować różnie (metaforyczne znaczenie)."
+	},
+	{
+		"id": 18,
+		"title": "Sprzedawca",
+		"gender": false,
+		"color": "rgb(255, 215, 0)",
+		"age": [20, 50],
+		"desc": "Odpowiada tak, by się przypodobać ostatniemu rozmówcy. Kłamie lub mówi prawdę w zależności od autorytetu tej osoby. Jeśli sprzeczność zostanie wykryta, jego stres rośnie 2× szybciej."
+	},
+	{
+		"id": 19,
+		"title": "Aktor",
+		"gender": true,
+		"color": "rgb(255, 182, 193)",
+		"age": [20, 60],
+		"desc": "Kopiuje na początku rundy 1 postać, ale detektyw nie wie kogo. Efektem mogą być np. 2 anioły."
+	},
+	{
+		"id": 20,
+		"title": "Ksiądz",
+		"gender": true,
+		"color": "rgb(255, 250, 250)",
+		"age": [30, 80],
+		"desc": "Powściągliwy, moralizujący ton. Mówi prawdę, ale nie ujawnia nic objętego tajemnicą. Gdy posiada ukrytą wiedzę, stres rośnie 1.5× szybciej."
+	},
+	{
+		"id": 21,
+		"title": "Prawnik",
+		"gender": true,
+		"color": "rgb(0, 0, 139)",
+		"age": [25, 60],
+		"desc": "Precyzyjny i suchy język. Mówi prawdę, ale tylko w ramach dokładnie zadanego pytania. Jeśli pytanie jest nieprecyzyjne, odpowiada wymijająco (bez wzrostu stresu)."
+	},
+	{
+		"id": 22,
+		"title": "Pijak",
+		"gender": true,
+		"color": "rgb(139, 69, 19)",
+		"age": [30, 70],
+		"desc": "Bełkotliwy, powtarza słowa. Jego stres rośnie wolniej (0.5×), ale innych 1.5× szybciej. 10% szans, że powie przypadkiem prawdę o czymś, o co nikt nie pytał."
+	}
+]
