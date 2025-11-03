@@ -12,20 +12,25 @@ function getRandomName(gender: boolean) {
 	return list[Math.floor(Math.random() * list.length)];
 }
 
+function getRandomCharacters<T>(arr: T[], count: number): T[] {
+	const shuffled = [...arr].sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, count);
+}
+
 export function useCharacters() {
 	const [characters, setCharacters] = useState<CharacterType[]>([]);
 
 	useEffect(() => {
-		const firstFour = charactersData.slice(0, 4);
-		const randomized = firstFour.map((char) => ({
+		const randomFour = getRandomCharacters(charactersData, 4);
+
+		const randomized = randomFour.map((char) => ({
 			...char,
 			age: getRandomInt(char.age[0], char.age[1]),
 			name: getRandomName(char.gender),
 			stressMeter: getRandomInt(0, 100)
 		}));
 
-		const shuffled = [...randomized].sort(() => 0.5 - Math.random());
-		setCharacters(shuffled);
+		setCharacters(randomized);
 	}, []);
 
 	return { characters };
