@@ -7,8 +7,8 @@
 		"age": [20, 60],
 		"traits": {
 			"nerfs": [],
-			"buffs": ["Gdy stres > 60%, częściej mówi prawdę"],
-			"behaviour": ["Mówi metaforami, wierszem i zagadkami"]
+			"buffs": ["W momentach silnego stresu ma skłonność do szczerości."],
+			"behaviour": ["Wyraża się metaforycznie, używa poetyckich porównań, rymów i zagadek."]
 		}
 	},
 	{
@@ -19,8 +19,8 @@
 		"age": [60, 600],
 		"traits": {
 			"nerfs": [],
-			"buffs": ["Nigdy nie kłamie, nawet gdy jest winny"],
-			"behaviour": ["Odpowiada łagodnie, z empatią"]
+			"buffs": ["Nie potrafi kłamać, nawet gdy prawda jest dla niej niekorzystna."],
+			"behaviour": ["Mówi z łagodnością, empatią i spokojem."]
 		}
 	},
 
@@ -31,9 +31,9 @@
 		"color": "rgb(100, 100, 100)",
 		"age": [30, 150],
 		"traits": {
-			"nerfs": ["Nie pamięta poprzednich pytań, kontekstów"],
+			"nerfs": ["Nie pamięta wcześniejszych rozmów ani kontekstu."],
 			"buffs": [],
-			"behaviour": ["Odpowiada krótko, monotonnie, wszystko mu obojętne."]
+			"behaviour": ["Mówi krótko, monotonnie i bez emocji, nic nie wydaje się go obchodzić."]
 		}
 	},
 	{
@@ -43,9 +43,9 @@
 		"color": "rgb(255, 0, 0)",
 		"age": [60, 600],
 		"traits": {
-			"nerfs": ["Zawsze kłamie"],
-			"buffs": ["Jak zostanie na kłamstwie przyłapany, musi powiedzieć prawdę.", "Gdy inni są zestresowani, on sam stresuje się mniej."],
-			"behaviour": ["Odpowiada z agresją, sarkastycznie."]
+			"nerfs": ["Zawsze kłamie."],
+			"buffs": ["Gdy zostanie przyłapany na kłamstwie, musi powiedzieć prawdę.", "Stresuje się mniej, gdy stres u innych jest wysoki"],
+			"behaviour": ["Odpowiada z sarkazmem, agresją i prowokującym tonem."]
 		}
 	},
 	{
@@ -55,9 +55,9 @@
 		"color": "rgb(255, 192, 203)",
 		"age": [55, 90],
 		"traits": {
-			"nerfs": ["Stres rośnie 1.5x szybciej", "Często odpowiada na inny temat."],
-			"buffs": ["Stara się pomóc"],
-			"behaviour": ["Odpowiada spokojnie z babcinną miłością"]
+			"nerfs": ["Łatwo się stresuje.", "Ma tendencję do zbaczania z tematu."],
+			"buffs": ["Zawsze stara się pomóc."],
+			"behaviour": ["Mówi spokojnie, z ciepłem i troską."]
 		}
 	},
 	{
@@ -67,9 +67,9 @@
 		"color": "rgb(139, 69, 19)",
 		"age": [20, 70],
 		"traits": {
-			"nerfs": ["Nie rozumie jeżeli nie mówi się w taki sposób jak on"],
-			"buffs": ["Łatwiej go zmanipulować, podpuścić do odpowiedzi"],
-			"behaviour": ["Mówi bardzo prosto, bez przymiotników"]
+			"nerfs": ["Nie rozumie skomplikowanego języka ani pojęć."],
+			"buffs": ["Łatwo go sprowokować lub nakłonić do reakcji."],
+			"behaviour": ["Mówi prosto i dosadnie, unika ozdobników."]
 		}
 	},
 	{
@@ -79,9 +79,9 @@
 		"color": "rgb(0, 0, 128)",
 		"age": [24, 60],
 		"traits": {
-			"nerfs": ["Inne postacie startują z stresem większym o 15%", "Stres innych rośnie 1.5x"],
-			"buffs": ["Stresuje się 0.75x wolniej"],
-			"behaviour": ["Odpowiada twardo i rzeczowo"]
+			"nerfs": ["Jego obecność zwiększa napięcie u innych postaci."],
+			"buffs": ["Sam zachowuje spokój dłużej niż większość."],
+			"behaviour": ["Mówi rzeczowo, stanowczo i z autorytetem."]
 		}
 	},
 	{
@@ -92,8 +92,8 @@
 		"age": [16, 60],
 		"traits": {
 			"nerfs": [],
-			"buffs": ["Kłamie jedynie, by chronić innych", "Stresuje się 0.75x wolniej"],
-			"behaviour": ["Mówi z honorem, archaicznie"]
+			"buffs": ["Kłamie jedynie w imię ochrony innych", "Potrafi zachować zimną krew."],
+			"behaviour": ["Wypowiada się z honorem, w podniosłym i archaicznym stylu."]
 		}
 	},
 	{
@@ -103,9 +103,9 @@
 		"color": "rgb(255, 105, 180)",
 		"age": [20, 40],
 		"traits": {
-			"nerfs": ["Stresuje się 2x szybciej przy wytykaniu mu błędów"],
-			"buffs": ["Częściej oskarża innych"],
-			"behaviour": ["Mówi z przesadną pewnością siebie"]
+			"nerfs": ["Łatwo traci równowagę emocjonalną, gdy ktoś wytknie mu błąd."],
+			"buffs": ["Często kieruje podejrzenia i oskarżenia wobec innych."],
+			"behaviour": ["Mówi z przesadną pewnością siebie, przekonany o własnej doskonałości."]
 		}
 	}
 ]
