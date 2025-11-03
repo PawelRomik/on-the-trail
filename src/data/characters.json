@@ -47,5 +47,65 @@
 			"buffs": ["Jak zostanie na kłamstwie przyłapany, musi powiedzieć prawdę.", "Gdy inni są zestresowani, on sam stresuje się mniej."],
 			"behaviour": ["Odpowiada z agresją, sarkastycznie."]
 		}
+	},
+	{
+		"id": 5,
+		"title": "Babcia",
+		"gender": false,
+		"color": "rgb(255, 192, 203)",
+		"age": [55, 90],
+		"traits": {
+			"nerfs": ["Stres rośnie 1.5x szybciej", "Często odpowiada na inny temat."],
+			"buffs": ["Stara się pomóc"],
+			"behaviour": ["Odpowiada spokojnie z babcinną miłością"]
+		}
+	},
+	{
+		"id": 6,
+		"title": "Jaskiniowiec",
+		"gender": true,
+		"color": "rgb(139, 69, 19)",
+		"age": [20, 70],
+		"traits": {
+			"nerfs": ["Nie rozumie jeżeli nie mówi się w taki sposób jak on"],
+			"buffs": ["Łatwiej go zmanipulować, podpuścić do odpowiedzi"],
+			"behaviour": ["Mówi bardzo prosto, bez przymiotników"]
+		}
+	},
+	{
+		"id": 7,
+		"title": "Policjant",
+		"gender": true,
+		"color": "rgb(0, 0, 128)",
+		"age": [24, 60],
+		"traits": {
+			"nerfs": ["Inne postacie startują z stresem większym o 15%", "Stres innych rośnie 1.5x"],
+			"buffs": ["Stresuje się 0.75x wolniej"],
+			"behaviour": ["Odpowiada twardo i rzeczowo"]
+		}
+	},
+	{
+		"id": 8,
+		"title": "Rycerz",
+		"gender": true,
+		"color": "rgb(192, 192, 192)",
+		"age": [16, 60],
+		"traits": {
+			"nerfs": [],
+			"buffs": ["Kłamie jedynie, by chronić innych", "Stresuje się 0.75x wolniej"],
+			"behaviour": ["Mówi z honorem, archaicznie"]
+		}
+	},
+	{
+		"id": 9,
+		"title": "Narcyz",
+		"gender": true,
+		"color": "rgb(255, 105, 180)",
+		"age": [20, 40],
+		"traits": {
+			"nerfs": ["Stresuje się 2x szybciej przy wytykaniu mu błędów"],
+			"buffs": ["Częściej oskarża innych"],
+			"behaviour": ["Mówi z przesadną pewnością siebie"]
+		}
 	}
 ]
