@@ -1,9 +1,14 @@
 export type CharacterType = {
 	id: number;
 	name: string;
+	title: string;
 	age: number;
 	stressMeter: number;
 	color: string;
 	gender: boolean;
-	desc: string;
+	traits: {
+		buffs: string[];
+		nerfs: string[];
+		behaviour: string[];
+	};
 };
