@@ -15,21 +15,22 @@
 		"age": [60, 600],
 		"desc": "Odpowiada łagodnie, z empatią. Nigdy nie kłamie; stres rośnie 0.75× wolniej."
 	},
+
 	{
 		"id": 3,
-		"title": "Diabeł",
-		"gender": true,
-		"color": "rgb(255, 0, 0)",
-		"age": [60, 600],
-		"desc": "Sarkastyczny, prowokujący ton. Zawsze kłamie, dopóki nie zostanie przyłapany; po przyłapaniu musi powiedzieć prawdę w następnym pytaniu. Gdy inni są zestresowani, jego stres rośnie wolniej."
-	},
-	{
-		"id": 4,
 		"title": "Zombie",
 		"gender": true,
 		"color": "rgb(100, 100, 100)",
 		"age": [30, 150],
 		"desc": "Krótkie, monotonne zdania. Nie pamięta poprzednich pytań, ale pamięta fakty o zdarzeniu."
+	},
+	{
+		"id": 4,
+		"title": "Diabeł",
+		"gender": true,
+		"color": "rgb(255, 0, 0)",
+		"age": [60, 600],
+		"desc": "Sarkastyczny, prowokujący ton. Zawsze kłamie, dopóki nie zostanie przyłapany; po przyłapaniu musi powiedzieć prawdę w następnym pytaniu. Gdy inni są zestresowani, jego stres rośnie wolniej."
 	},
 	{
 		"id": 5,
