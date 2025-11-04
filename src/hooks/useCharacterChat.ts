@@ -1,0 +1,71 @@
+import { useState } from "react";
+import { type CharacterType } from "../types/CharacterType";
+import { type MessageType } from "../types/MessageType";
+
+export function useCharacterChat(initialCharacters: CharacterType[], setCharacters: React.Dispatch<React.SetStateAction<CharacterType[]>>) {
+	const [chats, setChats] = useState<Record<number, MessageType[]>>(() => {
+		const start: Record<number, MessageType[]> = {};
+		initialCharacters.forEach((c) => {
+			start[c.id] = [];
+		});
+		return start;
+	});
+
+	const sendMessage = async (character: CharacterType, text: string) => {
+		if (!text.trim()) return;
+
+		setChats((prev) => ({
+			...prev,
+			[character.id]: [...(prev[character.id] || []), { from: "player", text }]
+		}));
+
+		try {
+			const res = await fetch("/api/chat", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					character,
+					messages: [...(chats[character.id] || []), { from: "player", text }]
+				})
+			});
+
+			const data = await res.json();
+			const replyText = data.message || "…";
+			const stressChange = typeof data.stress === "number" ? data.stress : 0;
+
+			setChats((prev) => ({
+				...prev,
+				[character.id]: [...(prev[character.id] || []), { from: "character", text: replyText }]
+			}));
+
+			setCharacters((prevChars) => {
+				const stressedCount = prevChars.filter((c) => c.id !== character.id && c.stressMeter > 50).length;
+
+				return prevChars.map((c) => {
+					if (c.id !== character.id) return c;
+
+					let multiplier = 1;
+
+					const title = c.title.toLowerCase();
+
+					if (title.includes("babcia")) {
+						multiplier = 1.25;
+					} else if (title.includes("policjant") || title.includes("rycerz")) {
+						multiplier = 0.75;
+					} else if (title.includes("diabeł")) {
+						multiplier = Math.max(0, 1 - stressedCount * 0.1);
+					}
+
+					const stressDelta = Math.round(stressChange * multiplier);
+					const newStress = Math.min(100, c.stressMeter + stressDelta);
+
+					return { ...c, stressMeter: newStress };
+				});
+			});
+		} catch (err) {
+			console.error(err);
+		}
+	};
+
+	return { chats, sendMessage };
+}

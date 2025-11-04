@@ -20,7 +20,7 @@ export default function ChatView({ character, chats, inputText, setInputText, on
 			<div className='relative flex-2 bg-[rgba(0,0,0,0.6)] p-6 text-white flex flex-col'>
 				<ChatHeader character={character} onClose={onClose} />
 				<ChatMessages chats={chats} character={character} />
-				<ChatInput inputText={inputText} setInputText={setInputText} onSend={onSend} />
+				<ChatInput stress={character.stressMeter} inputText={inputText} setInputText={setInputText} onSend={onSend} />
 			</div>
 
 			<div className='flex justify-end items-end flex-1'>

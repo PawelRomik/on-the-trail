@@ -1,8 +1,8 @@
 export type CharacterType = {
 	id: number;
-	name: string;
+	name?: string;
 	title: string;
-	age: number;
+	age: number | number[];
 	stressMeter: number;
 	color: string;
 	gender: boolean;
