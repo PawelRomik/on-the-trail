@@ -12,7 +12,7 @@ export default function StressMeter({ meter }: { meter: number }) {
 						</div>
 					))}
 				</div>
-				<p className='absolute text-stroke-3 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold bangers'>Stress: {meter}%</p>
+				<p className='absolute text-stroke-3 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold bangers'>Stres: {meter}%</p>
 			</div>
 		</div>
 	);

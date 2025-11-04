@@ -23,15 +23,17 @@ export function useCharacters() {
 	useEffect(() => {
 		const randomFour = getRandomCharacters(charactersData, 4);
 
+		const hasPoliceman = randomFour.some((char) => char.title.toLowerCase().includes("policjant"));
+
 		const randomized = randomFour.map((char) => ({
 			...char,
 			age: getRandomInt(char.age[0], char.age[1]),
 			name: getRandomName(char.gender),
-			stressMeter: getRandomInt(0, 100)
+			stressMeter: hasPoliceman && !char.title.toLowerCase().includes("policjant") ? 15 : 0
 		}));
 
 		setCharacters(randomized);
 	}, []);
 
-	return { characters };
+	return { characters, setCharacters };
 }

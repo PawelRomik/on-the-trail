@@ -13,7 +13,7 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 			onClick={onClick}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
-			className='hover:cursor-pointer'
+			className={`hover:cursor-pointer ${character.stressMeter === 100 && "brightness-25"}`}
 			src={characterImage}
 			alt={character.name}
 		/>

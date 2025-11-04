@@ -1,12 +1,23 @@
 import library from "../../assets/background/library.jpg";
 import CharactersView from "./CharactersView";
 import ChatView from "./ChatView";
-import { useChat } from "../../hooks/useChat";
 import { useCharacters } from "../../hooks/useCharacters";
+import { useState } from "react";
+import { useCharacterChat } from "../../hooks/useCharacterChat";
 
 export default function Game() {
-	const { characters } = useCharacters();
-	const { chats, inputText, setInputText, selectedCharacter, setSelectedCharacter, handleSendMessage } = useChat(characters);
+	const { characters, setCharacters } = useCharacters();
+	const [selectedId, setSelectedId] = useState<number | null>(null);
+	const { chats, sendMessage } = useCharacterChat(characters, setCharacters);
+	const [inputText, setInputText] = useState("");
+
+	const selectedCharacter = selectedId ? characters.find((c) => c.id === selectedId) || null : null;
+
+	const handleSend = () => {
+		if (!selectedCharacter) return;
+		sendMessage(selectedCharacter, inputText);
+		setInputText("");
+	};
 
 	return (
 		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${library})` }}>
@@ -16,11 +27,11 @@ export default function Game() {
 					chats={chats[selectedCharacter.id] || []}
 					inputText={inputText}
 					setInputText={setInputText}
-					onSend={handleSendMessage}
-					onClose={() => setSelectedCharacter(null)}
+					onSend={handleSend}
+					onClose={() => setSelectedId(null)}
 				/>
 			) : (
-				<CharactersView characters={characters} onSelect={setSelectedCharacter} />
+				<CharactersView characters={characters} onSelect={(c) => setSelectedId(c.id)} />
 			)}
 		</div>
 	);
