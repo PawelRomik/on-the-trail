@@ -34,7 +34,7 @@ export default function CharacterTooltip({ character }: CharacterTooltipProps) {
 
 	return (
 		<div
-			className='absolute bg-black text-white p-2 rounded shadow-lg text-sm z-50 pointer-events-none max-w-xs'
+			className='absolute bg-black border-zinc-600 border-3 text-white p-1 rounded-xl shadow-lg text-sm z-50 pointer-events-none max-w-xs'
 			style={{
 				top: tooltipPos.y + 10,
 				left: tooltipPos.flipX ? tooltipPos.x - 220 : tooltipPos.x + 10

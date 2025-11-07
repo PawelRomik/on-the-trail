@@ -8,7 +8,7 @@ type CharactersViewProps = {
 
 export default function CharactersView({ characters, onSelect }: CharactersViewProps) {
 	return (
-		<div className='w-full h-[800px] flex gap-4 items-center justify-center'>
+		<div className='w-[80%] m-auto h-[800px] flex gap-4 items-center justify-center'>
 			{characters.map((char) => (
 				<Character key={char.id} character={char} onClick={() => onSelect(char)} />
 			))}
