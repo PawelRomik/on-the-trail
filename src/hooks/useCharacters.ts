@@ -29,7 +29,7 @@ export function useCharacters() {
 			...char,
 			age: getRandomInt(char.age[0], char.age[1]),
 			name: getRandomName(char.gender),
-			stressMeter: hasPoliceman && !char.title.toLowerCase().includes("policjant") ? 15 : 0
+			stressMeter: hasPoliceman && !char.title.toLowerCase().includes("policjant") ? 15 : 70
 		}));
 
 		setCharacters(randomized);
