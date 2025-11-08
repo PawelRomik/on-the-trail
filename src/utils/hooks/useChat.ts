@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { type CharacterType } from "../types/CharacterType";
-import { type MessageType } from "../types/MessageType";
+import type { CharacterType } from "../../types/CharacterType";
+import type { MessageType } from "../../types/MessageType";
 
-export function useCharacterChat(initialCharacters: CharacterType[], setCharacters: React.Dispatch<React.SetStateAction<CharacterType[]>>) {
+export function useChat(initialCharacters: CharacterType[], setCharacters: React.Dispatch<React.SetStateAction<CharacterType[]>>) {
 	const [chats, setChats] = useState<Record<number, MessageType[]>>(() => {
 		const start: Record<number, MessageType[]> = {};
 		initialCharacters.forEach((c) => {
@@ -38,34 +38,31 @@ export function useCharacterChat(initialCharacters: CharacterType[], setCharacte
 				[character.id]: [...(prev[character.id] || []), { from: "character", text: replyText }]
 			}));
 
-			setCharacters((prevChars) => {
-				const stressedCount = prevChars.filter((c) => c.id !== character.id && c.stressMeter > 50).length;
-
-				return prevChars.map((c) => {
+			setCharacters((prevChars) =>
+				prevChars.map((c) => {
 					if (c.id !== character.id) return c;
 
 					let multiplier = 1;
-
 					const title = c.title.toLowerCase();
-
-					if (title.includes("babcia")) {
-						multiplier = 1.25;
-					} else if (title.includes("policjant") || title.includes("rycerz")) {
-						multiplier = 0.75;
-					} else if (title.includes("diabeł")) {
-						multiplier = Math.max(0, 1 - stressedCount * 0.1);
-					}
+					if (title.includes("babcia")) multiplier = 1.25;
+					else if (title.includes("policjant") || title.includes("rycerz")) multiplier = 0.75;
+					else if (title.includes("diabeł")) multiplier = Math.max(0, 1 - prevChars.filter((p) => p.stressMeter > 50 && p.id !== c.id).length * 0.1);
 
 					const stressDelta = Math.round(stressChange * multiplier);
 					const newStress = Math.min(100, c.stressMeter + stressDelta);
-
 					return { ...c, stressMeter: newStress };
-				});
-			});
+				})
+			);
 		} catch (err) {
 			console.error(err);
 		}
 	};
 
-	return { chats, sendMessage };
+	const resetChats = (characters: CharacterType[]) => {
+		const emptyChats: Record<number, MessageType[]> = {};
+		characters.forEach((c) => (emptyChats[c.id] = []));
+		setChats(emptyChats);
+	};
+
+	return { chats, sendMessage, resetChats };
 }

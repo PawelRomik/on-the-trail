@@ -6,7 +6,7 @@ import type { CharacterType } from "../../types/CharacterType";
 
 type CharacterProps = {
 	character: CharacterType;
-	onClick?: () => void;
+	onClick?: (c: CharacterType) => void;
 };
 
 export default function Character({ character, onClick }: CharacterProps) {
