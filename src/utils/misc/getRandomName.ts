@@ -1,4 +1,4 @@
-import namesData from "../data/names.json";
+import namesData from "../../data/names.json";
 
 export default function getRandomName(gender: boolean) {
 	const list = gender ? namesData.male : namesData.female;
