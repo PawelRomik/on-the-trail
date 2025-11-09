@@ -7,9 +7,9 @@ const ChatContext = createContext<ReturnType<typeof useChat> | undefined>(undefi
 
 export function ChatProvider({ children }: { children: ReactNode }) {
 	const { characters, setCharacters } = useCharacters();
-	const { chats, sendMessage, resetChats } = useChat(characters, setCharacters);
+	const { chats, sendMessage, resetChats, history } = useChat(characters, setCharacters);
 
-	return <ChatContext.Provider value={{ chats, sendMessage, resetChats }}>{children}</ChatContext.Provider>;
+	return <ChatContext.Provider value={{ chats, sendMessage, resetChats, history }}>{children}</ChatContext.Provider>;
 }
 
 export { ChatContext };

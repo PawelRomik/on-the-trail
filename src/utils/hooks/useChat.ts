@@ -2,6 +2,11 @@ import { useState } from "react";
 import type { CharacterType } from "../../types/CharacterType";
 import type { MessageType } from "../../types/MessageType";
 
+export type HistoryEntry = {
+	character: CharacterType;
+	message: MessageType;
+};
+
 export function useChat(initialCharacters: CharacterType[], setCharacters: React.Dispatch<React.SetStateAction<CharacterType[]>>) {
 	const [chats, setChats] = useState<Record<number, MessageType[]>>(() => {
 		const start: Record<number, MessageType[]> = {};
@@ -11,13 +16,19 @@ export function useChat(initialCharacters: CharacterType[], setCharacters: React
 		return start;
 	});
 
+	const [history, setHistory] = useState<HistoryEntry[]>([]);
+
 	const sendMessage = async (character: CharacterType, text: string) => {
 		if (!text.trim()) return;
 
+		const playerMsg: MessageType = { from: "player", text };
+
 		setChats((prev) => ({
 			...prev,
-			[character.id]: [...(prev[character.id] || []), { from: "player", text }]
+			[character.id]: [...(prev[character.id] || []), playerMsg]
 		}));
+
+		setHistory((prev) => [...prev, { character, message: playerMsg }]);
 
 		try {
 			const res = await fetch("/api/chat", {
@@ -25,7 +36,7 @@ export function useChat(initialCharacters: CharacterType[], setCharacters: React
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
 					character,
-					messages: [...(chats[character.id] || []), { from: "player", text }]
+					messages: [...(chats[character.id] || []), playerMsg]
 				})
 			});
 
@@ -33,10 +44,14 @@ export function useChat(initialCharacters: CharacterType[], setCharacters: React
 			const replyText = data.message || "…";
 			const stressChange = typeof data.stress === "number" ? data.stress : 0;
 
+			const charMsg: MessageType = { from: "character", text: replyText };
+
 			setChats((prev) => ({
 				...prev,
-				[character.id]: [...(prev[character.id] || []), { from: "character", text: replyText }]
+				[character.id]: [...(prev[character.id] || []), charMsg]
 			}));
+
+			setHistory((prev) => [...prev, { character, message: charMsg }]);
 
 			setCharacters((prevChars) =>
 				prevChars.map((c) => {
@@ -62,7 +77,8 @@ export function useChat(initialCharacters: CharacterType[], setCharacters: React
 		const emptyChats: Record<number, MessageType[]> = {};
 		characters.forEach((c) => (emptyChats[c.id] = []));
 		setChats(emptyChats);
+		setHistory([]);
 	};
 
-	return { chats, sendMessage, resetChats };
+	return { chats, history, sendMessage, resetChats };
 }
