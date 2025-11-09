@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Projekt: On the Trail
+# 🕵️‍♂️ On the Trail
 ### Step into the shoes of a detective in this AI-powered mystery game! 🤖🕵️
 * ✨ <b>Every case is unique!</b> At the start, 3–5 characters, a gripping plot, and a location are randomly generated - no two mysteries are ever the same.
 * 👥 <b>Meet unforgettable characters!</b> Each one is distinct, with special traits - you could talk to a grandma, a brave knight, or even an angel! Gather clues, ask questions, and try to uncover the culprit… but beware! Every character has a stress level, and if you push them too far, they’ll refuse to talk to you.
