@@ -6,7 +6,7 @@ import ChatView from "./ChatView";
 
 import NotepadView from "./NotepadView";
 
-export default function Game() {
+export default function GameView() {
 	const { selectedCharacter } = useCharactersContext();
 	const { activeView } = useViewContext();
 
