@@ -1,74 +1,24 @@
-# React + TypeScript + Vite
+# 🕵️‍♂️ On the Trail
+### Step into the shoes of a detective in this AI-powered mystery game! 🤖🕵️
+* ✨ <b>Every case is unique!</b> At the start, 3–5 characters, a gripping plot, and a location are randomly generated - no two mysteries are ever the same.
+* 👥 <b>Meet unforgettable characters!</b> Each one is distinct, with special traits - you could talk to a grandma, a brave knight, or even an angel! Gather clues, ask questions, and try to uncover the culprit… but beware! Every character has a stress level, and if you push them too far, they’ll refuse to talk to you.
+* 💬 <b>AI-driven conversations!</b> Powered by OpenAI, every dialogue feels alive, unpredictable, and immersive. Your detective skills are the key to cracking the case.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### ⚙️ Progress
+<table>
+  <tr>
+    <th>Coding</th>
+    <th>Art</th>
+    <th>Sound</th>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/23%2F47-47%25-green" alt="Coding 49%"></td>
+    <td><img src="https://img.shields.io/badge/14%2F63-13%25-yellow" alt="Art 22%"></td>
+    <td><img src="https://img.shields.io/badge/0%2F13-0%25-red" alt="Sound 0%"></td>
+  </tr>
+</table>
 
-Currently, two official plugins are available:
+### 📸 Preview:
+<img width="1917" height="997" alt="image" src="https://github.com/user-attachments/assets/267577d2-60d7-4f16-9207-b3b35c05e247" />
+🌐 Try it now: https://on-the-trail.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# on-the-trail
