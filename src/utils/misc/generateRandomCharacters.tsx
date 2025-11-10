@@ -12,6 +12,6 @@ export default function generateRandomCharacters(): CharacterType[] {
 		...c,
 		age: getRandomInt(c.age[0], c.age[1]),
 		name: getRandomName(c.gender),
-		stressMeter: hasPoliceman && !c.title.toLowerCase().includes("policjant") ? 15 : 70
+		stressMeter: hasPoliceman && !c.title.toLowerCase().includes("policjant") ? 15 : 0
 	}));
 }
