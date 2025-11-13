@@ -1,0 +1,195 @@
+{
+	"menu": {
+		"start": "Start",
+		"settings": "Ustawienia"
+	},
+	"ui": {
+		"male": "Mężczyzna",
+		"female": "Kobieta",
+		"age": "{{age}} lat",
+		"stress": "Stres: {{amount}}%"
+	},
+	"chat": {
+		"send": "Wyślij",
+		"chatWith": "Rozmowa z {{name}}",
+		"sendMessage": "Wyślij wiadomość",
+		"you": "Ty"
+	},
+	"notes": {
+		"all": "Wszystkie",
+		"notes": "Notatki",
+		"writeNote": "Napisz notatkę"
+	},
+	"characters": {
+		"ch1": {
+			"title": "Poeta",
+			"traits": {
+				"nerfs": [],
+				"buffs": ["W momentach silnego stresu ma skłonność do szczerości."],
+				"behaviour": "Wyraża się metaforycznie, używa poetyckich porównań, rymów i zagadek."
+			}
+		},
+		"ch2": {
+			"title": "Anioł",
+			"traits": {
+				"nerfs": [],
+				"buffs": ["Nie potrafi kłamać, nawet gdy prawda jest dla niej niekorzystna."],
+				"behaviour": "Mówi z łagodnością, empatią i spokojem."
+			}
+		},
+		"ch3": {
+			"title": "Zombie",
+			"traits": {
+				"nerfs": ["Nie pamięta wcześniejszych rozmów ani kontekstu."],
+				"buffs": [],
+				"behaviour": "Mówi krótko, monotonnie i bez emocji, nic go nie obchodzi."
+			}
+		},
+		"ch4": {
+			"title": "Diabeł",
+			"traits": {
+				"nerfs": ["Zawsze kłamie."],
+				"buffs": ["Gdy zostanie przyłapany na kłamstwie, musi powiedzieć prawdę.", "Stresuje się mniej, gdy stres u innych jest wysoki."],
+				"behaviour": "Odpowiada z sarkazmem, agresją i prowokującym tonem."
+			}
+		},
+		"ch5": {
+			"title": "Babcia",
+			"traits": {
+				"nerfs": ["Łatwo się stresuje.", "Ma tendencję do zbaczania z tematu."],
+				"buffs": ["Zawsze stara się pomóc."],
+				"behaviour": "Mówi spokojnie, z ciepłem i troską."
+			}
+		},
+		"ch6": {
+			"title": "Jaskiniowiec",
+			"traits": {
+				"nerfs": ["Nie rozumie skomplikowanego języka ani pojęć."],
+				"buffs": ["Łatwo go sprowokować lub nakłonić do reakcji."],
+				"behaviour": "Mówi prosto i dosadnie, unika ozdobników."
+			}
+		},
+		"ch7": {
+			"title": "Policjant",
+			"traits": {
+				"nerfs": ["Jego obecność zwiększa napięcie u innych postaci."],
+				"buffs": ["Sam zachowuje spokój dłużej niż większość."],
+				"behaviour": "Mówi rzeczowo, stanowczo i z autorytetem."
+			}
+		},
+		"ch8": {
+			"title": "Rycerz",
+			"traits": {
+				"nerfs": [],
+				"buffs": ["Kłamie jedynie w imię ochrony innych.", "Potrafi zachować zimną krew."],
+				"behaviour": "Wypowiada się z honorem, w podniosłym i archaicznym stylu."
+			}
+		},
+		"ch9": {
+			"title": "Narcyz",
+			"traits": {
+				"nerfs": ["Łatwo traci równowagę emocjonalną, gdy ktoś wytknie mu błąd."],
+				"buffs": ["Często kieruje podejrzenia i oskarżenia wobec innych."],
+				"behaviour": "Mówi z przesadną pewnością siebie, przekonany o własnej doskonałości."
+			}
+		},
+		"ch10": {
+			"title": "Duch",
+			"traits": {
+				"nerfs": ["Powtarza to, co mówi najodważniejsza osoba."],
+				"buffs": ["Mówi prawdę, gdy to on jest najodważniejszy."],
+				"behaviour": "Mówi cicho, nieśmiale, często powtarza słowa innych."
+			}
+		},
+		"ch11": {
+			"title": "Święty Mikołaj",
+			"traits": {
+				"nerfs": ["Kłamie, gdy jesteś niegrzeczny."],
+				"buffs": ["Mówi prawdę, gdy jesteś grzeczny.", "Stres innych rośnie w wolniejszym tempie."],
+				"behaviour": "Mówi pogodnym, ciepłym tonem."
+			}
+		},
+		"ch12": {
+			"title": "Łowca",
+			"traits": {
+				"nerfs": ["Trudniej go złapać na kłamstwie."],
+				"buffs": ["Wie więcej szczegółów na temat sprawy."],
+				"behaviour": "Mówi krótko i konkretnie."
+			}
+		},
+		"ch13": {
+			"title": "Detektyw",
+			"traits": {
+				"nerfs": ["Częściej oskarża innych."],
+				"buffs": ["Nie kłamie."],
+				"behaviour": "Odpowiada z sarkazmem, często pytaniem retorycznym."
+			}
+		},
+		"ch14": {
+			"title": "Klaun",
+			"traits": {
+				"nerfs": ["Naprzemiennie kłamie."],
+				"buffs": ["Naprzemiennie mówi prawdę."],
+				"behaviour": "Mówi żartami, często nielogicznie."
+			}
+		},
+		"ch15": {
+			"title": "Ksiądz",
+			"traits": {
+				"nerfs": ["Mówi wyłącznie prawdę."],
+				"buffs": ["Nie ujawnia tajemnic."],
+				"behaviour": "Mówi powściągliwym, moralizującym tonem."
+			}
+		},
+		"ch16": {
+			"title": "Wadliwy robot",
+			"traits": {
+				"nerfs": ["Odpowiedzi mogą zostać uszkodzone."],
+				"buffs": [],
+				"behaviour": "Mówi rzeczowo i na temat."
+			}
+		}
+	},
+	"names": {
+		"Adam": "Adam",
+		"Bartosz": "Bartosz",
+		"Cezary": "Cezary",
+		"Dawid": "Dawid",
+		"Eryk": "Eryk",
+		"Filip": "Filip",
+		"Grzegorz": "Grzegorz",
+		"Henryk": "Henryk",
+		"Igor": "Igor",
+		"Jakub": "Jakub",
+		"Krzysztof": "Krzysztof",
+		"Łukasz": "Łukasz",
+		"Marcin": "Marcin",
+		"Norbert": "Norbert",
+		"Oskar": "Oskar",
+		"Patryk": "Patryk",
+		"Rafał": "Rafał",
+		"Szymon": "Szymon",
+		"Tomasz": "Tomasz",
+		"Wojciech": "Wojciech",
+		"Anna": "Anna",
+		"Barbara": "Barbara",
+		"Cecylia": "Cecylia",
+		"Dorota": "Dorota",
+		"Eliza": "Eliza",
+		"Filomena": "Filomena",
+		"Grażyna": "Grażyna",
+		"Helena": "Helena",
+		"Iwona": "Iwona",
+		"Joanna": "Joanna",
+		"Katarzyna": "Katarzyna",
+		"Lucyna": "Lucyna",
+		"Magdalena": "Magdalena",
+		"Natalia": "Natalia",
+		"Olga": "Olga",
+		"Patrycja": "Patrycja",
+		"Renata": "Renata",
+		"Sylwia": "Sylwia",
+		"Teresa": "Teresa",
+		"Wioletta": "Wioletta"
+	}
+}

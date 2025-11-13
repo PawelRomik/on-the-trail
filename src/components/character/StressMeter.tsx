@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function StressMeter({ meter }: { meter: number }) {
+	const { t } = useTranslation();
 	const markers = [0, 25, 50, 75, 100];
 
 	return (
@@ -12,7 +15,7 @@ export default function StressMeter({ meter }: { meter: number }) {
 						</div>
 					))}
 				</div>
-				<p className='absolute text-stroke-3 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-bold bangers'>Stres: {meter}%</p>
+				<p className='absolute text-stroke-3 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-bold bangers'>{t("ui.stress", { amount: 10 })}</p>
 			</div>
 		</div>
 	);

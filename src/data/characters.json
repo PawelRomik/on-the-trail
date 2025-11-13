@@ -135,7 +135,7 @@
 	{
 		"id": 12,
 		"title": "Łowca",
-		"gender": true,
+		"gender": false,
 		"color": "rgb(160, 82, 45)",
 		"age": [25, 60],
 		"traits": {

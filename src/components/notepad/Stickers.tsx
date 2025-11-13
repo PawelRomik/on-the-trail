@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useCharactersContext } from "../../utils/context/character-context/useCharacterContext";
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
 
@@ -9,6 +10,7 @@ type StickersProps = {
 export default function Stickers({ setShowNotes, setFilterCharacter }: StickersProps) {
 	const { characters } = useCharactersContext();
 	const { setActiveView } = useViewContext();
+	const { t } = useTranslation();
 
 	const onClose = () => {
 		setActiveView("game");
@@ -31,7 +33,7 @@ export default function Stickers({ setShowNotes, setFilterCharacter }: StickersP
 					setFilterCharacter(null);
 				}}
 			>
-				Notes
+				{t("notes.notes")}
 			</button>
 
 			<button
@@ -41,7 +43,7 @@ export default function Stickers({ setShowNotes, setFilterCharacter }: StickersP
 					setShowNotes(false);
 				}}
 			>
-				All
+				{t("notes.all")}
 			</button>
 
 			{characters.map((ch, index) => (
@@ -56,7 +58,7 @@ export default function Stickers({ setShowNotes, setFilterCharacter }: StickersP
 						setShowNotes(false);
 					}}
 				>
-					{ch.title}
+					{t(`characters.ch${ch.id}.title`)}
 				</button>
 			))}
 		</div>

@@ -1,0 +1,195 @@
+{
+	"menu": {
+		"start": "Start",
+		"settings": "Settings"
+	},
+	"ui": {
+		"male": "Male",
+		"female": "Female",
+		"age": "{{age}} yrs",
+		"stress": "Stress: {{amount}}%"
+	},
+	"chat": {
+		"send": "Send",
+		"chatWith": "Chat with {{name}}",
+		"sendMessage": "Send a message",
+		"you": "You"
+	},
+	"notes": {
+		"all": "All",
+		"notes": "Notes",
+		"writeNote": "Write a note"
+	},
+	"characters": {
+		"ch1": {
+			"title": "Poet",
+			"traits": {
+				"nerfs": [],
+				"buffs": ["In moments of strong stress, tends to be honest."],
+				"behaviour": "Speaks metaphorically, uses poetic comparisons, rhymes, and riddles."
+			}
+		},
+		"ch2": {
+			"title": "Angel",
+			"traits": {
+				"nerfs": [],
+				"buffs": ["Cannot lie, even when the truth is disadvantageous."],
+				"behaviour": "Speaks with gentleness, empathy, and calm."
+			}
+		},
+		"ch3": {
+			"title": "Zombie",
+			"traits": {
+				"nerfs": ["Does not remember previous conversations or context."],
+				"buffs": [],
+				"behaviour": "Speaks briefly, monotonously, and without emotion — nothing seems to matter to him."
+			}
+		},
+		"ch4": {
+			"title": "Devil",
+			"traits": {
+				"nerfs": ["Always lies."],
+				"buffs": ["When caught lying, must tell the truth.", "Feels less stress when others are highly stressed."],
+				"behaviour": "Responds with sarcasm, aggression, and a provocative tone."
+			}
+		},
+		"ch5": {
+			"title": "Grandma",
+			"traits": {
+				"nerfs": ["Easily gets stressed.", "Tends to go off-topic."],
+				"buffs": ["Always tries to help."],
+				"behaviour": "Speaks calmly, with warmth and care."
+			}
+		},
+		"ch6": {
+			"title": "Caveman",
+			"traits": {
+				"nerfs": ["Does not understand complex language or concepts."],
+				"buffs": ["Can be easily provoked or persuaded to react."],
+				"behaviour": "Speaks simply and directly, avoiding embellishments."
+			}
+		},
+		"ch7": {
+			"title": "Police Officer",
+			"traits": {
+				"nerfs": ["His presence increases the tension among other characters."],
+				"buffs": ["Remains calm longer than most."],
+				"behaviour": "Speaks firmly, decisively, and with authority."
+			}
+		},
+		"ch8": {
+			"title": "Knight",
+			"traits": {
+				"nerfs": [],
+				"buffs": ["Lies only to protect others.", "Can remain calm under pressure."],
+				"behaviour": "Speaks with honor, in a lofty and archaic manner."
+			}
+		},
+		"ch9": {
+			"title": "Narcissist",
+			"traits": {
+				"nerfs": ["Easily loses emotional balance when someone points out a mistake."],
+				"buffs": ["Often directs suspicion and accusations toward others."],
+				"behaviour": "Speaks with exaggerated confidence, convinced of his own perfection."
+			}
+		},
+		"ch10": {
+			"title": "Ghost",
+			"traits": {
+				"nerfs": ["Repeats what the bravest person says."],
+				"buffs": ["Speaks the truth when they are the bravest."],
+				"behaviour": "Speaks softly, shyly, often echoing others."
+			}
+		},
+		"ch11": {
+			"title": "Santa Claus",
+			"traits": {
+				"nerfs": ["Lies when you are naughty."],
+				"buffs": ["Tells the truth when you are nice.", "Others' stress increases more slowly around him."],
+				"behaviour": "Speaks in a cheerful, warm tone."
+			}
+		},
+		"ch12": {
+			"title": "Hunter",
+			"traits": {
+				"nerfs": ["Harder to catch lying."],
+				"buffs": ["Knows more details about the case."],
+				"behaviour": "Speaks briefly and to the point."
+			}
+		},
+		"ch13": {
+			"title": "Detective",
+			"traits": {
+				"nerfs": ["Accuses others more often."],
+				"buffs": ["Does not lie."],
+				"behaviour": "Responds with sarcasm, often with rhetorical questions."
+			}
+		},
+		"ch14": {
+			"title": "Clown",
+			"traits": {
+				"nerfs": ["Alternates between lying and truth-telling."],
+				"buffs": ["Alternates between truth-telling and lying."],
+				"behaviour": "Speaks in jokes, often nonsensical."
+			}
+		},
+		"ch15": {
+			"title": "Priest",
+			"traits": {
+				"nerfs": ["Always tells the truth."],
+				"buffs": ["Keeps secrets confidential."],
+				"behaviour": "Speaks in a restrained, moralizing tone."
+			}
+		},
+		"ch16": {
+			"title": "Faulty Robot",
+			"traits": {
+				"nerfs": ["Responses may be corrupted."],
+				"buffs": [],
+				"behaviour": "Speaks factually and to the point."
+			}
+		}
+	},
+	"names": {
+		"Adam": "Adam",
+		"Bartosz": "Bartholomew",
+		"Cezary": "Caesar",
+		"Dawid": "David",
+		"Eryk": "Eric",
+		"Filip": "Philip",
+		"Grzegorz": "Gregory",
+		"Henryk": "Henry",
+		"Igor": "Igor",
+		"Jakub": "Jacob",
+		"Krzysztof": "Christopher",
+		"Łukasz": "Lucas",
+		"Marcin": "Martin",
+		"Norbert": "Norbert",
+		"Oskar": "Oscar",
+		"Patryk": "Patrick",
+		"Rafał": "Raphael",
+		"Szymon": "Simon",
+		"Tomasz": "Thomas",
+		"Wojciech": "Wojciech",
+		"Anna": "Anna",
+		"Barbara": "Barbara",
+		"Cecylia": "Cecilia",
+		"Dorota": "Dorothy",
+		"Eliza": "Eliza",
+		"Filomena": "Philomena",
+		"Grażyna": "Grace",
+		"Helena": "Helen",
+		"Iwona": "Iwona",
+		"Joanna": "Joanna",
+		"Katarzyna": "Catherine",
+		"Lucyna": "Lucina",
+		"Magdalena": "Magdalene",
+		"Natalia": "Natalie",
+		"Olga": "Olga",
+		"Patrycja": "Patricia",
+		"Renata": "Renata",
+		"Sylwia": "Sylvia",
+		"Teresa": "Theresa",
+		"Wioletta": "Violetta"
+	}
+}

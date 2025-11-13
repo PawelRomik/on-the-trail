@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { type CharacterType } from "../../types/CharacterType";
 import ChatCloseButton from "./ChatCloseButton";
 
@@ -7,10 +8,11 @@ type ChatHeaderProps = {
 };
 
 export default function ChatHeader({ character, onClose }: ChatHeaderProps) {
+	const { t } = useTranslation();
 	return (
 		<div className='mb-4'>
 			<ChatCloseButton onClose={onClose} />
-			<h2 className='text-3xl font-bold'>Czat z {character.name}</h2>
+			<h2 className='text-3xl font-bold'>{t("chat.chatWith", { name: t(`names.${character.name}`) })}</h2>
 		</div>
 	);
 }
