@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import type { CharacterType } from "../../types/CharacterType";
 
 type CharacterImageProps = {
@@ -8,6 +9,7 @@ type CharacterImageProps = {
 
 export default function CharacterImage({ character, setHovered, onClick }: CharacterImageProps) {
 	const characterImage = `../assets/character/ch${character.id}.png`;
+	const { t } = useTranslation();
 	return (
 		<img
 			onClick={() => onClick?.(character)}
@@ -15,7 +17,7 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 			onMouseLeave={() => setHovered(false)}
 			className={`hover:cursor-pointer h-[70%] ${character.stressMeter === 100 && "brightness-25"}`}
 			src={characterImage}
-			alt={character.name}
+			alt={t(`characters.ch${character.id}.title`)}
 		/>
 	);
 }
