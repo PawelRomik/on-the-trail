@@ -2,10 +2,12 @@ import Character from "../../components/character/Character";
 import ChatHeader from "../../components/chat/ChatHeader";
 import ChatMessages from "../../components/chat/ChatMessages";
 import ChatInput from "../../components/chat/ChatInput";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useChatContext } from "../../utils/context/chat-context/useChatContext";
 import { useCharactersContext } from "../../utils/context/character-context/useCharacterContext";
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
+import { playCharacterSound } from "../../utils/misc/playCharacterSound";
+import playSound from "../../utils/misc/playSound";
 
 export default function ChatView() {
 	const [inputText, setInputText] = useState("");
@@ -13,10 +15,15 @@ export default function ChatView() {
 	const { selectedCharacter, setSelectedCharacter } = useCharactersContext();
 	const { setActiveView } = useViewContext();
 
+	useEffect(() => {
+		if (selectedCharacter) playCharacterSound({ character: selectedCharacter, sound: "hello" });
+	}, [selectedCharacter]);
+
 	const handleSend = () => {
 		if (!selectedCharacter) return;
 		sendMessage(selectedCharacter, inputText);
 		setInputText("");
+		playSound("button_press");
 	};
 
 	const closeChat = () => {

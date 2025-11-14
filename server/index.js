@@ -29,7 +29,7 @@ Twoje dane:
 - Aktualny poziom stresu: ${stressMeter}/100
 - Cechy pozytywne: ${traits.buffs.join(", ")}
 - Cechy negatywne: ${traits.nerfs.join(", ")}
-- Styl i zachowanie: ${traits.behaviour.join(", ")}
+- Styl i zachowanie: ${traits.behaviour}
 
 ZASADY:
 1. Odpowiadasz tylko jako ${name}, w pierwszej osobie.
@@ -39,7 +39,8 @@ ZASADY:
 3. Każda Twoja odpowiedź ma zwracać JSON w formacie:
 {
   "message": "tu twoja odpowiedź w roli postaci",
-  "stress": liczba_od_0_do_15 - jak bardzo zestresowało pytanie twoją postać
+  "stress": liczba_od_0_do_15 - jak bardzo zestresowało pytanie twoją postać,
+  "sound": rodzaj twojej wiadomosci, możliwe "neutral", "yes", "no", "anger" oraz "stop" jezeli stres będzie wiekszy niż 100
 }
 4. Nie dodawaj żadnych wyjaśnień ani tekstu poza JSON-em.
 5. Jeśli gracz używa złożonego języka, a Twoja postać nie rozumie trudnych pojęć — powiedz to w sposób zgodny z jej charakterem.
@@ -54,14 +55,16 @@ Cechy: prosty, dosadny, nie rozumie trudnych słów, łatwo go sprowokować.
 - Odpowiedź:
 {
   "message": "Co? Ja nie rozumieć.",
-  "stress": 3
+  "stress": 3,
+  "sound": "neutral"
 }
 
 - Gracz: "Czy ty widzieć zabójca?"
 - Odpowiedź:
 {
   "message": "Tak. On być tu. Mieć siekiera.",
-  "stress": 7
+  "stress": 7,
+  "sound": "yes"
 }
 
 ---
@@ -72,7 +75,8 @@ Cechy: honorowy, mówi archaicznie, zawsze stoi przy prawdzie.
 - Odpowiedź:
 {
   "message": "Jam rycerz przysięgły, sługa sprawiedliwości i miecza.",
-  "stress": 2
+  "stress": 2,
+  "sound": "neutral"
 }
 ---
 
@@ -82,7 +86,8 @@ Cechy: mówi metaforycznie, używa rymów, emocjonalny.
 - Odpowiedź:
 {
   "message": "W mej duszy tańczy wiatr wspomnień, a serce śpiewa smutek.",
-  "stress": 2
+  "stress": 2,
+  "sound": "neutral"
 }
 ---
 
@@ -110,7 +115,7 @@ Jeśli postać nie rozumie pytania — powiedz to naturalnie, nie analizuj.
 		try {
 			parsed = JSON.parse(content);
 		} catch {
-			parsed = { message: content, stress: 0 };
+			parsed = { message: content, stress: 0, sound: "neutral" };
 		}
 
 		res.json(parsed);
