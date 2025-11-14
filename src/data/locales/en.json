@@ -13,7 +13,8 @@
 		"send": "Send",
 		"chatWith": "Chat with {{name}}",
 		"sendMessage": "Send a message",
-		"you": "You"
+		"you": "You",
+		"startingMessage": "Yes, Detective?"
 	},
 	"notes": {
 		"all": "All",

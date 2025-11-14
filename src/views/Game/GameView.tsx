@@ -3,12 +3,26 @@ import { useCharactersContext } from "../../utils/context/character-context/useC
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
 import CharactersView from "./CharactersView";
 import ChatView from "./ChatView";
+import gameMusic from "/assets/sound/music/game.mp3";
 
 import NotepadView from "./NotepadView";
+import { useEffect } from "react";
 
 export default function GameView() {
 	const { selectedCharacter } = useCharactersContext();
 	const { activeView } = useViewContext();
+
+	useEffect(() => {
+		const audio = new Audio(gameMusic);
+		audio.loop = true;
+		audio.volume = 0.3;
+		audio.play().catch((e) => console.warn("Autoplay prevented:", e));
+
+		return () => {
+			audio.pause();
+			audio.currentTime = 0;
+		};
+	}, []);
 
 	return (
 		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${library})` }}>
