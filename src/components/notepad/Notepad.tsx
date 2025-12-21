@@ -5,6 +5,7 @@ import Note from "./Note";
 import NotesArea from "./NotesArea";
 import Stickers from "./Stickers";
 import playSound from "../../utils/misc/playSound";
+import { useSettings } from "../../utils/context/settings-context/useSettings";
 
 type NotepadProps = {
 	filteredHistory: HistoryEntry[];
@@ -15,10 +16,11 @@ type NotepadProps = {
 
 export default function Notepad({ filteredHistory, showNotes, setShowNotes, setFilterCharacter }: NotepadProps) {
 	const { notes, setNotes } = useNotepad();
+	const { voiceVolume } = useSettings();
 
 	useEffect(() => {
-		playSound("book_open");
-	}, [filteredHistory, showNotes]);
+		playSound("book_open", voiceVolume);
+	}, [filteredHistory, showNotes, voiceVolume]);
 	return (
 		<div className='w-[50%] h-[95%] bg-amber-900  pt-2 rounded-lg border-t-zinc-600 border-t-30 m-auto'>
 			<div className='flex flex-col w-full m-auto bg-yellow-100 h-full gap-2   shadow-lg rounded-lg'>

@@ -16,6 +16,18 @@
 		"you": "You",
 		"startingMessage": "Yes, Detective?"
 	},
+	"settings": {
+		"title": "Settings",
+		"musicVolume": "Music volume",
+		"voiceVolume": "Voice volume",
+		"language": "Language",
+		"backToMenu": "Back to menu",
+		"resetGame": "Reset game",
+		"languages": {
+			"pl": "Polish",
+			"en": "English"
+		}
+	},
 	"notes": {
 		"all": "All",
 		"notes": "Notes",
