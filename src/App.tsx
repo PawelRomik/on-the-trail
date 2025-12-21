@@ -1,9 +1,9 @@
-import { useState } from "react";
 import MenuView from "./views/Menu/MenuView";
 import GameView from "./views/Game/GameView";
+import { useSettings } from "./utils/context/settings-context/useSettings";
 
 export default function App() {
-	const [started, setStarted] = useState(false);
+	const { gameStarted, setGameStarted } = useSettings();
 
-	return <>{started ? <GameView /> : <MenuView onStart={() => setStarted(true)} />}</>;
+	return <>{gameStarted ? <GameView /> : <MenuView onStart={() => setGameStarted(true)} />}</>;
 }

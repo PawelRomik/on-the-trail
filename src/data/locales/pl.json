@@ -16,6 +16,18 @@
 		"you": "Ty",
 		"startingMessage": "Tak, Detektywie?"
 	},
+	"settings": {
+		"title": "Ustawienia",
+		"musicVolume": "Głośność muzyki",
+		"voiceVolume": "Głośność głosów",
+		"language": "Język",
+		"backToMenu": "Powrót do menu",
+		"resetGame": "Reset gry",
+		"languages": {
+			"pl": "Polski",
+			"en": "Angielski"
+		}
+	},
 	"notes": {
 		"all": "Wszystkie",
 		"notes": "Notatki",

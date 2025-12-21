@@ -3,6 +3,8 @@ import type { CharacterType } from "../../types/CharacterType";
 import type { MessageType } from "../../types/MessageType";
 import { useCharactersContext } from "../context/character-context/useCharacterContext";
 import { useTranslation } from "react-i18next";
+import { playCharacterSound } from "../misc/playCharacterSound";
+import { useSettings } from "../context/settings-context/useSettings";
 
 export type HistoryEntry = {
 	character: CharacterType;
@@ -13,6 +15,7 @@ export function useChat() {
 	const { characters, setCharacters } = useCharactersContext();
 	const { t } = useTranslation();
 	const [chats, setChats] = useState<Record<number, MessageType[]>>({});
+	const { voiceVolume } = useSettings();
 
 	const initializedRef = useRef(false);
 
@@ -59,21 +62,7 @@ export function useChat() {
 			const replyText = data.message || "…";
 			const stressChange = typeof data.stress === "number" ? data.stress : 0;
 
-			if (typeof data.sound === "string" && data.sound.trim() !== "") {
-				try {
-					const emotion = data.sound;
-					const sex = character.gender ? "male" : "female";
-					const idmod = (character.id % 2) + 1;
-
-					const soundFile = `${emotion}_${sex}_${idmod}.mp3`;
-					console.log(soundFile);
-
-					const audio = new Audio(`assets/sound/character/${soundFile}`);
-					audio.play();
-				} catch (e) {
-					console.error("Audio play error:", e);
-				}
-			}
+			playCharacterSound({ character: character, sound: data.sound, volume: voiceVolume });
 
 			const charMsg: MessageType = { from: "character", text: replyText };
 

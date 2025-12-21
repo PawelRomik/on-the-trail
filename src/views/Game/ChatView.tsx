@@ -8,22 +8,24 @@ import { useCharactersContext } from "../../utils/context/character-context/useC
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
 import { playCharacterSound } from "../../utils/misc/playCharacterSound";
 import playSound from "../../utils/misc/playSound";
+import { useSettings } from "../../utils/context/settings-context/useSettings";
 
 export default function ChatView() {
 	const [inputText, setInputText] = useState("");
 	const { chats, sendMessage } = useChatContext();
 	const { selectedCharacter, setSelectedCharacter } = useCharactersContext();
 	const { setActiveView } = useViewContext();
+	const { voiceVolume } = useSettings();
 
 	useEffect(() => {
-		if (selectedCharacter) playCharacterSound({ character: selectedCharacter, sound: "hello" });
-	}, [selectedCharacter]);
+		if (selectedCharacter) playCharacterSound({ character: selectedCharacter, sound: "hello", volume: voiceVolume });
+	}, [selectedCharacter, voiceVolume]);
 
 	const handleSend = () => {
 		if (!selectedCharacter) return;
 		sendMessage(selectedCharacter, inputText);
 		setInputText("");
-		playSound("button_press");
+		playSound("button_press", voiceVolume);
 	};
 
 	const closeChat = () => {

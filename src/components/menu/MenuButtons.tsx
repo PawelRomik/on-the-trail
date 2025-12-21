@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import playSound from "../../utils/misc/playSound";
+import { useSettings } from "../../utils/context/settings-context/useSettings";
 
 type MenuButtonsProps = {
 	onStart: () => void;
@@ -7,9 +8,10 @@ type MenuButtonsProps = {
 
 export default function MenuButtons({ onStart }: MenuButtonsProps) {
 	const { t } = useTranslation();
+	const { voiceVolume } = useSettings();
 
 	const buttonPress = () => {
-		playSound("button_press");
+		playSound("button_press", voiceVolume);
 		onStart();
 	};
 	return (
