@@ -15,7 +15,9 @@ export default function StressMeter({ meter }: { meter: number }) {
 						</div>
 					))}
 				</div>
-				<p className='absolute text-stroke-3 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-bold bangers'>{t("ui.stress", { amount: 10 })}</p>
+				<p className='absolute text-stroke-3 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-bold bangers'>
+					{t("ui.stress", { amount: meter })}
+				</p>
 			</div>
 		</div>
 	);
