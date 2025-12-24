@@ -7,7 +7,7 @@ import CharactersView from "./CharactersView";
 import ChatView from "./ChatView";
 import NotepadView from "./NotepadView";
 import SettingsView from "./SettingsView";
-import menuMusic from "../../../public/assets/sound/music/game.mp3";
+import gameMusic from "../../assets/music/game.mp3";
 
 export default function GameView() {
 	const { selectedCharacter } = useCharactersContext();
@@ -16,7 +16,7 @@ export default function GameView() {
 
 	return (
 		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${library})` }}>
-			<MusicPlayer src={menuMusic} volume={musicVolume} loop={true} muted={true} unmuteOnClick={true} />
+			<MusicPlayer src={gameMusic} volume={musicVolume} loop={true} muted={true} unmuteOnClick={true} />
 			{activeView === "notepad" ? (
 				<NotepadView />
 			) : activeView === "settings" ? (
