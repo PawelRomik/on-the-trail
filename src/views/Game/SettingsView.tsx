@@ -8,9 +8,11 @@ import SettingsModal from "../../components/settings/SettingsModal";
 import SettingsActions from "../../components/settings/SettingsActions";
 import LanguageSelect from "../../components/settings/LanguageSelect";
 import VolumeSlider from "../../components/settings/VolumeSlider";
+import { useStoryContext } from "../../utils/context/story-context/useStoryContext";
 
 export default function SettingsView() {
 	const { musicVolume, voiceVolume, language, setMusicVolume, setVoiceVolume, setLanguage, setGameStarted } = useSettings();
+	const { resetStory } = useStoryContext();
 
 	const { setActiveView } = useViewContext();
 	const { setCharacters, setSelectedCharacter } = useCharactersContext();
@@ -20,6 +22,7 @@ export default function SettingsView() {
 	const closeGame = () => {
 		setGameStarted(false);
 		setActiveView("game");
+		resetStory();
 	};
 
 	const resetGame = () => {
@@ -28,6 +31,7 @@ export default function SettingsView() {
 		setSelectedCharacter(null);
 		resetChats(characters);
 		setActiveView("game");
+		resetStory();
 	};
 
 	return (
