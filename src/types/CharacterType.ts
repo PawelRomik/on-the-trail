@@ -11,4 +11,5 @@ export type CharacterType = {
 		nerfs: string[];
 		behaviour: string[];
 	};
+	story?: string;
 };
