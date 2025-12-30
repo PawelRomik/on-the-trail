@@ -5,6 +5,7 @@ import { useCharactersContext } from "../context/character-context/useCharacterC
 import { useTranslation } from "react-i18next";
 import { playCharacterSound } from "../misc/playCharacterSound";
 import { useSettings } from "../context/settings-context/useSettings";
+import { useStoryContext } from "../context/story-context/useStoryContext";
 
 export type HistoryEntry = {
 	character: CharacterType;
@@ -16,6 +17,7 @@ export function useChat() {
 	const { t } = useTranslation();
 	const [chats, setChats] = useState<Record<number, MessageType[]>>({});
 	const { voiceVolume } = useSettings();
+	const { charactersStory, intro, location } = useStoryContext();
 
 	const initializedRef = useRef(false);
 
@@ -54,7 +56,10 @@ export function useChat() {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
 					character,
-					messages: [...(chats[character.id] || []), playerMsg]
+					messages: [...(chats[character.id] || []), playerMsg],
+					story: charactersStory,
+					intro: intro,
+					location: location
 				})
 			});
 
