@@ -37,10 +37,10 @@ export default function GameView() {
 	const { location, intro, charactersStory, initStory } = useStoryContext();
 
 	useEffect(() => {
-		if (characters.length > 1) {
+		if (characters.length > 1 && charactersStory.length < 1) {
 			initStory(characters);
 		}
-	}, [characters, initStory]);
+	}, [characters, initStory, charactersStory]);
 
 	if (!intro || !location || !charactersStory || !characters) return <LoadingScreen />;
 

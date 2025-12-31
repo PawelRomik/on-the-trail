@@ -4,8 +4,8 @@ export default function CharacterInformation({ age, gender }: { age: number | nu
 	const { t } = useTranslation();
 	return (
 		<div className='bangers text-2xl font-bold flex px-3 py-2 gap-3 w-full text-stroke-3 text-white'>
-			<p className='flex-1 shadow flex items-center  justify-center bg-zinc-800'>{t("ui.age", { age: age })}</p>
-			<p className='flex-2  shadow flex items-center justify-center bg-zinc-800'>
+			<p className='flex-1 shadow rounded-full border-2 border-zinc-950 flex items-center justify-center bg-zinc-800'>{t("ui.age", { age: age })}</p>
+			<p className='flex-2  shadow rounded-full border-2 border-zinc-950 flex items-center justify-center bg-zinc-800'>
 				{gender ? (
 					<>
 						<i className='ri-men-line text-blue-500' />
