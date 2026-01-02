@@ -1,6 +1,7 @@
 import CharacterTooltipContent from "./CharacterToolTipContent";
 import type { CharacterType } from "../../../types/CharacterType";
 import { useEffect, useState } from "react";
+import stone from "../../../assets/ui/stone.png";
 
 type TooltipPos = {
 	x: number | null;
@@ -34,10 +35,11 @@ export default function CharacterTooltip({ character }: CharacterTooltipProps) {
 
 	return (
 		<div
-			className='absolute bg-black border-zinc-600 border-3 text-white p-1 rounded-xl shadow-lg text-sm z-50 pointer-events-none max-w-xs'
+			className='absolute  italic text-white p-1 rounded-xl shadow-lg text-sm z-50 pointer-events-none max-w-xs'
 			style={{
 				top: tooltipPos.y + 10,
-				left: tooltipPos.flipX ? tooltipPos.x - 220 : tooltipPos.x + 10
+				left: tooltipPos.flipX ? tooltipPos.x - 220 : tooltipPos.x + 10,
+				backgroundImage: `url(${stone})`
 			}}
 		>
 			{character.traits && <CharacterTooltipContent character={character} />}
