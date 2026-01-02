@@ -8,10 +8,12 @@ export default function TraitList({ items, color, prefix = "" }: TraitListProps)
 	if (!items || items.length === 0) return null;
 
 	return (
-		<div className={`${color} p-1 w-full flex-col text-left flex gap-2`}>
+		<div className={`${color}  w-full flex-col text-left flex`}>
 			{items.map((item, i) => (
-				<div style={{ backgroundColor: color }} className='p-2 glass text-sm font-bold' key={i}>
-					{prefix}
+				<div className='p-2 text-sm font-bold' key={i}>
+					<span className='font-bold text-3xl' style={{ color: color }}>
+						{prefix}
+					</span>
 					{item}
 				</div>
 			))}

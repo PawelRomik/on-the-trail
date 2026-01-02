@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 export default function CharacterInformation({ age, gender }: { age: number | number[]; gender: boolean }) {
 	const { t } = useTranslation();
 	return (
-		<div className='bangers text-2xl font-bold flex px-3 py-2 gap-3 w-full text-stroke-3 text-white'>
-			<p className='flex-1 shadow rounded-full border-2 border-zinc-950 flex items-center justify-center bg-zinc-800'>{t("ui.age", { age: age })}</p>
-			<p className='flex-2  shadow rounded-full border-2 border-zinc-950 flex items-center justify-center bg-zinc-800'>
+		<div className='bangers text-2xl font-bold flex px-3 py-2 gap-3 w-full justify-around text-stroke-3 text-white'>
+			<p className='px-3 flex-1  rounded-full border-b-2 border-red-900  flex items-center justify-center '>{t("ui.age", { age: age })}</p>
+			<p className='px-3 rounded-full flex-1 border-b-2 border-red-900  flex items-center justify-center '>
 				{gender ? (
 					<>
 						<i className='ri-men-line text-blue-500' />
