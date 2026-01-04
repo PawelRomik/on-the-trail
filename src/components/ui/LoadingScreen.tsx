@@ -1,4 +1,4 @@
-import bgImage from "../../assets/background/manor.jpg";
+import bgImage from "../../../public/assets/background/manor.jpg";
 import detective from "../../assets/character/detective.png";
 
 export default function LoadingScreen() {

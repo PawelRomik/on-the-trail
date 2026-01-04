@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useCharactersContext } from "../../utils/context/character-context/useCharacterContext";
-import { useViewContext } from "../../utils/context/view-context/useViewContext";
 
 type StickersProps = {
 	setShowNotes: (val: boolean) => void;
@@ -9,23 +8,10 @@ type StickersProps = {
 
 export default function Stickers({ setShowNotes, setFilterCharacter }: StickersProps) {
 	const { characters } = useCharactersContext();
-	const { setActiveView } = useViewContext();
 	const { t } = useTranslation();
 
-	const onClose = () => {
-		setActiveView("game");
-	};
-
 	return (
-		<div className='w-full relative h-[60px] flex items-end gap-0'>
-			<button
-				onClick={onClose}
-				className='h-12 min-w-20 px-3 right-3 absolute cursor-pointer bg-yellow-300 rounded-t-lg -translate-y-5 shadow-md ml-3 flex items-center justify-center'
-				title='Zamknij notatnik'
-			>
-				<i className='ri-arrow-go-back-fill'></i>
-			</button>
-
+		<div className='w-full absolute h-[60px] -top-9 z-0 flex items-end gap-0'>
 			<button
 				className='h-12 min-w-20 px-3 cursor-pointer bg-yellow-300 text-white font-bold italic rounded-t-lg -translate-y-5 shadow-md ml-3 flex items-center justify-center'
 				onClick={() => {
@@ -54,7 +40,7 @@ export default function Stickers({ setShowNotes, setFilterCharacter }: StickersP
 						10 + index
 					} flex items-center justify-center`}
 					onClick={() => {
-						setFilterCharacter(ch.name);
+						setFilterCharacter(ch.title);
 						setShowNotes(false);
 					}}
 				>

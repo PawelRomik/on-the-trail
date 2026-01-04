@@ -31,7 +31,17 @@
 	"notes": {
 		"all": "Wszystkie",
 		"notes": "Notatki",
-		"writeNote": "Napisz notatkę"
+		"age": "Wiek",
+		"sex": "Płeć",
+		"writeNote": "Napisz notatkę",
+		"case": "Przegląd sprawy",
+		"you": "Ty",
+		"tipOne": "Twoim celem jest przepytanie wszystkich podejrzanych, ustalenie kto jest winny tej zbrodni oraz wymierzenie mu sprawiedliwej kary. Każda rozmowa może przybliżyć Cię do prawdy — albo ją ukryć.",
+		"tipTwo": "Każda postać posiada unikalne cechy charakteru, które mogą Ci pomóc w śledztwie lub znacząco je utrudnić. Obserwuj zachowanie i reaguj na ich słabości.",
+		"tipThree": "Każda postać posiada własny system stresu. Im wyższy poziom stresu, tym większe prawdopodobieństwo usłyszenia prawdy. Uważaj — gdy stres osiągnie 100, dalsza rozmowa z tą postacią stanie się niemożliwa."
+	},
+	"story": {
+		"location": "Miejsce"
 	},
 	"characters": {
 		"ch1": {
