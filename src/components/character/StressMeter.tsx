@@ -3,7 +3,6 @@ import blood from "../../assets/ui/blood.png";
 
 export default function StressMeter({ meter }: { meter: number }) {
 	const { t } = useTranslation();
-	meter = 30;
 
 	return (
 		<div className='relative  w-full py-3   px-3 '>

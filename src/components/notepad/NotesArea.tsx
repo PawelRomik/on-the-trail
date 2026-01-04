@@ -4,8 +4,8 @@ export default function NotesArea({ notes, setNotes }: { notes: string; setNotes
 	const { t } = useTranslation();
 	return (
 		<textarea
-			className='w-full h-full overflow-y-auto p-4 rounded-md resize-none shadow-inner placeholder-gray-500
-			caret-black font-mono leading-[1.6] whitespace-pre-line
+			className='w-full h-full overflow-y-auto text-2xl p-4 rounded-md focus:border-0 focus:outline-0 resize-none shadow-inner placeholder-gray-500
+			caret-black  leading-[1.6] whitespace-pre-line
 			bg-[repeating-linear-gradient(to bottom,rgba(0,0,0,0.05) 0,rgba(0,0,0,0.05) 1px,transparent 1px,transparent 24px)]'
 			value={notes}
 			onChange={(e) => setNotes(e.target.value)}

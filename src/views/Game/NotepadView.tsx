@@ -8,7 +8,7 @@ export default function NotepadView() {
 	const [filterCharacter, setFilterCharacter] = useState<string | null | undefined>(null);
 	const [showNotes, setShowNotes] = useState(true);
 
-	const filteredHistory = filterCharacter ? history.filter((entry) => entry.character.name === filterCharacter) : history;
+	const filteredHistory = filterCharacter ? history.filter((entry) => entry.character.title === filterCharacter) : history;
 
-	return <Notepad filteredHistory={filteredHistory} showNotes={showNotes} setShowNotes={setShowNotes} setFilterCharacter={setFilterCharacter} />;
+	return <Notepad filterCharacter={filterCharacter} filteredHistory={filteredHistory} showNotes={showNotes} setShowNotes={setShowNotes} setFilterCharacter={setFilterCharacter} />;
 }

@@ -1,11 +1,3 @@
-import library from "../../assets/background/library.jpg";
-import church from "../../assets/background/church.jpg";
-import graveyard from "../../assets/background/graveyard.jpg";
-import hospital from "../../assets/background/hospital.jpg";
-import manor from "../../assets/background/manor.jpg";
-import museum from "../../assets/background/museum.jpg";
-import police from "../../assets/background/police.jpg";
-import train from "../../assets/background/train.jpg";
 import MusicPlayer from "../../components/music-player/MusicPlayer";
 import { useCharactersContext } from "../../utils/context/character-context/useCharacterContext";
 import { useSettings } from "../../utils/context/settings-context/useSettings";
@@ -18,17 +10,6 @@ import gameMusic from "../../assets/music/game.mp3";
 import { useStoryContext } from "../../utils/context/story-context/useStoryContext";
 import { useEffect } from "react";
 import LoadingScreen from "../../components/ui/LoadingScreen";
-
-const backgrounds: Record<string, string> = {
-	library,
-	church,
-	graveyard,
-	hospital,
-	manor,
-	museum,
-	police,
-	train
-};
 
 export default function GameView() {
 	const { selectedCharacter, characters } = useCharactersContext();
@@ -44,7 +25,7 @@ export default function GameView() {
 
 	if (!intro || !location || !charactersStory || !characters) return <LoadingScreen />;
 
-	const bgImage = backgrounds[location] ?? "";
+	const bgImage = location ? `../../../public/assets/background/${location}.jpg` : `../../../public/assets/background/manor.jpg`;
 
 	return (
 		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${bgImage})` }}>

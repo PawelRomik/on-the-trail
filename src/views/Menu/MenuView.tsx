@@ -1,7 +1,7 @@
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
 import MenuSettingsView from "./MenuSettingsView";
 import MenuMainView from "./MenuMainView";
-import police from "../../assets/background/police.jpg";
+import police from "../../../public/assets/background/police.jpg";
 import MusicPlayer from "../../components/music-player/MusicPlayer";
 import { useSettings } from "../../utils/context/settings-context/useSettings";
 import menuMusic from "../../assets/music/menu.mp3";

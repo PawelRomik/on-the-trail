@@ -78,3 +78,16 @@
 		transform: rotate(1turn);
 	}
 }
+
+.bangers-regular {
+	font-family: "Bangers", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.caveat-regular {
+	font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
