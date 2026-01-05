@@ -7,7 +7,7 @@ export function MenuFooter() {
 				</a>
 			</div>
 			<div className='flex font-bold items-end justify-center gap-1'>
-				<p>0.6.1</p>
+				<p>0.6.2</p>
 				<a href='https://github.com/PawelRomik/on-the-trail' title='github'>
 					<i className='ri-github-fill text-4xl'></i>
 				</a>
