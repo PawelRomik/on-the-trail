@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+	overflow: hidden;
+}
+
 .bangers {
 	font-family: "Bangers", system-ui;
 	font-weight: 400;
@@ -108,4 +112,12 @@ input[type="range"]::-moz-range-thumb {
 	background: #991b1b;
 	cursor: grab;
 	border: none;
+}
+
+.wood {
+	border-image-slice: 27 27 27 27;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch stretch;
+	border-image-source: url("https://img.glyphs.co/img?src=aHR0cHM6Ly9zMy5tZWRpYWxvb3QuY29tL3Jlc291cmNlcy9TZWFtbGVzc19Xb29kX1RleHR1cmVzX1ZvbF8yXzgwMHg1MTgtMS5qcGc&q=70&enlarge=true&h=777&w=1200");
+	border-style: solid;
 }

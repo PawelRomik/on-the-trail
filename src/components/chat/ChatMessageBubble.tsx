@@ -14,7 +14,7 @@ export default function ChatMessageBubble({ msg, character }: ChatMessageBubbleP
 			<div
 				className='max-w-[70%] p-3 rounded-2xl text-white wrap-break-word transition-all duration-300'
 				style={{
-					backgroundColor: isPlayer ? "rgba(59,130,246,0.8)" : character.color
+					backgroundColor: isPlayer ? "#991b1b" : character.color
 				}}
 			>
 				{msg.text}
