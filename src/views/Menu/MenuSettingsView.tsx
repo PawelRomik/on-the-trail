@@ -13,6 +13,7 @@ export default function MenuSettingsView() {
 
 	return (
 		<SettingsModal onClose={() => setActiveView("game")} title={t("settings.title")}>
+			<h2 className='mb-2 border-b-2 border-red-800 text-white rounded-full text-center italic font-medium'>{t("settings.volume")}</h2>
 			<VolumeSlider id='musicVolume' label={t("settings.musicVolume")} value={musicVolume} onChange={setMusicVolume} />
 
 			<VolumeSlider id='voiceVolume' label={t("settings.voiceVolume")} value={voiceVolume} onChange={setVoiceVolume} />

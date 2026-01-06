@@ -10,9 +10,9 @@ type ChatHeaderProps = {
 export default function ChatHeader({ character, onClose }: ChatHeaderProps) {
 	const { t } = useTranslation();
 	return (
-		<div className='mb-4'>
+		<div className=' border-4  mt-3 wood bg-[rgba(17,17,17,0.5)] w-[90%] p-3 relative '>
 			<ChatCloseButton onClose={onClose} />
-			<h2 className='text-3xl font-bold'>{t("chat.chatWith", { name: t(`names.${character.name}`) })}</h2>
+			<h2 className='text-3xl font-bold px-10 italic'>{t("chat.chatWith", { name: t(`names.${character.name}`) })}</h2>
 		</div>
 	);
 }

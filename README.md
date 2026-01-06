@@ -15,12 +15,16 @@
     <th>Sound</th>
   </tr>
   <tr>
-    <td><img src="https://img.shields.io/badge/35%2F47-70%25-green" alt="Coding 70%"></td>
-    <td><img src="https://img.shields.io/badge/41%2F67-58%25-yellow" alt="Art 58%"></td>
-    <td><img src="https://img.shields.io/badge/12%2F13-92%25-red" alt="Sound 92%"></td>
+    <td><img src="https://img.shields.io/badge/36%2F47-76%25-green" alt="Coding 76%"></td>
+    <td><img src="https://img.shields.io/badge/44%2F70-62%25-yellow" alt="Art 62%"></td>
+    <td><img src="https://img.shields.io/badge/12%2F37-32%25-red" alt="Sound 32%"></td>
   </tr>
 </table>
 
 ### 📸 Preview:
-<img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/f42aa8cc-af16-4661-846d-df1e666f289f" />
+
+<img width="1916" height="955" alt="image" src="https://github.com/user-attachments/assets/7ed4a37f-32c8-49fb-977a-f686c10539ec" />
+
+
+
 🌐 Try it now: https://on-the-trail.vercel.app/

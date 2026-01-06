@@ -21,6 +21,8 @@
 		"musicVolume": "Głośność muzyki",
 		"voiceVolume": "Głośność głosów",
 		"language": "Język",
+		"internationalization": "Ustawienia języka",
+		"volume": "Głośność",
 		"backToMenu": "Powrót do menu",
 		"resetGame": "Reset gry",
 		"languages": {

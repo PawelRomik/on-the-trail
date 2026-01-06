@@ -21,6 +21,8 @@
 		"musicVolume": "Music volume",
 		"voiceVolume": "Voice volume",
 		"language": "Language",
+		"internationalization": "Internationalization",
+		"volume": "Volume",
 		"backToMenu": "Back to menu",
 		"resetGame": "Reset game",
 		"languages": {

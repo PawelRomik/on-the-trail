@@ -30,11 +30,11 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 	const isNoCharacterSelected = !showNotes && !filterCharacter;
 	const isCharacterView = !showNotes && !!filterCharacter;
 	const { t } = useTranslation();
-	const { setActiveView } = useViewContext();
+	const { setActiveView, lastView } = useViewContext();
 
 	const closeNotes = (e: React.MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
 		if (e.target === e.currentTarget) {
-			setActiveView("game");
+			setActiveView(lastView ? lastView : "game");
 		}
 	};
 
@@ -49,7 +49,7 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 	return (
 		<div onClick={(e) => closeNotes(e)} className='w-full relative h-full flex items-center justify-center pt-5 bg-[rgba(0,0,0,0.8)]'>
 			<button onClick={(e) => closeNotes(e)} className='hover:text-purple-400 transition absolute top-0 right-0 text-3xl cursor-pointer text-white p-3'>
-				X
+				<i className='ri-close-circle-line pointer-events-none'></i>
 			</button>
 			<div className='w-[60%] caveat-regular h-[90%] z-10 border-black border-5 relative border-t-0 rounded-lg m-auto flex shadow-[0_0_20px_rgba(128,0,128,0.7)]'>
 				<Stickers setShowNotes={setShowNotes} setFilterCharacter={setFilterCharacter} />
