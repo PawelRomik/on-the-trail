@@ -91,3 +91,21 @@
 	font-weight: 700;
 	font-style: normal;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #991b1b;
+	cursor: grab;
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #991b1b;
+	cursor: grab;
+	border: none;
+}
