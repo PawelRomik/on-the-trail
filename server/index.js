@@ -18,7 +18,7 @@ app.post("/api/chat", async (req, res) => {
 		const { character, messages, story, intro, location } = req.body;
 		const { name, age, title, traits, stressMeter } = character;
 
-		const myStory = story?.characters?.find((c) => c.name === name)?.story ?? "";
+		const myStory = story?.find((c) => c.name === name)?.story ?? "";
 
 		const systemPrompt = `
 You are a character in a detective game. Your task is to respond as ${name}, ${title}.
@@ -71,6 +71,7 @@ RESPONSE RULES:
 4. Do NOT add any explanations or text outside the JSON.
 5. If the player's language is too complex for you to understand, say so in character.
 6. If stress exceeds 100, use "sound": "stop" and refuse to continue the conversation.
+7. Always respond in the same language as the player’s input.
 
 ---
 
