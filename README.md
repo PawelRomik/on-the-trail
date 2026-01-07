@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td><img src="https://img.shields.io/badge/36%2F47-76%25-green" alt="Coding 76%"></td>
-    <td><img src="https://img.shields.io/badge/44%2F70-62%25-yellow" alt="Art 62%"></td>
+    <td><img src="https://img.shields.io/badge/48%2F70-68%25-yellow" alt="Art 68%"></td>
     <td><img src="https://img.shields.io/badge/12%2F37-32%25-red" alt="Sound 32%"></td>
   </tr>
 </table>
@@ -24,7 +24,5 @@
 ### 📸 Preview:
 
 <img width="1916" height="955" alt="image" src="https://github.com/user-attachments/assets/7ed4a37f-32c8-49fb-977a-f686c10539ec" />
-
-
 
 🌐 Try it now: https://on-the-trail.vercel.app/
