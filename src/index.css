@@ -121,3 +121,23 @@ input[type="range"]::-moz-range-thumb {
 	border-image-source: url("https://img.glyphs.co/img?src=aHR0cHM6Ly9zMy5tZWRpYWxvb3QuY29tL3Jlc291cmNlcy9TZWFtbGVzc19Xb29kX1RleHR1cmVzX1ZvbF8yXzgwMHg1MTgtMS5qcGc&q=70&enlarge=true&h=777&w=1200");
 	border-style: solid;
 }
+
+@keyframes spinWithPause {
+	0% {
+		transform: rotate(0deg);
+		animation-timing-function: ease-in;
+	}
+	33% {
+		transform: rotate(360deg);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		transform: rotate(360deg);
+		animation-timing-function: ease-out;
+	}
+}
+
+/* Klasa do obrazka */
+.rotating {
+	animation: spinWithPause 1.5s linear infinite;
+}
