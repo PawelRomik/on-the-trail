@@ -23,22 +23,26 @@ export default function GameView() {
 		}
 	}, [characters, initStory, charactersStory]);
 
-	if (!intro || !location || !charactersStory || !characters) return <LoadingScreen />;
-
 	const bgImage = location ? `../../../public/assets/background/${location}.jpg` : `../../../public/assets/background/manor.jpg`;
 
 	return (
-		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${bgImage})` }}>
+		<>
 			<MusicPlayer src={gameMusic} volume={musicVolume} loop={true} muted={true} unmuteOnClick={true} />
-			{activeView === "notepad" ? (
-				<NotepadView />
-			) : activeView === "settings" ? (
-				<SettingsView />
-			) : activeView === "character" && selectedCharacter ? (
-				<ChatView />
+			{!intro || !location || !charactersStory || !characters ? (
+				<LoadingScreen />
 			) : (
-				<CharactersView />
+				<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${bgImage})` }}>
+					{activeView === "notepad" ? (
+						<NotepadView />
+					) : activeView === "settings" ? (
+						<SettingsView />
+					) : activeView === "character" && selectedCharacter ? (
+						<ChatView />
+					) : (
+						<CharactersView />
+					)}
+				</div>
 			)}
-		</div>
+		</>
 	);
 }

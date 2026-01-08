@@ -30,6 +30,13 @@
 			"en": "English"
 		}
 	},
+	"loading": {
+		"text1": "Brewing coffee for the detective...",
+		"text2": "Sharpening the scythe...",
+		"text3": "Polishing the magnifying glass...",
+		"text4": "Lighting the oil lamp...",
+		"text5": "Adjusting the tie..."
+	},
 	"notes": {
 		"all": "All",
 		"notes": "Notes",

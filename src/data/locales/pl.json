@@ -30,6 +30,13 @@
 			"en": "Angielski"
 		}
 	},
+	"loading": {
+		"text1": "Parzenie kawy dla detektywa...",
+		"text2": "Ostrzenie kosy...",
+		"text3": "Polerowanie lupy...",
+		"text4": "Rozpalanie lampy naftowej...",
+		"text5": "Poprawianie krawata..."
+	},
 	"notes": {
 		"all": "Wszystkie",
 		"notes": "Notatki",
