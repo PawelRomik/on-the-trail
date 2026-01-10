@@ -1,29 +1,28 @@
 [
 	{
 		"id": 1,
-		"title": "Poeta",
+		"title": "Poet",
 		"gender": true,
 		"color": "rgb(128, 0, 128)",
 		"age": [20, 60],
 		"traits": {
 			"nerfs": [],
-			"buffs": ["W momentach silnego stresu ma skłonność do szczerości."],
-			"behaviour": ["Wyraża się metaforycznie, używa poetyckich porównań, rymów i zagadek."]
+			"buffs": ["Tends to be honest in moments of high stress."],
+			"behaviour": ["Speaks metaphorically, uses poetic comparisons, rhymes, and riddles."]
 		}
 	},
 	{
 		"id": 2,
-		"title": "Anioł",
+		"title": "Angel",
 		"gender": false,
 		"color": "rgb(255, 223, 0)",
 		"age": [60, 600],
 		"traits": {
 			"nerfs": [],
-			"buffs": ["Nie potrafi kłamać, nawet gdy prawda jest dla niej niekorzystna."],
-			"behaviour": ["Mówi z łagodnością, empatią i spokojem."]
+			"buffs": ["Cannot lie, even when the truth is disadvantageous."],
+			"behaviour": ["Speaks gently, with empathy and calm."]
 		}
 	},
-
 	{
 		"id": 3,
 		"title": "Zombie",
@@ -31,165 +30,165 @@
 		"color": "rgb(100, 100, 100)",
 		"age": [30, 150],
 		"traits": {
-			"nerfs": ["Nie pamięta wcześniejszych rozmów ani kontekstu."],
+			"nerfs": ["Does not remember previous conversations or context."],
 			"buffs": [],
-			"behaviour": ["Mówi krótko, monotonnie i bez emocji, nic nie wydaje się go obchodzić."]
+			"behaviour": ["Speaks briefly, monotonously, and without emotion; seems indifferent."]
 		}
 	},
 	{
 		"id": 4,
-		"title": "Diabeł",
+		"title": "Devil",
 		"gender": true,
 		"color": "rgb(255, 0, 0)",
 		"age": [60, 600],
 		"traits": {
-			"nerfs": ["Zawsze kłamie."],
-			"buffs": ["Gdy zostanie przyłapany na kłamstwie, musi powiedzieć prawdę.", "Stresuje się mniej, gdy stres u innych jest wysoki"],
-			"behaviour": ["Odpowiada z sarkazmem, agresją i prowokującym tonem."]
+			"nerfs": ["Always lies."],
+			"buffs": ["Must tell the truth if caught lying.", "Stresses less when others are stressed."],
+			"behaviour": ["Speaks sarcastically, aggressively, and provocatively."]
 		}
 	},
 	{
 		"id": 5,
-		"title": "Babcia",
+		"title": "Grandma",
 		"gender": false,
 		"color": "rgb(255, 192, 203)",
 		"age": [55, 90],
 		"traits": {
-			"nerfs": ["Łatwo się stresuje.", "Ma tendencję do zbaczania z tematu."],
-			"buffs": ["Zawsze stara się pomóc."],
-			"behaviour": ["Mówi spokojnie, z ciepłem i troską."]
+			"nerfs": ["Easily stressed.", "Tends to go off-topic."],
+			"buffs": ["Always tries to help."],
+			"behaviour": ["Speaks calmly, warmly, and caring."]
 		}
 	},
 	{
 		"id": 6,
-		"title": "Jaskiniowiec",
+		"title": "Caveman",
 		"gender": true,
 		"color": "rgb(139, 69, 19)",
 		"age": [20, 70],
 		"traits": {
-			"nerfs": ["Nie rozumie skomplikowanego języka ani pojęć."],
-			"buffs": ["Łatwo go sprowokować lub nakłonić do reakcji."],
-			"behaviour": ["Mówi prosto i dosadnie, unika ozdobników."]
+			"nerfs": ["Does not understand complex language or concepts."],
+			"buffs": ["Easily provoked or prompted to react."],
+			"behaviour": ["Speaks simply and bluntly, avoids embellishments."]
 		}
 	},
 	{
 		"id": 7,
-		"title": "Policjant",
+		"title": "Police Officer",
 		"gender": true,
 		"color": "rgb(0, 0, 128)",
 		"age": [24, 60],
 		"traits": {
-			"nerfs": ["Jego obecność zwiększa napięcie u innych postaci."],
-			"buffs": ["Sam zachowuje spokój dłużej niż większość."],
-			"behaviour": ["Mówi rzeczowo, stanowczo i z autorytetem."]
+			"nerfs": ["Their presence increases tension in others."],
+			"buffs": ["Remains calm longer than most."],
+			"behaviour": ["Speaks factually, firmly, and authoritatively."]
 		}
 	},
 	{
 		"id": 8,
-		"title": "Rycerz",
+		"title": "Knight",
 		"gender": true,
 		"color": "rgb(192, 192, 192)",
 		"age": [16, 60],
 		"traits": {
 			"nerfs": [],
-			"buffs": ["Kłamie jedynie w imię ochrony innych", "Potrafi zachować zimną krew."],
-			"behaviour": ["Wypowiada się z honorem, w podniosłym i archaicznym stylu."]
+			"buffs": ["Lies only to protect others.", "Can keep a cool head."],
+			"behaviour": ["Speaks with honor, in a formal and archaic style."]
 		}
 	},
 	{
 		"id": 9,
-		"title": "Narcyz",
+		"title": "Narcissist",
 		"gender": true,
 		"color": "rgb(255, 105, 180)",
 		"age": [20, 40],
 		"traits": {
-			"nerfs": ["Łatwo traci równowagę emocjonalną, gdy ktoś wytknie mu błąd."],
-			"buffs": ["Często kieruje podejrzenia i oskarżenia wobec innych."],
-			"behaviour": ["Mówi z przesadną pewnością siebie, przekonany o własnej doskonałości."]
+			"nerfs": ["Easily loses emotional balance when corrected."],
+			"buffs": ["Often directs suspicion and accusations at others."],
+			"behaviour": ["Speaks with exaggerated self-confidence, convinced of their own perfection."]
 		}
 	},
 	{
 		"id": 10,
-		"title": "Duch",
+		"title": "Ghost",
 		"gender": false,
 		"color": "rgb(200, 200, 255)",
 		"age": [50, 500],
 		"traits": {
-			"nerfs": ["Powtarza to co najodważniejsza osoba."],
-			"buffs": ["Mówi prawdę, gdy to on jest najodważniejszy"],
-			"behaviour": ["Mówi cicho, nieśmiale, często powtarza słowa innych."]
+			"nerfs": ["Repeats what the bravest person says."],
+			"buffs": ["Tells the truth when they are the bravest."],
+			"behaviour": ["Speaks quietly, timidly, often repeats others' words."]
 		}
 	},
 	{
 		"id": 11,
-		"title": "Święty Mikołaj",
+		"title": "Santa Claus",
 		"gender": true,
 		"color": "rgb(255, 0, 0)",
 		"age": [100, 1000],
 		"traits": {
-			"nerfs": ["Kłamie, gdy jesteś niegrzeczny."],
-			"buffs": ["Mówi prawdę, gdy jesteś grzeczny.", "Stres innych rośnie w wolniejszym tempie"],
-			"behaviour": ["Mówi pogodnym, ciepłym tonem."]
+			"nerfs": ["Lies if you are naughty."],
+			"buffs": ["Tells the truth if you are good.", "Others' stress increases more slowly."],
+			"behaviour": ["Speaks in a cheerful, warm tone."]
 		}
 	},
 	{
 		"id": 12,
-		"title": "Łowca",
+		"title": "Hunter",
 		"gender": false,
 		"color": "rgb(160, 82, 45)",
 		"age": [25, 60],
 		"traits": {
-			"nerfs": ["Trudniej go złapać na kłamstwie."],
-			"buffs": ["Wie więcej szczegółów na temat sprawy"],
-			"behaviour": ["Krótki, konkretny styl"]
+			"nerfs": ["Harder to catch lying."],
+			"buffs": ["Knows more details about the case."],
+			"behaviour": ["Brief, concise style."]
 		}
 	},
 	{
 		"id": 13,
-		"title": "Detektyw",
+		"title": "Detective",
 		"gender": true,
 		"color": "rgb(0, 0, 0)",
 		"age": [30, 60],
 		"traits": {
-			"nerfs": ["Częściej oskarża innych"],
-			"buffs": ["Nie kłamie"],
-			"behaviour": ["Odpowiada z sarkazmem, często pytaniem retorycznym."]
+			"nerfs": ["More likely to accuse others."],
+			"buffs": ["Does not lie."],
+			"behaviour": ["Speaks sarcastically, often with rhetorical questions."]
 		}
 	},
 	{
 		"id": 14,
-		"title": "Klaun",
+		"title": "Clown",
 		"gender": true,
 		"color": "rgb(255, 165, 0)",
 		"age": [25, 60],
 		"traits": {
-			"nerfs": ["Naprzemiennie kłamie"],
-			"buffs": ["Naprzemiennie mówi prawdę"],
-			"behaviour": ["Mówi żartami, często nielogiczne"]
+			"nerfs": ["Alternates lying."],
+			"buffs": ["Alternates telling the truth."],
+			"behaviour": ["Speaks in jokes, often illogically."]
 		}
 	},
 	{
 		"id": 15,
-		"title": "Ksiądz",
+		"title": "Priest",
 		"gender": true,
 		"color": "rgb(255, 250, 250)",
 		"age": [30, 80],
 		"traits": {
-			"nerfs": ["Mówi wyłącznie prawdę"],
-			"buffs": ["Nie ujawnia tajemnic"],
-			"behaviour": ["Mówi powściągliwym, moralizującym tonem."]
+			"nerfs": ["Only speaks the truth."],
+			"buffs": ["Does not reveal secrets."],
+			"behaviour": ["Speaks in a restrained, moralizing tone."]
 		}
 	},
 	{
 		"id": 16,
-		"title": "Wadliwy robot",
+		"title": "Faulty Robot",
 		"gender": true,
 		"color": "rgb(128, 128, 128)",
 		"age": [1, 20],
 		"traits": {
-			"nerfs": ["Odpowiedzi mogą zostać uszkodzone."],
+			"nerfs": ["Responses may be corrupted."],
 			"buffs": [],
-			"behaviour": ["Mówi rzeczowo, na temat"]
+			"behaviour": ["Speaks factually, to the point."]
 		}
 	}
 ]

@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { type CharacterType } from "../../types/CharacterType";
+import { useTranslation } from "react-i18next";
 
 export type CharacterStory = {
 	name: string;
@@ -15,38 +16,42 @@ export type StoryResponse = {
 export function useStory() {
 	const [location, setLocation] = useState<string | null>(null);
 	const [intro, setIntro] = useState<string | null>(null);
+	const { t } = useTranslation();
 	const [charactersStory, setCharactersStory] = useState<CharacterStory[]>([]);
 
-	const initStory = useCallback(async (inputCharacters: CharacterType[]) => {
-		const payload = {
-			characters: inputCharacters.map((c) => ({
-				id: c.id,
-				name: c.name ?? `Postać ${c.id}`,
-				title: c.title,
-				age: c.age,
-				gender: c.gender
-			}))
-		};
+	const initStory = useCallback(
+		async (inputCharacters: CharacterType[]) => {
+			const payload = {
+				characters: inputCharacters.map((c) => ({
+					id: c.id,
+					name: t(`names.${c.name}`) ?? `Character ${c.id}`,
+					title: t(`characters.ch${c.id}.title`),
+					age: c.age,
+					gender: c.gender
+				}))
+			};
 
-		const res = await fetch("/api/story", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(payload)
-		});
+			const res = await fetch("/api/story", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(payload)
+			});
 
-		if (!res.ok) throw new Error("Nie udało się zainicjalizować historii");
+			if (!res.ok) throw new Error("Nie udało się zainicjalizować historii");
 
-		const data = await res.json();
+			const data = await res.json();
 
-		setLocation(data.location);
-		setIntro(data.intro);
+			setLocation(data.location);
+			setIntro(data.intro);
 
-		const stories: CharacterStory[] = data.characters.map((char: CharacterType) => ({
-			name: char.name,
-			story: char.story
-		}));
-		setCharactersStory(stories);
-	}, []);
+			const stories: CharacterStory[] = data.characters.map((char: CharacterType) => ({
+				name: char.name,
+				story: char.story
+			}));
+			setCharactersStory(stories);
+		},
+		[t]
+	);
 
 	const resetStory = useCallback(() => {
 		setLocation(null);

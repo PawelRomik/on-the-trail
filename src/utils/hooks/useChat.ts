@@ -55,7 +55,13 @@ export function useChat() {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
-					character,
+					character: {
+						name: t(`names.${character.name}`),
+						age: character.age,
+						title: t(`characters.ch${character.id}.title`),
+						traits: character.traits,
+						StressMeter: character.stressMeter
+					},
 					messages: [...(chats[character.id] || []), playerMsg],
 					story: charactersStory,
 					intro: intro,
