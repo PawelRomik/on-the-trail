@@ -39,7 +39,7 @@ export default function ChatView() {
 		<div className='flex w-screen h-screen overflow-hidden gap-20'>
 			<div className='relative flex-2    text-white flex flex-col'>
 				<ChatHeader character={selectedCharacter} onClose={closeChat} />
-				<ChatMessages chats={chats[selectedCharacter.id] || []} character={selectedCharacter} />
+				<ChatMessages chats={chats[selectedCharacter.id] || []} />
 				<ChatInput stress={selectedCharacter.stressMeter} inputText={inputText} setInputText={setInputText} onSend={handleSend} />
 			</div>
 
