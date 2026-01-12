@@ -1,12 +1,10 @@
-import { type CharacterType } from "../../types/CharacterType";
 import { type MessageType } from "../../types/MessageType";
 
 type ChatMessageBubbleProps = {
 	msg: MessageType;
-	character: CharacterType;
 };
 
-export default function ChatMessageBubble({ msg, character }: ChatMessageBubbleProps) {
+export default function ChatMessageBubble({ msg }: ChatMessageBubbleProps) {
 	const isPlayer = msg.from === "player";
 
 	return (
@@ -14,7 +12,7 @@ export default function ChatMessageBubble({ msg, character }: ChatMessageBubbleP
 			<div
 				className='max-w-[70%] p-3 rounded-2xl text-white wrap-break-word transition-all duration-300'
 				style={{
-					backgroundColor: isPlayer ? "#991b1b" : character.color
+					backgroundColor: isPlayer ? "rgba(0,0,0,0.8)" : "#991b1b"
 				}}
 			>
 				{msg.text}

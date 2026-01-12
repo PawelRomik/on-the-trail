@@ -137,7 +137,39 @@ input[type="range"]::-moz-range-thumb {
 	}
 }
 
-/* Klasa do obrazka */
 .rotating {
 	animation: spinWithPause 1.5s linear infinite;
+}
+
+.corner-border {
+	position: relative;
+}
+
+.corner-border::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+
+	background: linear-gradient(#fff, #fff) left top, linear-gradient(#fff, #fff) right top, linear-gradient(#fff, #fff) left bottom, linear-gradient(#fff, #fff) right bottom;
+
+	background-size: 20px 2px, 2px 20px, 20px 2px, 2px 20px;
+
+	background-repeat: no-repeat;
+}
+
+@keyframes wave {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.wave * {
+	display: inline-block;
+	animation: wave 1.2s ease-in-out infinite;
+	animation-delay: calc(var(--i) * 0.1s);
 }

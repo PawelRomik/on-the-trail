@@ -22,7 +22,7 @@ export default function ChatCharacterImage({ character, onClick, setHovered }: C
 		<div className='w-full h-full relative'>
 			<div className='absolute top-5 right-[50%]  translate-x-[50%] w-full  items-center  justify-center flex flex-col'>
 				<div className='w-[80%]'>
-					<h2 className='text-white font-bold bangers bg-[rgba(0,0,0,0.5)] rounded-lg w-full text-center text-6xl text-shadow-lg/30  '>{character.name}</h2>
+					<h2 className='text-white font-bold bangers bg-[rgba(0,0,0,0.5)] rounded-lg w-full text-center text-6xl text-shadow-lg/30  '>{t(`names.${character.name}`)}</h2>
 					<StressMeter meter={character.stressMeter} />
 				</div>
 				<button

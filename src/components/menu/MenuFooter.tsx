@@ -2,7 +2,7 @@ export function MenuFooter() {
 	return (
 		<footer className='w-full  flex-col absolute top-5 right-0 z-20 flex items-end justify-between px-5'>
 			<div className='flex font-bold items-end justify-center gap-1'>
-				<p>0.6.7</p>
+				<p>0.7.0</p>
 				<a href='https://github.com/PawelRomik/on-the-trail' title='github'>
 					<i className='ri-github-fill text-4xl'></i>
 				</a>
