@@ -5,9 +5,11 @@ import stone from "../../assets/ui/stone.png";
 import book from "../../assets/ui/notes.png";
 import settings from "../../assets/ui/ustawienia.png";
 import knife from "../../assets/ui/kosa.png";
+import knife_a from "../../assets/ui/kosa_a.png";
+import stone_a from "../../assets/ui/stone_a.png";
 
 export default function Navbar() {
-	const { setActiveView } = useViewContext();
+	const { setActiveView, setKnifeActive, knifeActive } = useViewContext();
 	const { voiceVolume } = useSettings();
 
 	const openNotepad = () => {
@@ -24,8 +26,12 @@ export default function Navbar() {
 			<button onClick={openNotepad} style={{ backgroundImage: `url(${stone})` }} className='hover:brightness-125 bg-zinc-800 group  hover:cursor-pointer flex-1  w-full text-white'>
 				<img src={book} className='w-full p-3 group-hover:p-0 transition-all' />
 			</button>
-			<button style={{ backgroundImage: `url(${stone})` }} className='group bg-zinc-800 hover:brightness-125 hover:cursor-pointer flex-1  w-full text-white'>
-				<img src={knife} className='w-full p-3 group-hover:p-0 transition-all' />
+			<button
+				onClick={() => setKnifeActive((prev) => !prev)}
+				style={{ backgroundImage: `url(${knifeActive ? stone_a : stone})` }}
+				className={`group bg-zinc-800 hover:brightness-125 hover:cursor-pointer flex-1  w-full text-white `}
+			>
+				<img src={knifeActive ? knife_a : knife} className={`w-full p-3 ${knifeActive && "rotate-180"} group-hover:p-0 transition-all`} />
 			</button>
 			<button
 				style={{ backgroundImage: `url(${stone})` }}

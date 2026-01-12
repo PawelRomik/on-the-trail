@@ -7,11 +7,13 @@ import Story from "../../components/ui/Story";
 
 export default function CharactersView() {
 	const { characters, setSelectedCharacter } = useCharactersContext();
-	const { setActiveView } = useViewContext();
+	const { setActiveView, knifeActive } = useViewContext();
 
 	const selectCharacter = (c: CharacterType) => {
-		setSelectedCharacter(c);
-		setActiveView("character");
+		if (!knifeActive) {
+			setSelectedCharacter(c);
+			setActiveView("character");
+		}
 	};
 
 	return (
