@@ -24,5 +24,9 @@
 ### 📸 Preview:
 
 <img width="1916" height="955" alt="image" src="https://github.com/user-attachments/assets/7ed4a37f-32c8-49fb-977a-f686c10539ec" />
+<img width="1914" height="958" alt="image" src="https://github.com/user-attachments/assets/78da5543-d4d0-4246-8bb9-4d3f1cd0cbcc" />
+<img width="1918" height="955" alt="image" src="https://github.com/user-attachments/assets/5394aa21-04e1-4183-90da-50b6687f9ad8" />
+
+
 
 🌐 Try it now: https://on-the-trail.vercel.app/
