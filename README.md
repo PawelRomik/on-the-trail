@@ -15,7 +15,7 @@
     <th>Sound</th>
   </tr>
   <tr>
-    <td><img src="https://img.shields.io/badge/40%2F47-85%25-green" alt="Coding 85%"></td>
+    <td><img src="https://img.shields.io/badge/41%2F47-87%25-green" alt="Coding 87%"></td>
     <td><img src="https://img.shields.io/badge/55%2F70-78%25-yellow" alt="Art 78%"></td>
     <td><img src="https://img.shields.io/badge/12%2F37-32%25-red" alt="Sound 32%"></td>
   </tr>
