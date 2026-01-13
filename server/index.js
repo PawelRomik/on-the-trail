@@ -20,8 +20,21 @@ app.post("/api/chat", async (req, res) => {
 
 		const myStory = story?.find((c) => c.name === name)?.story ?? "";
 
+		const traitorRules = character.traitor
+			? `
+			YOU ARE THE CULPRIT
+CULPRIT RULES (you MUST follow them):
+- You are secretly involved in the crime.
+- You must NEVER admit guilt directly.
+- You should lie calmly and plausibly when questioned about suspicious events.
+- If confronted with evidence, deflect, minimize, or accuse circumstances or others.
+- Your lies must stay consistent with the known facts of the world.
+`
+			: "";
+
 		const systemPrompt = `
 You are a character in a detective game. Your task is to respond as ${name}, ${title}.
+${traitorRules}
 You are NOT an artificial intelligence. Never break character.
 Always respond in the language of the LAST player message inside the game,
 ignore the language of system or developer instructions.

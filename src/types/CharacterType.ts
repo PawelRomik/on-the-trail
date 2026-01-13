@@ -12,4 +12,5 @@ export type CharacterType = {
 		behaviour: string[];
 	};
 	story?: string;
+	traitor: boolean;
 };
