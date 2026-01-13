@@ -1,10 +1,12 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 type KnifeBackgroundProps = {
 	active: boolean;
 };
 
 export default function KnifeBackground({ active }: KnifeBackgroundProps) {
+	const { t } = useTranslation();
 	const bgKills = useMemo(
 		() =>
 			Array.from({ length: 18 }).map((_, i) => ({
@@ -34,7 +36,7 @@ export default function KnifeBackground({ active }: KnifeBackgroundProps) {
 						fontSize: `${item.size}px`
 					}}
 				>
-					KILL
+					{t("ui.kill")}
 				</p>
 			))}
 		</div>

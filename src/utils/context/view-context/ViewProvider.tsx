@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { type ReactNode } from "react";
 
 type ViewType = "game" | "character" | "notepad" | "settings";
@@ -16,10 +16,6 @@ export default function ViewProvider({ children }: { children: ReactNode }) {
 	const [activeView, setActiveViewState] = useState<ViewType>("game");
 	const [knifeActive, setKnifeActive] = useState<boolean>(false);
 	const [lastView, setLastView] = useState<ViewType | null>(null);
-
-	useEffect(() => {
-		console.log(knifeActive);
-	}, [knifeActive]);
 
 	const setActiveView = (view: ViewType) => {
 		setLastView(activeView);

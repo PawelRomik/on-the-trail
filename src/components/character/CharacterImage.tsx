@@ -15,12 +15,25 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 	const { knifeActive } = useViewContext();
 	const { t } = useTranslation();
 
+	const Aftermatch = () => {
+		console.log(character.traitor ? "You win" : "You lose");
+	};
+
+	const handleCharacterClick = () => {
+		if (knifeActive) {
+			Aftermatch();
+			return;
+		}
+
+		onClick?.(character);
+	};
+
 	return (
 		<div className='relative h-full w-full flex group'>
 			<KnifeBackground active={knifeActive} />
 
 			<img
-				onClick={() => onClick?.(character)}
+				onClick={handleCharacterClick}
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
 				className={`hover:cursor-pointer ${character.stressMeter === 100 && "brightness-25"}`}

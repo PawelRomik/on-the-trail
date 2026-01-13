@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import kosa from "../../../assets/ui/kosa_a.png";
 
 type KnifeOverlayProps = {
@@ -5,6 +6,7 @@ type KnifeOverlayProps = {
 };
 
 export default function KnifeOverlay({ active }: KnifeOverlayProps) {
+	const { t } = useTranslation();
 	return (
 		<span
 			className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
@@ -16,11 +18,13 @@ export default function KnifeOverlay({ active }: KnifeOverlayProps) {
 			<img src={kosa} />
 
 			<span className='wave inline-flex'>
-				{"KILL".split("").map((char, i) => (
-					<span key={i} style={{ "--i": i } as React.CSSProperties}>
-						{char === " " ? "\u00A0" : char}
-					</span>
-				))}
+				{t("ui.kill")
+					.split("")
+					.map((char, i) => (
+						<span key={i} style={{ "--i": i } as React.CSSProperties}>
+							{char === " " ? "\u00A0" : char}
+						</span>
+					))}
 			</span>
 		</span>
 	);
