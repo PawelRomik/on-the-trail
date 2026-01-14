@@ -224,5 +224,14 @@
 		"Sylwia": "Sylvia",
 		"Teresa": "Theresa",
 		"Wioletta": "Violetta"
+	},
+	"endScreen": {
+		"win": "YOU WIN!",
+		"lose": "YOU LOSE!",
+		"yourPick": "YOUR PICK",
+		"culprit": "CULPRIT",
+		"rip": "R.I.P.",
+		"restart": "Restart",
+		"quit": "Quit"
 	}
 }

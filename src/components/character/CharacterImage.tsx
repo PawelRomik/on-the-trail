@@ -15,16 +15,7 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 	const { knifeActive } = useViewContext();
 	const { t } = useTranslation();
 
-	const Aftermatch = () => {
-		console.log(character.traitor ? "You win" : "You lose");
-	};
-
 	const handleCharacterClick = () => {
-		if (knifeActive) {
-			Aftermatch();
-			return;
-		}
-
 		onClick?.(character);
 	};
 

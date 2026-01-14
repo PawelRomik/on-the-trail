@@ -224,5 +224,14 @@
 		"Sylwia": "Sylwia",
 		"Teresa": "Teresa",
 		"Wioletta": "Wioletta"
+	},
+	"endScreen": {
+		"win": "WYGRYWASZ!",
+		"lose": "PRZEGRYWASZ!",
+		"yourPick": "TWÓJ WYBÓR",
+		"culprit": "WINNY",
+		"rip": "Ś.P.",
+		"restart": "Restart",
+		"quit": "Wyjdź"
 	}
 }

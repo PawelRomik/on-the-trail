@@ -14,7 +14,7 @@ export default function SettingsView() {
 	const { musicVolume, voiceVolume, language, setMusicVolume, setVoiceVolume, setLanguage, setGameStarted } = useSettings();
 	const { resetStory } = useStoryContext();
 
-	const { setActiveView } = useViewContext();
+	const { setActiveView, setKnifeActive } = useViewContext();
 	const { setCharacters, setSelectedCharacter } = useCharactersContext();
 	const { resetChats } = useChatContext();
 	const { t } = useTranslation();
@@ -23,6 +23,7 @@ export default function SettingsView() {
 		setGameStarted(false);
 		setActiveView("game");
 		resetStory();
+		setKnifeActive(false);
 	};
 
 	const resetGame = () => {
@@ -32,6 +33,7 @@ export default function SettingsView() {
 		resetChats(characters);
 		setActiveView("game");
 		resetStory();
+		setKnifeActive(false);
 	};
 
 	return (
