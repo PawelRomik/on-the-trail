@@ -145,18 +145,6 @@
 	},
 	{
 		"id": 13,
-		"title": "Detective",
-		"gender": true,
-		"color": "brown",
-		"age": [30, 60],
-		"traits": {
-			"nerfs": ["More likely to accuse others."],
-			"buffs": ["Does not lie."],
-			"behaviour": ["Speaks sarcastically, often with rhetorical questions."]
-		}
-	},
-	{
-		"id": 14,
 		"title": "Clown",
 		"gender": true,
 		"color": "purple",
@@ -168,7 +156,7 @@
 		}
 	},
 	{
-		"id": 15,
+		"id": 14,
 		"title": "Priest",
 		"gender": true,
 		"color": "black",
@@ -180,7 +168,7 @@
 		}
 	},
 	{
-		"id": 16,
+		"id": 15,
 		"title": "Faulty Robot",
 		"gender": true,
 		"color": "black",

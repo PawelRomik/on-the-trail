@@ -12,7 +12,7 @@ export function playCharacterSound({ character, sound, volume = 50 }: PlaySoundP
 	try {
 		const emotion = sound.trim();
 		const sex = character.gender ? "male" : "female";
-		const idmod = (character.id % 2) + 1;
+		const idmod = (character.id % 4) + 1;
 
 		const soundFile = `${emotion}_${sex}_${idmod}.mp3`;
 
