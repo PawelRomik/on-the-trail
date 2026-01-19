@@ -148,14 +148,6 @@
 			}
 		},
 		"ch13": {
-			"title": "Detective",
-			"traits": {
-				"nerfs": ["Accuses others more often."],
-				"buffs": ["Does not lie."],
-				"behaviour": "Responds with sarcasm, often with rhetorical questions."
-			}
-		},
-		"ch14": {
 			"title": "Clown",
 			"traits": {
 				"nerfs": ["Alternates between lying and truth-telling."],
@@ -163,7 +155,7 @@
 				"behaviour": "Speaks in jokes, often nonsensical."
 			}
 		},
-		"ch15": {
+		"ch14": {
 			"title": "Priest",
 			"traits": {
 				"nerfs": ["Always tells the truth."],
@@ -171,7 +163,7 @@
 				"behaviour": "Speaks in a restrained, moralizing tone."
 			}
 		},
-		"ch16": {
+		"ch15": {
 			"title": "Faulty Robot",
 			"traits": {
 				"nerfs": ["Responses may be corrupted."],
