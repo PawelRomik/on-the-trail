@@ -1,11 +1,8 @@
-import { useEffect } from "react";
 import { useNotepad } from "../../utils/context/notes-context/useNotepadContext";
 import type { HistoryEntry } from "../../utils/hooks/useChat";
 import Note from "./Note";
 import NotesArea from "./NotesArea";
 import Stickers from "./Stickers";
-import playSound from "../../utils/misc/playSound";
-import { useSettings } from "../../utils/context/settings-context/useSettings";
 import { useCharactersContext } from "../../utils/context/character-context/useCharacterContext";
 import detective from "../../../src/assets/character/detective.png";
 import { useStoryContext } from "../../utils/context/story-context/useStoryContext";
@@ -22,7 +19,6 @@ type NotepadProps = {
 
 export default function Notepad({ filteredHistory, filterCharacter, showNotes, setShowNotes, setFilterCharacter }: NotepadProps) {
 	const { notes, setNotes } = useNotepad();
-	const { voiceVolume } = useSettings();
 	const { characters } = useCharactersContext();
 	const character = characters.find((c) => c.title === filterCharacter) || characters[0];
 	const { intro, location } = useStoryContext();
@@ -41,10 +37,6 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 	const displayedImage = isPlayerView ? detective : isNoCharacterSelected ? `../assets/background/${location}.jpg` : `../assets/character/ch${character.id}.png`;
 
 	const displayedTitle = isPlayerView ? t("notes.you") : isNoCharacterSelected ? t("notes.case") : t(`characters.ch${character.id}.title`);
-
-	useEffect(() => {
-		playSound("book_open", voiceVolume);
-	}, [filteredHistory, showNotes, voiceVolume]);
 
 	return (
 		<div onClick={(e) => closeNotes(e)} className='w-full relative h-full flex items-center justify-center pt-5 bg-[rgba(0,0,0,0.8)]'>
