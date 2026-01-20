@@ -73,7 +73,7 @@ export function useChat() {
 			const replyText = data.message || "…";
 			const stressChange = typeof data.stress === "number" ? data.stress : 0;
 
-			playCharacterSound({ character: character, sound: data.sound, volume: voiceVolume });
+			playCharacterSound({ characters: characters, characterId: character.id, sound: data.sound, volume: voiceVolume });
 
 			const charMsg: MessageType = { from: "character", text: replyText };
 

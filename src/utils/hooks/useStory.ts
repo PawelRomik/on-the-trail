@@ -7,15 +7,20 @@ export type CharacterStory = {
 	story: string;
 };
 
+export type introType = {
+	pl: string;
+	en: string;
+};
+
 export type StoryResponse = {
 	location: string;
-	intro: string;
+	intro: introType;
 	charactersStory: CharacterStory[];
 };
 
 export function useStory() {
 	const [location, setLocation] = useState<string | null>(null);
-	const [intro, setIntro] = useState<string | null>(null);
+	const [intro, setIntro] = useState<introType | null>(null);
 	const { t } = useTranslation();
 	const [charactersStory, setCharactersStory] = useState<CharacterStory[]>([]);
 

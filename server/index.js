@@ -210,7 +210,10 @@ Return ONLY valid JSON in this EXACT structure:
 
 {
   "location": "...",
-  "intro": "...",
+  "intro": {
+	"pl": "...",
+	"en": "..."
+  },
   "characters": [
     {
       "name": "...",

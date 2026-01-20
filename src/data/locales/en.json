@@ -10,6 +10,16 @@
 		"stress": "Stress: {{amount}}%",
 		"kill": "Kill"
 	},
+	"location": {
+		"graveyard": "Graveyard",
+		"church": "Church",
+		"hospital": "Hospital",
+		"library": "Library",
+		"manor": "Manor",
+		"museum": "Museum",
+		"police": "Police Station",
+		"train": "Train"
+	},
 	"chat": {
 		"send": "Send",
 		"chatWith": "Chat with {{name}}",
