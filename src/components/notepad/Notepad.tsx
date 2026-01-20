@@ -25,8 +25,9 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 	const isPlayerView = showNotes;
 	const isNoCharacterSelected = !showNotes && !filterCharacter;
 	const isCharacterView = !showNotes && !!filterCharacter;
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const { setActiveView, lastView } = useViewContext();
+	const currentLanguage = i18n.language as "pl" | "en";
 
 	const closeNotes = (e: React.MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
 		if (e.target === e.currentTarget) {
@@ -96,9 +97,9 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 							{isNoCharacterSelected && (
 								<div className='flex-col'>
 									<p className='italic text-3xl px-6 leading-relaxed'>
-										{t("story.location")}: {location}
+										{t("story.location")}: {t(`location.${location}`)}
 									</p>
-									<p className='italic text-xl px-6 leading-relaxed'>{intro}</p>
+									<p className='italic text-xl px-6 leading-relaxed'>{intro?.[currentLanguage]}</p>
 								</div>
 							)}
 

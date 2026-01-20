@@ -1,20 +1,26 @@
 import type { CharacterType } from "../../types/CharacterType";
 
 type PlaySoundParams = {
-	character: CharacterType;
+	characters: CharacterType[];
 	sound: string;
+	characterId: number;
 	volume?: number;
 };
 
-export function playCharacterSound({ character, sound, volume = 50 }: PlaySoundParams) {
+export function playCharacterSound({ characters, characterId, sound, volume = 50 }: PlaySoundParams) {
 	if (typeof sound !== "string" || sound.trim() === "") return;
+
+	const index = characters.findIndex((c) => c.id === characterId);
+	if (index === -1) return;
+	const character = characters[index];
 
 	try {
 		const emotion = sound.trim();
 		const sex = character.gender ? "male" : "female";
-		const idmod = (character.id % 4) + 1;
 
-		const soundFile = `${emotion}_${sex}_${idmod}.mp3`;
+		const voiceId = index + 1;
+
+		const soundFile = `${emotion}_${sex}_${voiceId}.mp3`;
 
 		const audio = new Audio(`/assets/sound/character/${soundFile}`);
 		audio.volume = Math.max(0, Math.min(1, volume / 100));

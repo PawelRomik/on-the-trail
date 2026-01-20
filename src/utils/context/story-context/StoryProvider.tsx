@@ -1,10 +1,10 @@
 import { createContext, type ReactNode } from "react";
-import { useStory, type CharacterStory } from "../../hooks/useStory";
+import { useStory, type CharacterStory, type introType } from "../../hooks/useStory";
 import type { CharacterType } from "../../../types/CharacterType";
 
 type StoryContextType = {
 	location: string | null;
-	intro: string | null;
+	intro: introType | null;
 	charactersStory: CharacterStory[];
 	initStory: (characters: CharacterType[]) => Promise<void>;
 	resetStory: () => void;

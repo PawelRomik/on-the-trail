@@ -10,6 +10,16 @@
 		"stress": "Stres: {{amount}}%",
 		"kill": "Zabij"
 	},
+	"location": {
+		"graveyard": "Cmentarz",
+		"church": "Kościół",
+		"hospital": "Szpital",
+		"library": "Biblioteka",
+		"manor": "Willa",
+		"museum": "Muzeum",
+		"police": "Komisariat",
+		"train": "Pociąg"
+	},
 	"chat": {
 		"send": "Wyślij",
 		"chatWith": "Rozmowa z {{name}}",
