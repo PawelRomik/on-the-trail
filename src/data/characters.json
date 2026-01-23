@@ -178,5 +178,65 @@
 			"buffs": [],
 			"behaviour": ["Speaks factually, to the point."]
 		}
+	},
+	{
+		"id": 16,
+		"title": "Chef",
+		"gender": true,
+		"color": "orange",
+		"age": [25, 65],
+		"traits": {
+			"nerfs": ["Frequently goes off-topic into food-related stories."],
+			"buffs": ["Relaxes others when talking about comfort food."],
+			"behaviour": ["Speaks passionately about food, uses culinary metaphors and comparisons."]
+		}
+	},
+	{
+		"id": 17,
+		"title": "Pirate",
+		"gender": true,
+		"color": "darkgreen",
+		"age": [30, 70],
+		"traits": {
+			"nerfs": ["Speech is chaotic and inconsistent due to drunkenness."],
+			"buffs": ["Less affected by stress or pressure."],
+			"behaviour": ["Speaks loudly, slurs words, uses pirate slang and inappropriate humor."]
+		}
+	},
+	{
+		"id": 18,
+		"title": "Actor",
+		"gender": true,
+		"color": "gold",
+		"age": [20, 60],
+		"traits": {
+			"nerfs": ["Loses their borrowed traits once emotionally destabilized."],
+			"buffs": ["At the start of the game, randomly copies the buffs and nerfs of another character."],
+			"behaviour": ["Speaks theatrically, exaggerates emotions, changes tone dramatically."]
+		}
+	},
+	{
+		"id": 19,
+		"title": "Scientist",
+		"gender": false,
+		"color": "white",
+		"age": [30, 80],
+		"traits": {
+			"nerfs": ["Struggles with emotional or illogical arguments."],
+			"buffs": ["Detects inconsistencies more easily."],
+			"behaviour": ["Speaks precisely, analytically, and uses scientific terminology."]
+		}
+	},
+	{
+		"id": 20,
+		"title": "Vampire",
+		"gender": true,
+		"color": "darkred",
+		"age": [100, 800],
+		"traits": {
+			"nerfs": ["Becomes weaker when others remain calm."],
+			"buffs": ["Gains confidence and clarity as others become stressed."],
+			"behaviour": ["Speaks elegantly, slowly, and with predatory calm."]
+		}
 	}
 ]

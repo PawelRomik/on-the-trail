@@ -180,6 +180,46 @@
 				"buffs": [],
 				"behaviour": "Speaks factually and to the point."
 			}
+		},
+		"ch16": {
+			"title": "Chef",
+			"traits": {
+				"nerfs": ["Frequently goes off-topic into food-related stories."],
+				"buffs": ["Talking about food reduces others' stress."],
+				"behaviour": "Speaks passionately about food, using culinary metaphors."
+			}
+		},
+		"ch17": {
+			"title": "Pirate",
+			"traits": {
+				"nerfs": ["Speech is chaotic and unreliable due to drunkenness."],
+				"buffs": ["Less affected by stress or pressure."],
+				"behaviour": "Speaks loudly, slurs words, and uses pirate slang."
+			}
+		},
+		"ch18": {
+			"title": "Actor",
+			"traits": {
+				"nerfs": ["Loses copied traits after emotional destabilization."],
+				"buffs": ["At the start of the game, copies traits of a random character."],
+				"behaviour": "Speaks theatrically, exaggerating emotions and tone."
+			}
+		},
+		"ch19": {
+			"title": "Scientist",
+			"traits": {
+				"nerfs": ["Struggles with emotional or illogical arguments."],
+				"buffs": ["Detects logical inconsistencies more easily."],
+				"behaviour": "Speaks precisely, analytically, using scientific language."
+			}
+		},
+		"ch20": {
+			"title": "Vampire",
+			"traits": {
+				"nerfs": ["Becomes weaker when others remain calm."],
+				"buffs": ["Gains clarity and confidence as others become stressed."],
+				"behaviour": "Speaks slowly, elegantly, and with predatory calm."
+			}
 		}
 	},
 	"story": {
