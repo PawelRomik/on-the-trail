@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td><img src="https://img.shields.io/badge/45%2F47-96%25-green" alt="Coding 96%"></td>
-    <td><img src="https://img.shields.io/badge/68%2F70-97%25-yellow" alt="Art 97%"></td>
+    <td><img src="https://img.shields.io/badge/70%2F70-100%25-yellow" alt="Art 100%"></td>
     <td><img src="https://img.shields.io/badge/36%2F37-94%25-red" alt="Sound 97%"></td>
   </tr>
 </table>

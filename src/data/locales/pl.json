@@ -183,6 +183,46 @@
 				"buffs": [],
 				"behaviour": "Mówi rzeczowo i na temat."
 			}
+		},
+		"ch16": {
+			"title": "Kucharz",
+			"traits": {
+				"nerfs": ["Często schodzi z tematu, opowiadając o jedzeniu."],
+				"buffs": ["Mówienie o jedzeniu obniża stres innych."],
+				"behaviour": "Mówi z pasją o jedzeniu, używając kulinarnych metafor."
+			}
+		},
+		"ch17": {
+			"title": "Pirat",
+			"traits": {
+				"nerfs": ["Jego wypowiedzi są chaotyczne i niewiarygodne z powodu upojenia."],
+				"buffs": ["Jest mniej podatny na stres i presję."],
+				"behaviour": "Mówi głośno, bełkocze i używa pirackiego slangu."
+			}
+		},
+		"ch18": {
+			"title": "Aktor",
+			"traits": {
+				"nerfs": ["Traci skopiowane cechy po destabilizacji emocjonalnej."],
+				"buffs": ["Na początku gry kopiuje cechy losowej postaci."],
+				"behaviour": "Mówi teatralnie, przesadnie zmieniając ton i emocje."
+			}
+		},
+		"ch19": {
+			"title": "Naukowiec",
+			"traits": {
+				"nerfs": ["Ma trudność z argumentami emocjonalnymi i nielogicznymi."],
+				"buffs": ["Łatwiej wykrywa niespójności logiczne."],
+				"behaviour": "Mówi precyzyjnie i analitycznie, używając języka naukowego."
+			}
+		},
+		"ch20": {
+			"title": "Wampir",
+			"traits": {
+				"nerfs": ["Słabnie, gdy inni zachowują spokój."],
+				"buffs": ["Zyskuje jasność myślenia i pewność siebie, gdy inni się stresują."],
+				"behaviour": "Mówi powoli, elegancko i z drapieżnym spokojem."
+			}
 		}
 	},
 	"names": {
