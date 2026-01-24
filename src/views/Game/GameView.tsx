@@ -23,7 +23,7 @@ export default function GameView() {
 		}
 	}, [characters, initStory, charactersStory]);
 
-	const bgImage = location ? `../../../public/assets/background/${location}.jpg` : `../../../public/assets/background/manor.jpg`;
+	const bgImage = `/assets/background/${location || "manor"}.jpg`;
 
 	return (
 		<>
