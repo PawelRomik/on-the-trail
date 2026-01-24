@@ -60,7 +60,7 @@ export function useChat() {
 						age: character.age,
 						title: t(`characters.ch${character.id}.title`),
 						traits: character.traits,
-						StressMeter: character.stressMeter
+						stressMeter: character.stressMeter
 					},
 					messages: [...(chats[character.id] || []), playerMsg],
 					story: charactersStory,
@@ -72,8 +72,6 @@ export function useChat() {
 			const data = await res.json();
 			const replyText = data.message || "…";
 			const stressChange = typeof data.stress === "number" ? data.stress : 0;
-
-			playCharacterSound({ characters: characters, characterId: character.id, sound: data.sound, volume: voiceVolume });
 
 			const charMsg: MessageType = { from: "character", text: replyText };
 
@@ -89,13 +87,24 @@ export function useChat() {
 					if (c.id !== character.id) return c;
 
 					let multiplier = 1;
-					const title = c.title.toLowerCase();
-					if (title.includes("babcia")) multiplier = 1.25;
-					else if (title.includes("policjant") || title.includes("rycerz")) multiplier = 0.75;
-					else if (title.includes("diabeł")) multiplier = Math.max(0, 1 - prevChars.filter((p) => p.stressMeter > 50 && p.id !== c.id).length * 0.1);
+					if (c.id === 5) multiplier = 1.25;
+					else if (c.id === 7) multiplier = 0.75;
+					else if (c.id === 4) {
+						multiplier = Math.max(0, 1 - prevChars.filter((p) => p.stressMeter > 50 && p.id !== c.id).length * 0.1);
+					}
 
 					const stressDelta = Math.round(stressChange * multiplier);
 					const newStress = Math.min(100, c.stressMeter + stressDelta);
+					let finalSound = data.sound;
+
+					if (newStress >= 100) finalSound = "stop";
+
+					playCharacterSound({
+						characters: prevChars,
+						characterId: c.id,
+						sound: finalSound,
+						volume: voiceVolume
+					});
 					return { ...c, stressMeter: newStress };
 				})
 			);

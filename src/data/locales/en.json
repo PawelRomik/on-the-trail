@@ -182,22 +182,6 @@
 			}
 		},
 		"ch16": {
-			"title": "Chef",
-			"traits": {
-				"nerfs": ["Frequently goes off-topic into food-related stories."],
-				"buffs": ["Talking about food reduces others' stress."],
-				"behaviour": "Speaks passionately about food, using culinary metaphors."
-			}
-		},
-		"ch17": {
-			"title": "Pirate",
-			"traits": {
-				"nerfs": ["Speech is chaotic and unreliable due to drunkenness."],
-				"buffs": ["Less affected by stress or pressure."],
-				"behaviour": "Speaks loudly, slurs words, and uses pirate slang."
-			}
-		},
-		"ch18": {
 			"title": "Actor",
 			"traits": {
 				"nerfs": ["Loses copied traits after emotional destabilization."],
@@ -205,6 +189,23 @@
 				"behaviour": "Speaks theatrically, exaggerating emotions and tone."
 			}
 		},
+		"ch17": {
+			"title": "Chef",
+			"traits": {
+				"nerfs": ["Frequently goes off-topic into food-related stories."],
+				"buffs": ["Talking about food reduces others' stress."],
+				"behaviour": "Speaks passionately about food, using culinary metaphors."
+			}
+		},
+		"ch18": {
+			"title": "Pirate",
+			"traits": {
+				"nerfs": ["Speech is chaotic and unreliable due to drunkenness."],
+				"buffs": ["Less affected by stress or pressure."],
+				"behaviour": "Speaks loudly, slurs words, and uses pirate slang."
+			}
+		},
+
 		"ch19": {
 			"title": "Scientist",
 			"traits": {

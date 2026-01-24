@@ -10,11 +10,12 @@ type MenuButtonsProps = {
 export default function MenuButtons({ onStart }: MenuButtonsProps) {
 	const { t } = useTranslation();
 	const { voiceVolume } = useSettings();
-	const { setActiveView } = useViewContext();
+	const { setActiveView, setMusicMode } = useViewContext();
 
 	const startGame = () => {
 		playSound("button_press", voiceVolume);
 		onStart();
+		setMusicMode("game");
 	};
 
 	const openMenu = () => {

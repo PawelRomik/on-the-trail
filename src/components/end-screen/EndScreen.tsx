@@ -13,7 +13,7 @@ export default function EndScreen() {
 	const { setGameStarted } = useSettings();
 	const { resetStory } = useStoryContext();
 	const { t } = useTranslation();
-	const { setActiveView, setKnifeActive } = useViewContext();
+	const { setActiveView, setKnifeActive, setMusicMode } = useViewContext();
 	const { resetChats } = useChatContext();
 	const culprit = characters.find((c) => c.traitor);
 	if (!culprit || !selectedCharacter) return;
@@ -26,6 +26,7 @@ export default function EndScreen() {
 		setActiveView("game");
 		resetStory();
 		setKnifeActive(false);
+		setMusicMode("menu");
 	};
 
 	const resetGame = () => {
@@ -35,6 +36,7 @@ export default function EndScreen() {
 		resetChats(characters);
 		setActiveView("game");
 		setKnifeActive(false);
+		setMusicMode("game");
 		resetStory();
 	};
 
