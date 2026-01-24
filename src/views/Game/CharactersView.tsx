@@ -11,7 +11,7 @@ import { useSettings } from "../../utils/context/settings-context/useSettings";
 
 export default function CharactersView() {
 	const { characters, setSelectedCharacter } = useCharactersContext();
-	const { setActiveView, knifeActive } = useViewContext();
+	const { setActiveView, knifeActive, setMusicMode } = useViewContext();
 	const { voiceVolume } = useSettings();
 	const [endScreen, setEndScreen] = useState<boolean>(false);
 
@@ -21,6 +21,7 @@ export default function CharactersView() {
 			setActiveView("character");
 		} else {
 			playSound("slash", voiceVolume);
+			setMusicMode("gameover");
 			setEndScreen(true);
 		}
 	};

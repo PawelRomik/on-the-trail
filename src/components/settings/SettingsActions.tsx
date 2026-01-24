@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import playSound from "../../utils/misc/playSound";
 import { useSettings } from "../../utils/context/settings-context/useSettings";
+import { useViewContext } from "../../utils/context/view-context/useViewContext";
 
 type SettingsActionsProps = {
 	onBack: () => void;
@@ -10,14 +11,17 @@ type SettingsActionsProps = {
 export default function SettingsActions({ onBack, onReset }: SettingsActionsProps) {
 	const { t } = useTranslation();
 	const { voiceVolume } = useSettings();
+	const { setMusicMode } = useViewContext();
 
 	const backToMenu = () => {
 		playSound("button_press", voiceVolume);
+		setMusicMode("menu");
 		onBack();
 	};
 
 	const resetGame = () => {
 		playSound("button_press", voiceVolume);
+		setMusicMode("game");
 		onReset();
 	};
 

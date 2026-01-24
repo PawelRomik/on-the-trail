@@ -1,20 +1,23 @@
 import { useEffect, useRef } from "react";
+import { useViewContext } from "../../utils/context/view-context/useViewContext";
+import { useSettings } from "../../utils/context/settings-context/useSettings";
 
 type AudioPlayerProps = {
-	src: string;
-	volume: number;
 	loop?: boolean;
 	muted?: boolean;
 	unmuteOnClick?: boolean;
 };
 
-const MusicPlayer = ({ src, volume, loop = true, muted = false, unmuteOnClick = false }: AudioPlayerProps) => {
+const MusicPlayer = ({ loop = true, muted = false, unmuteOnClick = false }: AudioPlayerProps) => {
 	const audioRef = useRef<HTMLAudioElement | null>(null);
+	const { musicMode } = useViewContext();
+	const { musicVolume } = useSettings();
+	const src = `/assets/sound/music/${musicMode}.mp3`;
 
 	useEffect(() => {
 		const audio = new Audio(src);
 		audio.loop = loop;
-		audio.volume = volume / 100;
+		audio.volume = musicVolume / 100;
 		audio.muted = muted;
 
 		audio.play().catch(() => {});
@@ -46,9 +49,9 @@ const MusicPlayer = ({ src, volume, loop = true, muted = false, unmuteOnClick = 
 
 	useEffect(() => {
 		if (audioRef.current) {
-			audioRef.current.volume = volume / 100;
+			audioRef.current.volume = musicVolume / 100;
 		}
-	}, [volume]);
+	}, [musicVolume]);
 
 	useEffect(() => {
 		if (audioRef.current) {
