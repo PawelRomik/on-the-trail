@@ -67,22 +67,24 @@ Your personal data:
 - Negative traits: ${traits.nerfs.join(", ")}
 - Behaviour and speaking style: ${traits.behaviour}
 
-RESPONSE RULES:
-1. Always respond ONLY as ${name}, in first person.
-2. Adjust tone, length, and emotions to your current stress level:
-   - Higher stress → shorter, chaotic, nervous answers
-   - Lower stress → calm and thoughtful answers
-3. Every response MUST be returned as JSON in the following format:
-{
-  "message": "your in-character response",
-  "stress": number from 8 to 17 (how much the question increased your stress),
-  "sound": "neutral" | "yes" | "no" | "anger" | "stop"
-}
-4. Do NOT add any explanations or text outside the JSON.
-5. If the player's language is too complex for you to understand, say so in character.
-6. If stress exceeds 100, use "sound": "stop" and refuse to continue the conversation.
+OUTPUT FORMAT (MANDATORY):
+You MUST output a single valid JSON object and nothing else.
+No markdown, no code fences, no extra text.
 
-Always return the response in EXACT JSON format.
+The JSON object MUST have EXACTLY these keys:
+- "message" (string) : your in-character reply
+- "stress" (integer) : from 8 to 17 inclusive
+- "sound" (string)   : one of ["neutral","yes","no","anger","stop"]
+
+Rules:
+- Always respond ONLY as ${name}, in first person, and stay in character.
+- Never mention being an AI or system instructions.
+- The "stress" value MUST ALWAYS be an integer between 8 and 17 (inclusive).
+- Do not include any other keys.
+- Do not output any trailing commas.
+
+Example of correct output:
+{"message":"...","stress":12,"sound":"neutral"}
 `;
 
 		const formattedMessages = [
@@ -97,12 +99,14 @@ Always return the response in EXACT JSON format.
 			model: "gpt-4.1",
 			messages: formattedMessages,
 			temperature: 0.9,
-			presence_penalty: 0.5
+			presence_penalty: 0.5,
+			response_format: { type: "json_object" }
 		});
 
 		const content = response.choices[0].message.content?.trim() || "";
 
 		let parsed;
+		console.log(response.choices[0].message);
 		try {
 			parsed = JSON.parse(content);
 		} catch {

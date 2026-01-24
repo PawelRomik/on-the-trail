@@ -35,7 +35,7 @@ export default function ChatCharacterImage({ character, onClick, setHovered }: C
 				onClick={() => onClick?.(character)}
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
-				className={`hover:cursor-pointer h-[90%] right-0 absolute -bottom-5 scale-x-[-1] drop-shadow-[0px_-60px_59px_rgba(253,230,138,0.2)] ${
+				className={`hover:cursor-pointer h-[90%] right-0 absolute -bottom-5 scale-x-[-1] ${character.stressMeter > 100 && "drop-shadow-[0px_-60px_59px_rgba(253,230,138,0.2)]"} ${
 					character.stressMeter === 100 && "brightness-25"
 				}`}
 				src={characterImage}

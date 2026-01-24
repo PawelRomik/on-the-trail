@@ -27,7 +27,7 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
 
 	const [gameStarted, setGameStarted] = useState(false);
 
-	const [language, setLanguageState] = useState<"pl" | "en">((localStorage.getItem("userLocale") as "pl" | "en") || "pl");
+	const [language, setLanguageState] = useState<"pl" | "en">((localStorage.getItem("userLocale") as "pl" | "en") || "en");
 
 	const setMusicVolume = (value: number) => {
 		setMusicVolumeState(value);

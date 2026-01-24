@@ -185,6 +185,14 @@
 			}
 		},
 		"ch16": {
+			"title": "Aktor",
+			"traits": {
+				"nerfs": ["Traci skopiowane cechy po destabilizacji emocjonalnej."],
+				"buffs": ["Na początku gry kopiuje cechy losowej postaci."],
+				"behaviour": "Mówi teatralnie, przesadnie zmieniając ton i emocje."
+			}
+		},
+		"ch17": {
 			"title": "Kucharz",
 			"traits": {
 				"nerfs": ["Często schodzi z tematu, opowiadając o jedzeniu."],
@@ -192,20 +200,12 @@
 				"behaviour": "Mówi z pasją o jedzeniu, używając kulinarnych metafor."
 			}
 		},
-		"ch17": {
+		"ch18": {
 			"title": "Pirat",
 			"traits": {
 				"nerfs": ["Jego wypowiedzi są chaotyczne i niewiarygodne z powodu upojenia."],
 				"buffs": ["Jest mniej podatny na stres i presję."],
 				"behaviour": "Mówi głośno, bełkocze i używa pirackiego slangu."
-			}
-		},
-		"ch18": {
-			"title": "Aktor",
-			"traits": {
-				"nerfs": ["Traci skopiowane cechy po destabilizacji emocjonalnej."],
-				"buffs": ["Na początku gry kopiuje cechy losowej postaci."],
-				"behaviour": "Mówi teatralnie, przesadnie zmieniając ton i emocje."
 			}
 		},
 		"ch19": {
