@@ -210,3 +210,19 @@ input[type="range"]::-moz-range-thumb {
 		transform: scale(1);
 	}
 }
+
+@keyframes purpleGlow {
+	0% {
+		box-shadow: 0 0 30px 1px rgba(128, 0, 128, 0.7);
+	}
+	50% {
+		box-shadow: 0 0 600px 1px rgba(128, 0, 128, 0.4);
+	}
+	100% {
+		box-shadow: 0 0 30px 1px rgba(128, 0, 128, 0.7);
+	}
+}
+
+.glow-animate {
+	animation: purpleGlow 20s ease-in-out infinite;
+}
