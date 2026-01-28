@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 You are a game master creating a hidden, highly detailed detective story.
 
 INPUT:
-- Characters: ${characters.map((c) => `- ${c.name} (${c.title})`).join("\n")}
+- Characters: ${characters.map((c) => `- ${c.name}`).join("\n")}
 - Culprit: ${culprit.name} (${culprit.title})
 
 TASK:

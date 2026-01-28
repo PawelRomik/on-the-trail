@@ -181,6 +181,18 @@
 	},
 	{
 		"id": 16,
+		"title": "Actor",
+		"gender": true,
+		"color": "gold",
+		"age": [20, 60],
+		"traits": {
+			"nerfs": ["Loses their borrowed traits once emotionally destabilized."],
+			"buffs": ["At the start of the game, randomly copies the buffs and nerfs of another character."],
+			"behaviour": ["Speaks theatrically, exaggerates emotions, changes tone dramatically."]
+		}
+	},
+	{
+		"id": 17,
 		"title": "Chef",
 		"gender": true,
 		"color": "orange",
@@ -192,7 +204,7 @@
 		}
 	},
 	{
-		"id": 17,
+		"id": 18,
 		"title": "Pirate",
 		"gender": true,
 		"color": "darkgreen",
@@ -203,18 +215,7 @@
 			"behaviour": ["Speaks loudly, slurs words, uses pirate slang and inappropriate humor."]
 		}
 	},
-	{
-		"id": 18,
-		"title": "Actor",
-		"gender": true,
-		"color": "gold",
-		"age": [20, 60],
-		"traits": {
-			"nerfs": ["Loses their borrowed traits once emotionally destabilized."],
-			"buffs": ["At the start of the game, randomly copies the buffs and nerfs of another character."],
-			"behaviour": ["Speaks theatrically, exaggerates emotions, changes tone dramatically."]
-		}
-	},
+
 	{
 		"id": 19,
 		"title": "Scientist",
