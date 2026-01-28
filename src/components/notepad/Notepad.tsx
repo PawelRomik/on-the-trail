@@ -8,6 +8,8 @@ import detective from "../../../src/assets/character/detective.png";
 import { useStoryContext } from "../../utils/context/story-context/useStoryContext";
 import { useTranslation } from "react-i18next";
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
+import paper from "../../assets/ui/paper.png";
+import cover from "../../assets/ui/cover.png";
 
 type NotepadProps = {
 	filteredHistory: HistoryEntry[];
@@ -41,44 +43,15 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 
 	return (
 		<div onClick={(e) => closeNotes(e)} className='w-full relative h-full flex items-center justify-center pt-5 bg-[rgba(0,0,0,0.8)]'>
-			<button onClick={(e) => closeNotes(e)} className='hover:text-purple-400 transition absolute top-0 right-0 text-3xl cursor-pointer text-white p-3'>
-				<i className='ri-close-circle-line pointer-events-none'></i>
-			</button>
-			<div className='w-[60%] caveat-regular h-[90%] z-10 border-black border-5 relative border-t-0 rounded-lg m-auto flex shadow-[0_0_20px_rgba(128,0,128,0.7)]'>
-				<Stickers setShowNotes={setShowNotes} setFilterCharacter={setFilterCharacter} />
-				<div className='flex flex-col flex-1 z-10 w-full m-auto bg-zinc-100 h-full gap-2   shadow-lg rounded-lg'>
-					<div
-						style={{
-							background: `
-			repeating-linear-gradient(
-				to bottom,
-				rgba(0,0,0,0.05) 0px,
-				rgba(0,0,0,0.05) 1px,
-				transparent 1px,
-				transparent 24px
-			)
-		`
-						}}
-						className='p-2 overflow-y-auto flex flex-col gap-2 relative h-full '
-					>
+			<div style={{ backgroundImage: `url(${cover})` }} className='w-[60%] gap-px  caveat-regular h-[90%] p-2 z-10  relative border-t-0 rounded-lg m-auto flex glow-animate'>
+				<Stickers showNotes={showNotes} filterCharacter={filterCharacter} setShowNotes={setShowNotes} setFilterCharacter={setFilterCharacter} />
+				<div style={{ backgroundImage: `url(${paper})` }} className='flex brightness-110 flex-col flex-1 z-10 w-full m-auto g h-full gap-2   shadow-lg'>
+					<div className='p-2 overflow-y-auto flex flex-col gap-2 relative h-full '>
 						{showNotes ? <NotesArea notes={notes} setNotes={setNotes} /> : filteredHistory.map((entry, index) => <Note key={index} entry={entry} />)}
 					</div>
 				</div>
-				<div className='flex z-10 flex-col flex-1 w-full m-auto bg-zinc-200 h-full gap-2   shadow-lg rounded-lg'>
-					<div
-						style={{
-							background: `
-			repeating-linear-gradient(
-				to bottom,
-				rgba(0,0,0,0.05) 0px,
-				rgba(0,0,0,0.05) 1px,
-				transparent 1px,
-				transparent 24px
-			)
-		`
-						}}
-						className='p-2 overflow-y-auto flex flex-col gap-2 relative h-full '
-					>
+				<div style={{ backgroundImage: `url(${paper})` }} className=' flex scale-x-[-1] z-10 flex-col flex-1 w-full m-auto  h-full gap-2   shadow-lg'>
+					<div className='p-2 scale-x-[-1] overflow-y-auto flex flex-col gap-2 relative h-full '>
 						<div className='flex flex-col justify-center w-full h-full text-center gap-4'>
 							<div className='w-[270px] shadow-lg bg-[rgba(255,255,0,0.2)] flex mx-auto  items-center justify-center border-8 border-white -rotate-8'>
 								<img src={displayedImage} className='h-full w-full' />

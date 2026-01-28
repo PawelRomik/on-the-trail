@@ -18,6 +18,7 @@ export function useChat() {
 	const [chats, setChats] = useState<Record<number, MessageType[]>>({});
 	const { voiceVolume } = useSettings();
 	const { charactersStory, intro, location } = useStoryContext();
+	const [isTyping, setIsTyping] = useState<Record<string, boolean>>({});
 
 	const initializedRef = useRef(false);
 
@@ -39,6 +40,8 @@ export function useChat() {
 	const [history, setHistory] = useState<HistoryEntry[]>([]);
 
 	const sendMessage = async (character: CharacterType, text: string) => {
+		if (!character) return;
+		if (isTyping?.[character.id]) return;
 		if (!text.trim()) return;
 
 		const playerMsg: MessageType = { from: "player", text };
@@ -50,6 +53,7 @@ export function useChat() {
 
 		setHistory((prev) => [...prev, { character, message: playerMsg }]);
 
+		setIsTyping((prev) => ({ ...prev, [character.id]: true }));
 		try {
 			const res = await fetch("/api/chat", {
 				method: "POST",
@@ -74,6 +78,7 @@ export function useChat() {
 			const stressChange = typeof data.stress === "number" ? data.stress : 0;
 
 			const charMsg: MessageType = { from: "character", text: replyText };
+			setIsTyping((prev) => ({ ...prev, [character.id]: false }));
 
 			setChats((prev) => ({
 				...prev,
@@ -126,5 +131,5 @@ export function useChat() {
 		setHistory([]);
 	};
 
-	return { chats, history, sendMessage, resetChats };
+	return { chats, history, sendMessage, resetChats, isTyping };
 }

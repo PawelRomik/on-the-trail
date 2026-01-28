@@ -12,6 +12,7 @@ export default async function handler(req, res) {
 	try {
 		const { character, messages, story, intro, location } = req.body;
 		const { name, age, title, traits, stressMeter } = character;
+		console.log(story, intro);
 
 		const myStory = story?.find((c) => c.name === name)?.story ?? "";
 

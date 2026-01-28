@@ -12,7 +12,7 @@ import ChatCharacter from "../../components/chat/ChatCharacter/ChatCharacter";
 
 export default function ChatView() {
 	const [inputText, setInputText] = useState("");
-	const { chats, sendMessage } = useChatContext();
+	const { chats, sendMessage, isTyping } = useChatContext();
 	const { selectedCharacter, characters, setSelectedCharacter } = useCharactersContext();
 	const { setActiveView } = useViewContext();
 	const { voiceVolume } = useSettings();
@@ -56,8 +56,8 @@ export default function ChatView() {
 		<div className='flex w-screen h-screen overflow-hidden gap-20'>
 			<div className='relative flex-2    text-white flex flex-col'>
 				<ChatHeader character={currentChar} onClose={closeChat} />
-				<ChatMessages chats={chats[currentChar.id] || []} />
-				<ChatInput stress={currentChar.stressMeter} inputText={inputText} setInputText={setInputText} onSend={handleSend} />
+				<ChatMessages chats={chats[currentChar.id] || []} isTyping={isTyping?.[currentChar.id]} />
+				<ChatInput stress={currentChar.stressMeter} disabled={isTyping?.[currentChar.id]} inputText={inputText} setInputText={setInputText} onSend={handleSend} />
 			</div>
 
 			<div className='flex justify-end items-end flex-1'>
