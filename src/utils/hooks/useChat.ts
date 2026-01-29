@@ -23,10 +23,6 @@ export function useChat() {
 	const initializedRef = useRef(false);
 
 	useEffect(() => {
-		initializedRef.current = false;
-	}, [characters]);
-
-	useEffect(() => {
 		if (!characters || characters.length === 0) return;
 		if (initializedRef.current) return;
 		const start: Record<number, MessageType[]> = {};
