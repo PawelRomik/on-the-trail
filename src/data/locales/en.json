@@ -61,166 +61,184 @@
 		"tipThree": "Every character has their own stress system. The higher the stress level, the greater the chance of hearing the truth. Be careful — once stress reaches 100, any further conversation with that character will become impossible."
 	},
 	"characters": {
+		"perks": {
+			"buffs": {
+				"buff_innocent": {
+					"name": "Wings Unstained",
+					"desc": "Always innocent."
+				},
+				"buff_nostoptalking": {
+					"name": "Silver Tongue",
+					"desc": "Never stops talking."
+				},
+				"buff_slowstress": {
+					"name": "Inner Stillness",
+					"desc": "Stress increases more slowly."
+				},
+				"buff_telltruth": {
+					"name": "Infernal Contract",
+					"desc": "If caught lying, must tell the truth."
+				},
+				"buff_slowstresschars": {
+					"name": "Warm Hearth",
+					"desc": "Other characters gain stress more slowly."
+				},
+				"buff_manipulative": {
+					"name": "Naive Mind",
+					"desc": "Easier to manipulate."
+				},
+				"buff_storydetails": {
+					"name": "Keen Eye",
+					"desc": "Knows more details about the story."
+				}
+			},
+			"nerfs": {
+				"nerf_harmlessspeech": {
+					"name": "Vow of Mercy",
+					"desc": "Will not say anything that could hurt someone."
+				},
+				"nerf_offtopic": {
+					"name": "Wandering Mind",
+					"desc": "Often drifts into side topics."
+				},
+				"nerf_faststress": {
+					"name": "Short Temper",
+					"desc": "Stress increases faster."
+				},
+				"nerf_memoryloss": {
+					"name": "Shattered Past",
+					"desc": "Does not remember previous conversations."
+				},
+				"nerf_stresschars": {
+					"name": "Corrupting Presence",
+					"desc": "Other characters start with higher stress."
+				},
+				"nerf_simplelanguage": {
+					"name": "Primitive Speech",
+					"desc": "Does not understand more complex words."
+				},
+				"nerf_stresslies": {
+					"name": "False Comfort",
+					"desc": "The higher the stress, the more often they lie."
+				},
+				"nerf_corruptedchat": {
+					"name": "System Instability",
+					"desc": "The higher the stress, the more corrupted the conversation becomes."
+				}
+			},
+			"special": {
+				"special_bravevoice": {
+					"name": "Whisper of the Brave",
+					"desc": "Speaks with the voice of the bravest person; if they are the bravest, they tell the truth. Stress increases twice as fast while active."
+				},
+				"special_truthliecycle": {
+					"name": "Jester's Rhythm",
+					"desc": "Alternates between telling the truth and lying."
+				},
+				"special_borrowedtrait": {
+					"name": "Borrowed Persona",
+					"desc": "At the start of the game, randomly selects one trait from another character."
+				}
+			}
+		},
 		"ch1": {
 			"title": "Poet",
-			"traits": {
-				"nerfs": [],
-				"buffs": ["In moments of strong stress, tends to be honest."],
-				"behaviour": "Speaks metaphorically, uses poetic comparisons, rhymes, and riddles."
-			}
+			"behaviour": "Speaks metaphorically, uses poetic comparisons, rhymes, and riddles."
 		},
+
 		"ch2": {
 			"title": "Angel",
-			"traits": {
-				"nerfs": [],
-				"buffs": ["Cannot lie, even when the truth is disadvantageous."],
-				"behaviour": "Speaks with gentleness, empathy, and calm."
-			}
+			"behaviour": "Speaks gently, with empathy and calm."
 		},
+
 		"ch3": {
 			"title": "Zombie",
-			"traits": {
-				"nerfs": ["Does not remember previous conversations or context."],
-				"buffs": [],
-				"behaviour": "Speaks briefly, monotonously, and without emotion — nothing seems to matter to him."
-			}
+			"behaviour": "Speaks briefly, monotonously, and without emotion; seems indifferent."
 		},
+
 		"ch4": {
 			"title": "Devil",
-			"traits": {
-				"nerfs": ["Always lies."],
-				"buffs": ["When caught lying, must tell the truth.", "Feels less stress when others are highly stressed."],
-				"behaviour": "Responds with sarcasm, aggression, and a provocative tone."
-			}
+			"behaviour": "Speaks sarcastically, aggressively, and provocatively."
 		},
+
 		"ch5": {
 			"title": "Grandma",
-			"traits": {
-				"nerfs": ["Easily gets stressed.", "Tends to go off-topic."],
-				"buffs": ["Always tries to help."],
-				"behaviour": "Speaks calmly, with warmth and care."
-			}
+			"behaviour": "Speaks calmly, warmly, and caring."
 		},
+
 		"ch6": {
 			"title": "Caveman",
-			"traits": {
-				"nerfs": ["Does not understand complex language or concepts."],
-				"buffs": ["Can be easily provoked or persuaded to react."],
-				"behaviour": "Speaks simply and directly, avoiding embellishments."
-			}
+			"behaviour": "Speaks simply and bluntly, avoids embellishments."
 		},
+
 		"ch7": {
 			"title": "Police Officer",
-			"traits": {
-				"nerfs": ["His presence increases the tension among other characters."],
-				"buffs": ["Remains calm longer than most."],
-				"behaviour": "Speaks firmly, decisively, and with authority."
-			}
+			"behaviour": "Speaks factually, firmly, and authoritatively."
 		},
+
 		"ch8": {
 			"title": "Knight",
-			"traits": {
-				"nerfs": [],
-				"buffs": ["Lies only to protect others.", "Can remain calm under pressure."],
-				"behaviour": "Speaks with honor, in a lofty and archaic manner."
-			}
+			"behaviour": "Speaks with honor, in a formal and archaic style."
 		},
+
 		"ch9": {
 			"title": "Narcissist",
-			"traits": {
-				"nerfs": ["Easily loses emotional balance when someone points out a mistake."],
-				"buffs": ["Often directs suspicion and accusations toward others."],
-				"behaviour": "Speaks with exaggerated confidence, convinced of his own perfection."
-			}
+			"behaviour": "Speaks with exaggerated self-confidence, convinced of their own perfection."
 		},
+
 		"ch10": {
 			"title": "Ghost",
-			"traits": {
-				"nerfs": ["Repeats what the bravest person says."],
-				"buffs": ["Speaks the truth when they are the bravest."],
-				"behaviour": "Speaks softly, shyly, often echoing others."
-			}
+			"behaviour": "Speaks quietly, timidly, often repeats others' words."
 		},
+
 		"ch11": {
 			"title": "Santa Claus",
-			"traits": {
-				"nerfs": ["Lies when you are naughty."],
-				"buffs": ["Tells the truth when you are nice.", "Others' stress increases more slowly around him."],
-				"behaviour": "Speaks in a cheerful, warm tone."
-			}
+			"behaviour": "Speaks in a cheerful, warm tone."
 		},
+
 		"ch12": {
 			"title": "Hunter",
-			"traits": {
-				"nerfs": ["Harder to catch lying."],
-				"buffs": ["Knows more details about the case."],
-				"behaviour": "Speaks briefly and to the point."
-			}
+			"behaviour": "Brief, concise style."
 		},
+
 		"ch13": {
 			"title": "Clown",
-			"traits": {
-				"nerfs": ["Alternates between lying and truth-telling."],
-				"buffs": ["Alternates between truth-telling and lying."],
-				"behaviour": "Speaks in jokes, often nonsensical."
-			}
+			"behaviour": "Speaks in jokes, often illogically."
 		},
+
 		"ch14": {
 			"title": "Priest",
-			"traits": {
-				"nerfs": ["Always tells the truth."],
-				"buffs": ["Keeps secrets confidential."],
-				"behaviour": "Speaks in a restrained, moralizing tone."
-			}
+			"behaviour": "Speaks in a restrained, moralizing tone."
 		},
+
 		"ch15": {
 			"title": "Faulty Robot",
-			"traits": {
-				"nerfs": ["Responses may be corrupted."],
-				"buffs": [],
-				"behaviour": "Speaks factually and to the point."
-			}
+			"behaviour": "Speaks factually, to the point."
 		},
+
 		"ch16": {
 			"title": "Actor",
-			"traits": {
-				"nerfs": ["Loses copied traits after emotional destabilization."],
-				"buffs": ["At the start of the game, copies traits of a random character."],
-				"behaviour": "Speaks theatrically, exaggerating emotions and tone."
-			}
+			"behaviour": "Speaks theatrically, exaggerates emotions, changes tone dramatically."
 		},
+
 		"ch17": {
 			"title": "Chef",
-			"traits": {
-				"nerfs": ["Frequently goes off-topic into food-related stories."],
-				"buffs": ["Talking about food reduces others' stress."],
-				"behaviour": "Speaks passionately about food, using culinary metaphors."
-			}
+			"behaviour": "Speaks passionately about food, uses culinary metaphors and comparisons."
 		},
+
 		"ch18": {
 			"title": "Pirate",
-			"traits": {
-				"nerfs": ["Speech is chaotic and unreliable due to drunkenness."],
-				"buffs": ["Less affected by stress or pressure."],
-				"behaviour": "Speaks loudly, slurs words, and uses pirate slang."
-			}
+			"behaviour": "Speaks loudly, slurs words, uses pirate slang and inappropriate humor."
 		},
 
 		"ch19": {
 			"title": "Scientist",
-			"traits": {
-				"nerfs": ["Struggles with emotional or illogical arguments."],
-				"buffs": ["Detects logical inconsistencies more easily."],
-				"behaviour": "Speaks precisely, analytically, using scientific language."
-			}
+			"behaviour": "Speaks precisely, analytically, and uses scientific terminology."
 		},
+
 		"ch20": {
 			"title": "Vampire",
-			"traits": {
-				"nerfs": ["Becomes weaker when others remain calm."],
-				"buffs": ["Gains clarity and confidence as others become stressed."],
-				"behaviour": "Speaks slowly, elegantly, and with predatory calm."
-			}
+			"behaviour": "Speaks elegantly, slowly, and with predatory calm."
 		}
 	},
 	"story": {

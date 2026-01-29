@@ -6,8 +6,8 @@
 		"color": "purple",
 		"age": [20, 60],
 		"traits": {
-			"nerfs": [],
-			"buffs": ["Tends to be honest in moments of high stress."],
+			"nerfs": ["nerf_offtopic"],
+			"buffs": ["buff_nostoptalking"],
 			"behaviour": ["Speaks metaphorically, uses poetic comparisons, rhymes, and riddles."]
 		}
 	},
@@ -18,8 +18,8 @@
 		"color": "yellow",
 		"age": [60, 600],
 		"traits": {
-			"nerfs": [],
-			"buffs": ["Cannot lie, even when the truth is disadvantageous."],
+			"nerfs": ["nerf_harmlessspeech"],
+			"buffs": ["buff_innocent"],
 			"behaviour": ["Speaks gently, with empathy and calm."]
 		}
 	},
@@ -30,8 +30,8 @@
 		"color": "green",
 		"age": [30, 150],
 		"traits": {
-			"nerfs": ["Does not remember previous conversations or context."],
-			"buffs": [],
+			"nerfs": ["nerf_memoryloss"],
+			"buffs": ["buff_slowstress"],
 			"behaviour": ["Speaks briefly, monotonously, and without emotion; seems indifferent."]
 		}
 	},
@@ -42,8 +42,8 @@
 		"color": "red",
 		"age": [60, 600],
 		"traits": {
-			"nerfs": ["Always lies."],
-			"buffs": ["Must tell the truth if caught lying.", "Stresses less when others are stressed."],
+			"nerfs": ["nerf_stresschars"],
+			"buffs": ["buff_telltruth"],
 			"behaviour": ["Speaks sarcastically, aggressively, and provocatively."]
 		}
 	},
@@ -54,8 +54,8 @@
 		"color": "brown",
 		"age": [55, 90],
 		"traits": {
-			"nerfs": ["Easily stressed.", "Tends to go off-topic."],
-			"buffs": ["Always tries to help."],
+			"nerfs": ["nerf_offtopic"],
+			"buffs": ["buff_slowstresschars"],
 			"behaviour": ["Speaks calmly, warmly, and caring."]
 		}
 	},
@@ -66,8 +66,8 @@
 		"color": "brown",
 		"age": [20, 70],
 		"traits": {
-			"nerfs": ["Does not understand complex language or concepts."],
-			"buffs": ["Easily provoked or prompted to react."],
+			"nerfs": ["nerf_simplelanguage"],
+			"buffs": ["buff_manipulative"],
 			"behaviour": ["Speaks simply and bluntly, avoids embellishments."]
 		}
 	},
@@ -78,8 +78,8 @@
 		"color": "blue",
 		"age": [24, 60],
 		"traits": {
-			"nerfs": ["Their presence increases tension in others."],
-			"buffs": ["Remains calm longer than most."],
+			"nerfs": ["nerf_stresschars"],
+			"buffs": ["buff_slowstress"],
 			"behaviour": ["Speaks factually, firmly, and authoritatively."]
 		}
 	},
@@ -90,8 +90,8 @@
 		"color": "red",
 		"age": [16, 60],
 		"traits": {
-			"nerfs": [],
-			"buffs": ["Lies only to protect others.", "Can keep a cool head."],
+			"nerfs": ["nerf_harmlessspeech"],
+			"buffs": ["buff_slowstress"],
 			"behaviour": ["Speaks with honor, in a formal and archaic style."]
 		}
 	},
@@ -102,8 +102,8 @@
 		"color": "pink",
 		"age": [20, 40],
 		"traits": {
-			"nerfs": ["Easily loses emotional balance when corrected."],
-			"buffs": ["Often directs suspicion and accusations at others."],
+			"nerfs": ["nerf_faststress"],
+			"buffs": ["buff_manipulative"],
 			"behaviour": ["Speaks with exaggerated self-confidence, convinced of their own perfection."]
 		}
 	},
@@ -114,8 +114,7 @@
 		"color": "black",
 		"age": [50, 500],
 		"traits": {
-			"nerfs": ["Repeats what the bravest person says."],
-			"buffs": ["Tells the truth when they are the bravest."],
+			"special": ["special_bravevoice"],
 			"behaviour": ["Speaks quietly, timidly, often repeats others' words."]
 		}
 	},
@@ -126,8 +125,8 @@
 		"color": "red",
 		"age": [100, 1000],
 		"traits": {
-			"nerfs": ["Lies if you are naughty."],
-			"buffs": ["Tells the truth if you are good.", "Others' stress increases more slowly."],
+			"nerfs": ["nerf_stresslies"],
+			"buffs": ["buff_slowstresschars"],
 			"behaviour": ["Speaks in a cheerful, warm tone."]
 		}
 	},
@@ -138,8 +137,8 @@
 		"color": "brown",
 		"age": [25, 60],
 		"traits": {
-			"nerfs": ["Harder to catch lying."],
-			"buffs": ["Knows more details about the case."],
+			"nerfs": ["nerf_faststress"],
+			"buffs": ["buff_storydetails"],
 			"behaviour": ["Brief, concise style."]
 		}
 	},
@@ -150,8 +149,7 @@
 		"color": "purple",
 		"age": [25, 60],
 		"traits": {
-			"nerfs": ["Alternates lying."],
-			"buffs": ["Alternates telling the truth."],
+			"special": ["special_truthliecycle"],
 			"behaviour": ["Speaks in jokes, often illogically."]
 		}
 	},
@@ -162,8 +160,8 @@
 		"color": "black",
 		"age": [30, 80],
 		"traits": {
-			"nerfs": ["Only speaks the truth."],
-			"buffs": ["Does not reveal secrets."],
+			"nerfs": ["nerf_harmlessspeech"],
+			"buffs": ["buff_slowstresschars"],
 			"behaviour": ["Speaks in a restrained, moralizing tone."]
 		}
 	},
@@ -174,8 +172,8 @@
 		"color": "black",
 		"age": [1, 20],
 		"traits": {
-			"nerfs": ["Responses may be corrupted."],
-			"buffs": [],
+			"nerfs": ["nerf_corruptedchat"],
+			"buffs": ["buff_storydetails"],
 			"behaviour": ["Speaks factually, to the point."]
 		}
 	},
@@ -186,8 +184,7 @@
 		"color": "gold",
 		"age": [20, 60],
 		"traits": {
-			"nerfs": ["Loses their borrowed traits once emotionally destabilized."],
-			"buffs": ["At the start of the game, randomly copies the buffs and nerfs of another character."],
+			"special": ["special_borrowedtrait"],
 			"behaviour": ["Speaks theatrically, exaggerates emotions, changes tone dramatically."]
 		}
 	},
@@ -198,8 +195,8 @@
 		"color": "orange",
 		"age": [25, 65],
 		"traits": {
-			"nerfs": ["Frequently goes off-topic into food-related stories."],
-			"buffs": ["Relaxes others when talking about comfort food."],
+			"nerfs": ["nerf_offtopic"],
+			"buffs": ["buff_slowstress"],
 			"behaviour": ["Speaks passionately about food, uses culinary metaphors and comparisons."]
 		}
 	},
@@ -210,8 +207,8 @@
 		"color": "darkgreen",
 		"age": [30, 70],
 		"traits": {
-			"nerfs": ["Speech is chaotic and inconsistent due to drunkenness."],
-			"buffs": ["Less affected by stress or pressure."],
+			"nerfs": ["nerf_memoryloss"],
+			"buffs": ["buff_storydetails"],
 			"behaviour": ["Speaks loudly, slurs words, uses pirate slang and inappropriate humor."]
 		}
 	},
@@ -219,12 +216,12 @@
 	{
 		"id": 19,
 		"title": "Scientist",
-		"gender": false,
+		"gender": true,
 		"color": "white",
 		"age": [30, 80],
 		"traits": {
-			"nerfs": ["Struggles with emotional or illogical arguments."],
-			"buffs": ["Detects inconsistencies more easily."],
+			"nerfs": ["nerf_offtopic"],
+			"buffs": ["buff_storydetails"],
 			"behaviour": ["Speaks precisely, analytically, and uses scientific terminology."]
 		}
 	},
@@ -235,8 +232,8 @@
 		"color": "darkred",
 		"age": [100, 800],
 		"traits": {
-			"nerfs": ["Becomes weaker when others remain calm."],
-			"buffs": ["Gains confidence and clarity as others become stressed."],
+			"nerfs": ["nerf_stresschars"],
+			"buffs": ["buff_slowstress"],
 			"behaviour": ["Speaks elegantly, slowly, and with predatory calm."]
 		}
 	}

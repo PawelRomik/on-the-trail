@@ -64,165 +64,184 @@
 		"location": "Miejsce"
 	},
 	"characters": {
+		"perks": {
+			"buffs": {
+				"buff_innocent": {
+					"name": "Nieskalane Skrzydła",
+					"desc": "Zawsze niewinny."
+				},
+				"buff_nostoptalking": {
+					"name": "Srebrny Język",
+					"desc": "Nigdy nie przestaje mówić."
+				},
+				"buff_slowstress": {
+					"name": "Wewnętrzny Spokój",
+					"desc": "Stres narasta wolniej."
+				},
+				"buff_telltruth": {
+					"name": "Piekielny Kontrakt",
+					"desc": "Jeśli zostanie przyłapany na kłamstwie, musi powiedzieć prawdę."
+				},
+				"buff_slowstresschars": {
+					"name": "Ciepłe Ognisko",
+					"desc": "Inne postacie stresują się wolniej."
+				},
+				"buff_manipulative": {
+					"name": "Naiwny Umysł",
+					"desc": "Łatwiej go zmanipulować."
+				},
+				"buff_storydetails": {
+					"name": "Bystre Oko",
+					"desc": "Zna więcej szczegółów historii."
+				}
+			},
+			"nerfs": {
+				"nerf_harmlessspeech": {
+					"name": "Ślub Miłosierdzia",
+					"desc": "Nie powie niczego, co mogłoby kogoś skrzywdzić."
+				},
+				"nerf_offtopic": {
+					"name": "Wędrujący Umysł",
+					"desc": "Często ucieka w poboczne wątki."
+				},
+				"nerf_faststress": {
+					"name": "Krótki Zapłon",
+					"desc": "Stres narasta szybciej."
+				},
+				"nerf_memoryloss": {
+					"name": "Rozbita Przeszłość",
+					"desc": "Nie pamięta poprzednich rozmów."
+				},
+				"nerf_stresschars": {
+					"name": "Skażająca Obecność",
+					"desc": "Inne postacie zaczynają z wyższym poziomem stresu."
+				},
+				"nerf_simplelanguage": {
+					"name": "Prymitywna Mowa",
+					"desc": "Nie rozumie trudniejszych słów."
+				},
+				"nerf_stresslies": {
+					"name": "Fałszywe Pocieszenie",
+					"desc": "Im większy stres, tym częściej kłamie."
+				},
+				"nerf_corruptedchat": {
+					"name": "Niestabilność Systemu",
+					"desc": "Im większy stres, tym bardziej skorumpowana staje się rozmowa."
+				}
+			},
+			"special": {
+				"special_bravevoice": {
+					"name": "Szept Odważnego",
+					"desc": "Mówi głosem najodważniejszej osoby; jeśli sam jest najodważniejszy, mówi prawdę. Podczas działania stres narasta dwukrotnie szybciej."
+				},
+				"special_truthliecycle": {
+					"name": "Rytm Błazna",
+					"desc": "Na przemian mówi prawdę i kłamstwa."
+				},
+				"special_borrowedtrait": {
+					"name": "Pożyczona Persona",
+					"desc": "Na początku gry losowo wybiera jedną cechę innej postaci."
+				}
+			}
+		},
 		"ch1": {
 			"title": "Poeta",
-			"traits": {
-				"nerfs": [],
-				"buffs": ["W momentach silnego stresu ma skłonność do szczerości."],
-				"behaviour": "Wyraża się metaforycznie, używa poetyckich porównań, rymów i zagadek."
-			}
+			"behaviour": "Mówi metaforycznie, używa poetyckich porównań, rymów i zagadek."
 		},
+
 		"ch2": {
 			"title": "Anioł",
-			"traits": {
-				"nerfs": [],
-				"buffs": ["Nie potrafi kłamać, nawet gdy prawda jest dla niej niekorzystna."],
-				"behaviour": "Mówi z łagodnością, empatią i spokojem."
-			}
+			"behaviour": "Mówi łagodnie, z empatią i spokojem."
 		},
+
 		"ch3": {
 			"title": "Zombie",
-			"traits": {
-				"nerfs": ["Nie pamięta wcześniejszych rozmów ani kontekstu."],
-				"buffs": [],
-				"behaviour": "Mówi krótko, monotonnie i bez emocji, nic go nie obchodzi."
-			}
+			"behaviour": "Mówi krótko, monotonnie i bez emocji; sprawia wrażenie obojętnego."
 		},
+
 		"ch4": {
 			"title": "Diabeł",
-			"traits": {
-				"nerfs": ["Zawsze kłamie."],
-				"buffs": ["Gdy zostanie przyłapany na kłamstwie, musi powiedzieć prawdę.", "Stresuje się mniej, gdy stres u innych jest wysoki."],
-				"behaviour": "Odpowiada z sarkazmem, agresją i prowokującym tonem."
-			}
+			"behaviour": "Mówi sarkastycznie, agresywnie i prowokacyjnie."
 		},
+
 		"ch5": {
 			"title": "Babcia",
-			"traits": {
-				"nerfs": ["Łatwo się stresuje.", "Ma tendencję do zbaczania z tematu."],
-				"buffs": ["Zawsze stara się pomóc."],
-				"behaviour": "Mówi spokojnie, z ciepłem i troską."
-			}
+			"behaviour": "Mówi spokojnie, ciepło i z troską."
 		},
+
 		"ch6": {
 			"title": "Jaskiniowiec",
-			"traits": {
-				"nerfs": ["Nie rozumie skomplikowanego języka ani pojęć."],
-				"buffs": ["Łatwo go sprowokować lub nakłonić do reakcji."],
-				"behaviour": "Mówi prosto i dosadnie, unika ozdobników."
-			}
+			"behaviour": "Mówi prosto i dosadnie, unika ozdobników."
 		},
+
 		"ch7": {
 			"title": "Policjant",
-			"traits": {
-				"nerfs": ["Jego obecność zwiększa napięcie u innych postaci."],
-				"buffs": ["Sam zachowuje spokój dłużej niż większość."],
-				"behaviour": "Mówi rzeczowo, stanowczo i z autorytetem."
-			}
+			"behaviour": "Mówi rzeczowo, stanowczo i autorytatywnie."
 		},
+
 		"ch8": {
 			"title": "Rycerz",
-			"traits": {
-				"nerfs": [],
-				"buffs": ["Kłamie jedynie w imię ochrony innych.", "Potrafi zachować zimną krew."],
-				"behaviour": "Wypowiada się z honorem, w podniosłym i archaicznym stylu."
-			}
+			"behaviour": "Mówi z honorem, w formalnym i archaicznym stylu."
 		},
+
 		"ch9": {
 			"title": "Narcyz",
-			"traits": {
-				"nerfs": ["Łatwo traci równowagę emocjonalną, gdy ktoś wytknie mu błąd."],
-				"buffs": ["Często kieruje podejrzenia i oskarżenia wobec innych."],
-				"behaviour": "Mówi z przesadną pewnością siebie, przekonany o własnej doskonałości."
-			}
+			"behaviour": "Mówi z przesadzoną pewnością siebie, przekonany o własnej doskonałości."
 		},
+
 		"ch10": {
 			"title": "Duch",
-			"traits": {
-				"nerfs": ["Powtarza to, co mówi najodważniejsza osoba."],
-				"buffs": ["Mówi prawdę, gdy to on jest najodważniejszy."],
-				"behaviour": "Mówi cicho, nieśmiale, często powtarza słowa innych."
-			}
+			"behaviour": "Mówi cicho i nieśmiało, często powtarza słowa innych."
 		},
+
 		"ch11": {
 			"title": "Święty Mikołaj",
-			"traits": {
-				"nerfs": ["Kłamie, gdy jesteś niegrzeczny."],
-				"buffs": ["Mówi prawdę, gdy jesteś grzeczny.", "Stres innych rośnie w wolniejszym tempie."],
-				"behaviour": "Mówi pogodnym, ciepłym tonem."
-			}
+			"behaviour": "Mówi w radosnym, ciepłym tonie."
 		},
+
 		"ch12": {
 			"title": "Łowca",
-			"traits": {
-				"nerfs": ["Trudniej go złapać na kłamstwie."],
-				"buffs": ["Wie więcej szczegółów na temat sprawy."],
-				"behaviour": "Mówi krótko i konkretnie."
-			}
+			"behaviour": "Zwięzły, krótki styl wypowiedzi."
 		},
+
 		"ch13": {
 			"title": "Klaun",
-			"traits": {
-				"nerfs": ["Naprzemiennie kłamie."],
-				"buffs": ["Naprzemiennie mówi prawdę."],
-				"behaviour": "Mówi żartami, często nielogicznie."
-			}
+			"behaviour": "Mówi żartami, często nielogicznie."
 		},
+
 		"ch14": {
 			"title": "Ksiądz",
-			"traits": {
-				"nerfs": ["Mówi wyłącznie prawdę."],
-				"buffs": ["Nie ujawnia tajemnic."],
-				"behaviour": "Mówi powściągliwym, moralizującym tonem."
-			}
+			"behaviour": "Mówi w powściągliwym, moralizującym tonie."
 		},
+
 		"ch15": {
-			"title": "Wadliwy robot",
-			"traits": {
-				"nerfs": ["Odpowiedzi mogą zostać uszkodzone."],
-				"buffs": [],
-				"behaviour": "Mówi rzeczowo i na temat."
-			}
+			"title": "Zepsuty Robot",
+			"behaviour": "Mówi rzeczowo i na temat."
 		},
+
 		"ch16": {
 			"title": "Aktor",
-			"traits": {
-				"nerfs": ["Traci skopiowane cechy po destabilizacji emocjonalnej."],
-				"buffs": ["Na początku gry kopiuje cechy losowej postaci."],
-				"behaviour": "Mówi teatralnie, przesadnie zmieniając ton i emocje."
-			}
+			"behaviour": "Mówi teatralnie, wyolbrzymia emocje, dramatycznie zmienia ton."
 		},
+
 		"ch17": {
-			"title": "Kucharz",
-			"traits": {
-				"nerfs": ["Często schodzi z tematu, opowiadając o jedzeniu."],
-				"buffs": ["Mówienie o jedzeniu obniża stres innych."],
-				"behaviour": "Mówi z pasją o jedzeniu, używając kulinarnych metafor."
-			}
+			"title": "Szef Kuchni",
+			"behaviour": "Mówi z pasją o jedzeniu, używa kulinarnych metafor i porównań."
 		},
+
 		"ch18": {
 			"title": "Pirat",
-			"traits": {
-				"nerfs": ["Jego wypowiedzi są chaotyczne i niewiarygodne z powodu upojenia."],
-				"buffs": ["Jest mniej podatny na stres i presję."],
-				"behaviour": "Mówi głośno, bełkocze i używa pirackiego slangu."
-			}
+			"behaviour": "Mówi głośno, bełkocze, używa pirackiego slangu i niestosownego humoru."
 		},
+
 		"ch19": {
 			"title": "Naukowiec",
-			"traits": {
-				"nerfs": ["Ma trudność z argumentami emocjonalnymi i nielogicznymi."],
-				"buffs": ["Łatwiej wykrywa niespójności logiczne."],
-				"behaviour": "Mówi precyzyjnie i analitycznie, używając języka naukowego."
-			}
+			"behaviour": "Mówi precyzyjnie i analitycznie, używa terminologii naukowej."
 		},
+
 		"ch20": {
 			"title": "Wampir",
-			"traits": {
-				"nerfs": ["Słabnie, gdy inni zachowują spokój."],
-				"buffs": ["Zyskuje jasność myślenia i pewność siebie, gdy inni się stresują."],
-				"behaviour": "Mówi powoli, elegancko i z drapieżnym spokojem."
-			}
+			"behaviour": "Mówi elegancko, powoli i z drapieżnym spokojem."
 		}
 	},
 	"names": {
