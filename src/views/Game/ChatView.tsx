@@ -57,7 +57,14 @@ export default function ChatView() {
 			<div className='relative flex-2    text-white flex flex-col'>
 				<ChatHeader character={currentChar} onClose={closeChat} />
 				<ChatMessages chats={chats[currentChar.id] || []} isTyping={isTyping?.[currentChar.id]} />
-				<ChatInput stress={currentChar.stressMeter} disabled={isTyping?.[currentChar.id]} inputText={inputText} setInputText={setInputText} onSend={handleSend} />
+				<ChatInput
+					character={currentChar}
+					stress={currentChar.stressMeter}
+					disabled={isTyping?.[currentChar.id]}
+					inputText={inputText}
+					setInputText={setInputText}
+					onSend={handleSend}
+				/>
 			</div>
 
 			<div className='flex justify-end items-end flex-1'>

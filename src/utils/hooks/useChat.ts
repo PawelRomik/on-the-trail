@@ -92,17 +92,27 @@ export function useChat() {
 					if (c.id !== character.id) return c;
 
 					let multiplier = 1;
-					if (c.id === 5) multiplier = 1.25;
-					else if (c.id === 7) multiplier = 0.75;
-					else if (c.id === 4) {
-						multiplier = Math.max(0, 1 - prevChars.filter((p) => p.stressMeter > 50 && p.id !== c.id).length * 0.1);
+					if (c.traits?.buffs?.includes("buff_slowstress")) {
+						multiplier *= 0.75;
+					}
+
+					if (c.traits?.nerfs?.includes("nerf_faststress")) {
+						multiplier *= 1.2;
+					}
+
+					const hasSlowStressCharsBuff = prevChars.some((p) => p.id !== c.id && p.traits?.buffs?.includes("buff_slowstresschars"));
+
+					if (hasSlowStressCharsBuff) {
+						multiplier *= 0.8;
 					}
 
 					const stressDelta = Math.round(stressChange * multiplier);
 					const newStress = Math.min(100, c.stressMeter + stressDelta);
 					let finalSound = data.sound;
 
-					if (newStress >= 100) finalSound = "stop";
+					if (newStress >= 100 && !character.traits?.buffs?.includes("buff_nostoptalking")) {
+						finalSound = "stop";
+					}
 
 					playCharacterSound({
 						characters: prevChars,
