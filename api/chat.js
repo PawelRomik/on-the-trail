@@ -12,7 +12,6 @@ export default async function handler(req, res) {
 	try {
 		const { character, messages, story, intro, location } = req.body;
 		const { name, age, title, traits, stressMeter } = character;
-		console.log(story, intro);
 
 		const myStory = story?.find((c) => c.name === name)?.story ?? "";
 
@@ -107,7 +106,6 @@ Example of correct output:
 		const content = response.choices[0].message.content?.trim() || "";
 
 		let parsed;
-		console.log(response.choices[0].message);
 		try {
 			parsed = JSON.parse(content);
 		} catch {
