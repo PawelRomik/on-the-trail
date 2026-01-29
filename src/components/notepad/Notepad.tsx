@@ -102,16 +102,14 @@ export default function Notepad({ filteredHistory, filterCharacter, showNotes, s
 
 									<div className='flex flex-col text-xl gap-2 italic'>
 										{character.traits.behaviour.map((_, i) => (
-											<p key={`behaviour-${i}`}>{t(`characters.ch${character.id}.traits.behaviour`)}</p>
+											<p key={`behaviour-${i}`}>{t(`characters.ch${character.id}.behaviour`)}</p>
 										))}
 
-										{character.traits.buffs.map((_, i) => (
-											<p key={`buff-${i}`}>+ {t(`characters.ch${character.id}.traits.buffs.${i}`)}</p>
-										))}
+										{character.traits.buffs && character.traits.buffs.map((perkId) => <p key={`buff-${perkId}`}>+ {t(`characters.perks.buffs.${perkId}.desc`)}</p>)}
 
-										{character.traits.nerfs.map((_, i) => (
-											<p key={`nerf-${i}`}>- {t(`characters.ch${character.id}.traits.nerfs.${i}`)}</p>
-										))}
+										{character.traits.nerfs && character.traits.nerfs.map((perkId) => <p key={`nerf-${perkId}`}>- {t(`characters.perks.nerfs.${perkId}.desc`)}</p>)}
+
+										{character.traits.special && character.traits.special.map((perkId) => <p key={`special-${perkId}`}>* {t(`characters.perks.special.${perkId}.desc`)}</p>)}
 									</div>
 								</>
 							)}
