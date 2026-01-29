@@ -53,8 +53,8 @@ export default function ChatView() {
 	if (!currentChar) return null;
 
 	return (
-		<div className='flex w-screen h-screen overflow-hidden gap-20'>
-			<div className='relative flex-2    text-white flex flex-col'>
+		<div className='flex w-screen h-screen overflow-hidden gap-x-20'>
+			<div className='relative flex-2 h-full    text-white flex flex-col'>
 				<ChatHeader character={currentChar} onClose={closeChat} />
 				<ChatMessages chats={chats[currentChar.id] || []} isTyping={isTyping?.[currentChar.id]} />
 				<ChatInput
