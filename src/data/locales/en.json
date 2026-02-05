@@ -137,7 +137,7 @@
 				},
 				"special_borrowedtrait": {
 					"name": "Borrowed Persona",
-					"desc": "At the start of the game, randomly selects one trait from another character."
+					"desc": "At the start of the game, randomly copies traits from another character."
 				}
 			}
 		},

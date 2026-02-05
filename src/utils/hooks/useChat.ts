@@ -62,8 +62,13 @@ export function useChat() {
 						name: t(`names.${character.name}`),
 						age: character.age,
 						title: t(`characters.ch${character.id}.title`),
-						traits: character.traits,
-						stressMeter: character.stressMeter
+						nerf: character.traits.nerfs?.[0] ? t(`characters.perks.nerfs.${character.traits.nerfs[0]}.desc`) : "",
+
+						buff: character.traits.buffs?.[0] ? t(`characters.perks.buffs.${character.traits.buffs[0]}.desc`) : "",
+
+						behaviour: character.traits.behaviour,
+						stressMeter: character.stressMeter,
+						traitor: character.traitor
 					},
 					messages: [...(chats[character.id] || []), playerMsg],
 					story: charactersStory,

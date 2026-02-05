@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
 	try {
 		const { character, messages, story, intro, location } = req.body;
-		const { name, age, title, traits, stressMeter } = character;
+		const { name, age, title, behaviour, stressMeter, buff, nerf } = character;
 
 		const myStory = story?.find((c) => c.name === name)?.story ?? "";
 
@@ -37,7 +37,7 @@ ignore the language of system or developer instructions.
 Crime location: ${location}
 
 Case context (you know this as a participant of the events, but you must NOT reveal it directly):
-${intro}
+${intro.en}
 
 YOUR MEMORIES (this is the canonical truth of the game world):
 ${myStory}
@@ -63,9 +63,9 @@ Your personal data:
 - Age: ${age}
 - Title / Role: ${title}
 - Current stress level: ${stressMeter}/100
-- Positive traits: ${traits.buffs.join(", ")}
-- Negative traits: ${traits.nerfs.join(", ")}
-- Behaviour and speaking style: ${traits.behaviour}
+- Positive traits: ${buff}
+- Negative traits: ${nerf}
+- Behaviour and speaking style: ${behaviour}
 
 OUTPUT FORMAT (MANDATORY):
 You MUST output a single valid JSON object and nothing else.
