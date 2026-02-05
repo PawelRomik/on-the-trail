@@ -140,7 +140,7 @@
 				},
 				"special_borrowedtrait": {
 					"name": "Pożyczona Persona",
-					"desc": "Na początku gry losowo wybiera jedną cechę innej postaci."
+					"desc": "Na początku gry losowo kopiuje cechy innej postaci."
 				}
 			}
 		},
