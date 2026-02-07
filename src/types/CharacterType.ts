@@ -20,4 +20,5 @@ export type CharacterType = {
 		special?: string[];
 		behaviour: string[];
 	};
+	infernalBargainUsed?: boolean;
 };
