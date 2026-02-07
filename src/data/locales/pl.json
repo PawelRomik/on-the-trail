@@ -80,7 +80,7 @@
 				},
 				"buff_telltruth": {
 					"name": "Piekielny Kontrakt",
-					"desc": "Jeśli zostanie przyłapany na kłamstwie, musi powiedzieć prawdę."
+					"desc": "Raz na grę może wskazać jedną niewinną duszę. Zapłatą obciążeni są wszyscy."
 				},
 				"buff_slowstresschars": {
 					"name": "Ciepłe Ognisko",

@@ -58,13 +58,28 @@ export function useChat() {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
+					characters: characters.map((c) => ({
+						name: t(`names.${c.name}`),
+						culprit: c.traitor === true,
+						stressMeter: c.stressMeter
+					})),
 					character: {
 						name: t(`names.${character.name}`),
 						age: character.age,
 						title: t(`characters.ch${character.id}.title`),
-						nerf: character.traits.nerfs?.[0] ? t(`characters.perks.nerfs.${character.traits.nerfs[0]}.desc`) : "",
+						nerf: character.traits.nerfs?.[0]
+							? {
+									name: character.traits.nerfs[0],
+									desc: t(`characters.perks.nerfs.${character.traits.nerfs[0]}.desc`)
+								}
+							: null,
 
-						buff: character.traits.buffs?.[0] ? t(`characters.perks.buffs.${character.traits.buffs[0]}.desc`) : "",
+						buff: character.traits.buffs?.[0]
+							? {
+									name: character.traits.buffs[0],
+									desc: t(`characters.perks.buffs.${character.traits.buffs[0]}.desc`)
+								}
+							: null,
 
 						behaviour: character.traits.behaviour,
 						stressMeter: character.stressMeter,
@@ -78,6 +93,17 @@ export function useChat() {
 			});
 
 			const data = await res.json();
+			console.log(data.bargain);
+			const isInfernalBargainTriggered = data.bargain === true;
+			if (isInfernalBargainTriggered) {
+				setCharacters((prev) =>
+					prev.map((c) => ({
+						...c,
+						stressMeter: Math.min(100, c.stressMeter + 20),
+						infernalBargainUsed: c.id === character.id ? true : c.infernalBargainUsed
+					}))
+				);
+			}
 			const replyText = data.message || "…";
 			const stressChange = typeof data.stress === "number" ? data.stress : 0;
 

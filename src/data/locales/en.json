@@ -77,7 +77,7 @@
 				},
 				"buff_telltruth": {
 					"name": "Infernal Contract",
-					"desc": "If caught lying, must tell the truth."
+					"desc": "Once per game, can reveal one innocent soul. The price is shared by all."
 				},
 				"buff_slowstresschars": {
 					"name": "Warm Hearth",

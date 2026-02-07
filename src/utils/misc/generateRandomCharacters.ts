@@ -6,6 +6,7 @@ import getRandomCharacters from "./getRandomCharacters";
 
 export default function generateRandomCharacters(): CharacterType[] {
 	let characters = getRandomCharacters(charactersData, 4);
+	const usedNames = new Set<string>();
 
 	// --- special_borrowedtrait ---
 	characters = characters.map((c) => {
@@ -55,6 +56,20 @@ export default function generateRandomCharacters(): CharacterType[] {
 
 	const stressPenalty = stressNerfCount * 10;
 
+	const getUniqueRandomName = (gender: boolean): string => {
+		let name = "";
+		let safety = 0;
+
+		do {
+			name = getRandomName(gender);
+			safety++;
+			if (safety > 50) break; // zabezpieczenie awaryjne
+		} while (usedNames.has(name));
+
+		usedNames.add(name);
+		return name;
+	};
+
 	// --- final ---
 	return characters.map((c, index) => {
 		let baseStress = 0;
@@ -66,7 +81,7 @@ export default function generateRandomCharacters(): CharacterType[] {
 		return {
 			...c,
 			age: getRandomInt(c.age[0], c.age[1]),
-			name: getRandomName(c.gender),
+			name: getUniqueRandomName(c.gender),
 			stressMeter: Math.min(baseStress, 100),
 			traitor: index === traitorIndex
 		};

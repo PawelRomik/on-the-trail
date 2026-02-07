@@ -32,7 +32,8 @@ export function useStory() {
 					name: t(`names.${c.name}`) ?? `Character ${c.id}`,
 					title: t(`characters.ch${c.id}.title`),
 					age: c.age,
-					gender: c.gender
+					gender: c.gender,
+					buffs: c.traits?.buffs ?? []
 				}))
 			};
 
