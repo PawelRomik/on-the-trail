@@ -12,7 +12,16 @@ export default function generateRandomCharacters(): CharacterType[] {
 	characters = characters.map((c) => {
 		if (!c.traits?.special?.includes("special_borrowedtrait")) return c;
 
-		const others = characters.filter((o) => o.id !== c.id);
+		const others = characters.filter((o) => {
+			if (o.id === c.id) return false;
+
+			if (o.traits?.special && o.traits.special.length > 0) return false;
+
+			if (o.traits?.buffs?.includes("buff_innocent")) return false;
+
+			return true;
+		});
+
 		if (others.length === 0) return c;
 
 		const borrowed = others[getRandomInt(0, others.length - 1)];
@@ -83,7 +92,8 @@ export default function generateRandomCharacters(): CharacterType[] {
 			age: getRandomInt(c.age[0], c.age[1]),
 			name: getUniqueRandomName(c.gender),
 			stressMeter: Math.min(baseStress, 100),
-			traitor: index === traitorIndex
+			traitor: index === traitorIndex,
+			jesterTruth: c.traits?.special?.includes("special_truthliecycle") ? (Math.random() < 0.5 ? "truth" : "lie") : "lie"
 		};
 	});
 }

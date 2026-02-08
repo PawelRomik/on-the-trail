@@ -10,7 +10,8 @@ type ChatInputProps = {
 };
 
 export default function ChatInput({ inputText, character, setInputText, onSend, stress, disabled }: ChatInputProps) {
-	const isDisabled = (stress === 100 && !character.traits?.buffs?.includes("buff_nostoptalking")) || disabled;
+	const traitsSource = character?.actorTraits ?? character?.traits;
+	const isDisabled = (stress === 100 && !traitsSource.buffs?.includes("buff_nostoptalking")) || disabled;
 
 	return (
 		<div className='flex gap-2 border-t-4 wood bg-[rgba(0,0,0,0.6)] border-x-4 p-3 pt-4'>

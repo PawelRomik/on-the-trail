@@ -21,4 +21,5 @@ export type CharacterType = {
 		behaviour: string[];
 	};
 	infernalBargainUsed?: boolean;
+	jesterTruth?: "truth" | "lie";
 };
