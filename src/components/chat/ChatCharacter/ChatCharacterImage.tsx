@@ -15,6 +15,8 @@ export default function ChatCharacterImage({ character, onClick, setHovered }: C
 	const { t } = useTranslation();
 	const { setActiveView } = useViewContext();
 
+	const traitsSource = character?.actorTraits ?? character?.traits;
+
 	const openNotepad = () => {
 		setActiveView("notepad");
 	};
@@ -36,7 +38,7 @@ export default function ChatCharacterImage({ character, onClick, setHovered }: C
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
 				className={`hover:cursor-pointer h-[90%] right-0 fixed  -bottom-5 scale-x-[-1] ${
-					character.stressMeter === 100 && !character.traits?.buffs?.includes("buff_nostoptalking") && "brightness-25"
+					character.stressMeter === 100 && !traitsSource.buffs?.includes("buff_nostoptalking") && "brightness-25"
 				}`}
 				src={characterImage}
 				alt={t(`characters.ch${character.id}.title`)}

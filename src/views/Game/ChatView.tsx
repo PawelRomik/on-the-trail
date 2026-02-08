@@ -34,9 +34,13 @@ export default function ChatView() {
 		});
 	}, [selectedCharacter, voiceVolume]);
 
+	if (!selectedCharacter) return null;
+
+	const currentChar = characters.find((c) => c.id === selectedCharacter.id);
+
 	const handleSend = () => {
-		if (!selectedCharacter) return;
-		sendMessage(selectedCharacter, inputText);
+		if (!currentChar) return;
+		sendMessage(currentChar, inputText);
 		setInputText("");
 		playSound("button_press", voiceVolume);
 	};
@@ -45,10 +49,6 @@ export default function ChatView() {
 		setSelectedCharacter(null);
 		setActiveView("game");
 	};
-
-	if (!selectedCharacter) return null;
-
-	const currentChar = characters.find((c) => c.id === selectedCharacter.id);
 
 	if (!currentChar) return null;
 

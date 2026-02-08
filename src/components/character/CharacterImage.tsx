@@ -15,6 +15,8 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 	const { knifeActive } = useViewContext();
 	const { t } = useTranslation();
 
+	const traitsSource = character?.actorTraits ?? character?.traits;
+
 	const handleCharacterClick = () => {
 		onClick?.(character);
 	};
@@ -27,7 +29,7 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 				onClick={handleCharacterClick}
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
-				className={`hover:cursor-pointer ${character.stressMeter === 100 && !character.traits?.buffs?.includes("buff_nostoptalking") && "brightness-25"}`}
+				className={`hover:cursor-pointer ${character.stressMeter === 100 && !traitsSource.buffs?.includes("buff_nostoptalking") && "brightness-25"}`}
 				src={characterImage}
 				alt={t(`characters.ch${character.id}.title`)}
 			/>

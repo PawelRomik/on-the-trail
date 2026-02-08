@@ -11,9 +11,30 @@ export default async function handler(req, res) {
 
 	try {
 		const { characters, character, messages, story, intro, location } = req.body;
-		const { name, age, title, behaviour, stressMeter, buff, nerf } = character;
+		const { name, age, title, behaviour, stressMeter, buff, special, nerf } = character;
 
 		const traitSections = [
+			special?.name === "special_bravevoice" &&
+				`SPECIAL STATE – WHISPER OF THE BRAVE:
+- You speak with confidence and certainty.
+- The memories you recall feel unquestionably true to you.
+- You do not doubt or question these memories.
+- You can't lie
+`,
+
+			special?.name === "special_truthliecycle" &&
+				`
+SPECIAL STATE – JESTER’S RHYTHM:
+- You follow a strict alternating rhythm of truth and lies.
+- CURRENT MODE: ${character.jesterTruth?.toUpperCase()}
+- If CURRENT MODE is TRUTH:
+  - Answer honestly, according to your memories.
+- If CURRENT MODE is LIE:
+  - Deliberately provide false or misleading information.
+  - You may even falsely claim to be the culprit, regardless of reality.
+- After this response, the mode will switch.
+`,
+
 			buff?.name === "buff_telltruth" &&
 				!character.infernalBargainUsed &&
 				`
@@ -104,6 +125,19 @@ NEGATIVE TRAIT – SYSTEM INSTABILITY:
 			.join("\n");
 
 		const myStory = story?.find((c) => c.name === name)?.story ?? "";
+		let effectiveStory = myStory;
+
+		if (special?.name === "special_bravevoice") {
+			const lowestStressChar = characters.reduce((lowest, curr) => {
+				return curr.stressMeter < lowest.stressMeter ? curr : lowest;
+			}, characters[0]);
+
+			const borrowedStory = story.find((s) => s.name === lowestStressChar.name);
+
+			if (borrowedStory?.story) {
+				effectiveStory = borrowedStory.story;
+			}
+		}
 
 		const traitorRules = character.traitor
 			? `
@@ -131,7 +165,7 @@ Case context (you know this as a participant of the events, but you must NOT rev
 ${intro.en}
 
 YOUR MEMORIES (this is the canonical truth of the game world):
-${myStory}
+${effectiveStory}
 
 IMPORTANT RULES ABOUT THE STORY:
 - Do NOT quote the story text directly

@@ -53,7 +53,9 @@ export function useChat() {
 		setHistory((prev) => [...prev, { character, message: playerMsg }]);
 
 		setIsTyping((prev) => ({ ...prev, [character.id]: true }));
+
 		try {
+			const traitsSource = character.actorTraits ?? character.traits;
 			const res = await fetch("/api/chat", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -61,29 +63,38 @@ export function useChat() {
 					characters: characters.map((c) => ({
 						name: t(`names.${c.name}`),
 						culprit: c.traitor === true,
-						stressMeter: c.stressMeter
+						stressMeter: c.stressMeter,
+						story: c.story
 					})),
 					character: {
 						name: t(`names.${character.name}`),
 						age: character.age,
 						title: t(`characters.ch${character.id}.title`),
-						nerf: character.traits.nerfs?.[0]
+						nerf: traitsSource?.nerfs?.[0]
 							? {
-									name: character.traits.nerfs[0],
-									desc: t(`characters.perks.nerfs.${character.traits.nerfs[0]}.desc`)
+									name: traitsSource.nerfs[0],
+									desc: t(`characters.perks.nerfs.${traitsSource.nerfs[0]}.desc`)
 								}
 							: null,
 
-						buff: character.traits.buffs?.[0]
+						buff: traitsSource?.buffs?.[0]
 							? {
-									name: character.traits.buffs[0],
-									desc: t(`characters.perks.buffs.${character.traits.buffs[0]}.desc`)
+									name: traitsSource.buffs[0],
+									desc: t(`characters.perks.buffs.${traitsSource.buffs[0]}.desc`)
+								}
+							: null,
+
+						special: traitsSource?.special?.[0]
+							? {
+									name: traitsSource.special[0],
+									desc: t(`characters.perks.special.${traitsSource.special[0]}.desc`)
 								}
 							: null,
 
 						behaviour: character.traits.behaviour,
 						stressMeter: character.stressMeter,
-						traitor: character.traitor
+						traitor: character.traitor,
+						jesterTruth: character.jesterTruth
 					},
 					messages: [...(chats[character.id] || []), playerMsg],
 					story: charactersStory,
@@ -93,7 +104,6 @@ export function useChat() {
 			});
 
 			const data = await res.json();
-			console.log(data.bargain);
 			const isInfernalBargainTriggered = data.bargain === true;
 			if (isInfernalBargainTriggered) {
 				setCharacters((prev) =>
@@ -121,26 +131,37 @@ export function useChat() {
 				prevChars.map((c) => {
 					if (c.id !== character.id) return c;
 
+					const traitsSource = c.actorTraits ?? c.traits;
+
 					let multiplier = 1;
-					if (c.traits?.buffs?.includes("buff_slowstress")) {
+
+					if (traitsSource?.buffs?.includes("buff_slowstress")) {
 						multiplier *= 0.75;
 					}
 
-					if (c.traits?.nerfs?.includes("nerf_faststress")) {
+					if (traitsSource?.nerfs?.includes("nerf_faststress")) {
 						multiplier *= 1.2;
 					}
 
-					const hasSlowStressCharsBuff = prevChars.some((p) => p.id !== c.id && p.traits?.buffs?.includes("buff_slowstresschars"));
+					const hasSlowStressCharsBuff = prevChars.some((p) => p.id !== c.id && (p.actorTraits ?? p.traits)?.buffs?.includes("buff_slowstresschars"));
 
 					if (hasSlowStressCharsBuff) {
 						multiplier *= 0.8;
 					}
 
+					if (traitsSource?.special?.includes("special_bravevoice")) {
+						const lowestStress = Math.min(...prevChars.map((p) => p.stressMeter));
+
+						if (c.stressMeter === lowestStress) {
+							multiplier *= 1.2;
+						}
+					}
+
 					const stressDelta = Math.round(stressChange * multiplier);
 					const newStress = Math.min(100, c.stressMeter + stressDelta);
-					let finalSound = data.sound;
 
-					if (newStress >= 100 && !character.traits?.buffs?.includes("buff_nostoptalking")) {
+					let finalSound = data.sound;
+					if (newStress >= 100 && !traitsSource?.buffs?.includes("buff_nostoptalking")) {
 						finalSound = "stop";
 					}
 
@@ -150,7 +171,14 @@ export function useChat() {
 						sound: finalSound,
 						volume: voiceVolume
 					});
-					return { ...c, stressMeter: newStress };
+
+					return {
+						...c,
+						stressMeter: newStress,
+						...(c.jesterTruth && {
+							jesterTruth: c.jesterTruth === "truth" ? "lie" : "truth"
+						})
+					};
 				})
 			);
 		} catch (err) {
