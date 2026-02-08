@@ -8,9 +8,9 @@
 
 ### 📸 Preview:
 
-<img width="1914" height="955" alt="image" src="https://github.com/user-attachments/assets/23981d17-d109-4608-9aa7-19c7dee4a7f7" />
+<img width="1911" height="954" alt="image" src="https://github.com/user-attachments/assets/976a31a3-a728-4496-af61-2bc1f429fb88" />
 <img width="1912" height="954" alt="image" src="https://github.com/user-attachments/assets/e28755db-609e-44c8-8e87-9f40e38bc0a8" />
-<img width="1912" height="954" alt="image" src="https://github.com/user-attachments/assets/dfe3ab1f-9597-499a-a8d4-594f11abf7d9" />
+<img width="1916" height="957" alt="image" src="https://github.com/user-attachments/assets/f370fd26-180d-413d-b0e5-c6a89860924e" />
 <img width="1913" height="954" alt="image" src="https://github.com/user-attachments/assets/9016bb2c-d54a-426f-958e-ebca133e1fb5" />
 
 🌐 Try it now: https://on-the-trail.vercel.app/
