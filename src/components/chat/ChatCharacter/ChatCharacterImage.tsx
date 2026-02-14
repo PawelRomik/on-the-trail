@@ -18,7 +18,7 @@ export default function ChatCharacterImage({ character, onClick, setHovered }: C
 	const traitsSource = character?.actorTraits ?? character?.traits;
 
 	const openNotepad = () => {
-		setActiveView("notepad");
+		setActiveView("book");
 	};
 	return (
 		<div className='w-full h-full relative'>

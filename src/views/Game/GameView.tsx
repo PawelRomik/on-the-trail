@@ -3,11 +3,12 @@ import { useCharactersContext } from "../../utils/context/character-context/useC
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
 import CharactersView from "./CharactersView";
 import ChatView from "./ChatView";
-import NotepadView from "./NotepadView";
+
 import SettingsView from "./SettingsView";
 import { useStoryContext } from "../../utils/context/story-context/useStoryContext";
 import { useEffect } from "react";
 import LoadingScreen from "../../components/ui/LoadingScreen";
+import BookView from "./BookView";
 
 export default function GameView() {
 	const { selectedCharacter, characters } = useCharactersContext();
@@ -26,15 +27,7 @@ export default function GameView() {
 
 	return (
 		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${bgImage})` }}>
-			{activeView === "notepad" ? (
-				<NotepadView />
-			) : activeView === "settings" ? (
-				<SettingsView />
-			) : activeView === "character" && selectedCharacter ? (
-				<ChatView />
-			) : (
-				<CharactersView />
-			)}
+			{activeView === "book" ? <BookView /> : activeView === "settings" ? <SettingsView /> : activeView === "character" && selectedCharacter ? <ChatView /> : <CharactersView />}
 		</div>
 	);
 }

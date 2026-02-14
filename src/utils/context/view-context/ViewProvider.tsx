@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { type ReactNode } from "react";
 
-type ViewType = "game" | "character" | "notepad" | "settings";
+type ViewType = "game" | "character" | "book" | "settings";
 type ViewContextType = {
 	activeView: ViewType;
 	lastView: ViewType | null;
