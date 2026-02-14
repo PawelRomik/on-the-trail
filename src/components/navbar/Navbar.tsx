@@ -14,7 +14,7 @@ export default function Navbar() {
 
 	const openNotepad = () => {
 		playSound("book_open", voiceVolume);
-		setActiveView("notepad");
+		setActiveView("book");
 	};
 
 	const openSettings = () => {

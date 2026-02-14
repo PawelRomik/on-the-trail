@@ -1,15 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { useCharactersContext } from "../../utils/context/character-context/useCharacterContext";
-import playSound from "../../utils/misc/playSound";
-import { useSettings } from "../../utils/context/settings-context/useSettings";
 import detective from "../../assets/character/detective.png";
 import all from "../../assets/ui/all.png";
+import type { FlipBookRef } from "./Book";
+import { useEffect } from "react";
 
 type StickersProps = {
-	showNotes: boolean;
-	filterCharacter: string | null | undefined;
-	setShowNotes: (val: boolean) => void;
-	setFilterCharacter: (val: string | null | undefined) => void;
+	bookRef: FlipBookRef;
+	page: number;
 };
 
 const stickerClass = (active: boolean) =>
@@ -17,43 +15,40 @@ const stickerClass = (active: boolean) =>
 		active ? "bg-purple-700 h-16" : "bg-purple-800 "
 	}`;
 
-export default function Stickers({ showNotes, filterCharacter, setShowNotes, setFilterCharacter }: StickersProps) {
+export default function Stickers({ bookRef, page }: StickersProps) {
 	const { characters } = useCharactersContext();
 	const { t } = useTranslation();
-	const { voiceVolume } = useSettings();
 
 	const getCharacterImage = (id: number) => `../assets/character/ch${id}.png`;
 
+	useEffect(() => {
+		console.log(page);
+	}, [page]);
+
 	const showNotesHandler = () => {
-		playSound("page_flip", voiceVolume);
-		setShowNotes(true);
-		setFilterCharacter(null);
+		bookRef.current?.pageFlip().flip(0, "bottom");
 	};
 
 	const showAllHandler = () => {
-		playSound("page_flip", voiceVolume);
-		setFilterCharacter(null);
-		setShowNotes(false);
+		bookRef.current?.pageFlip().flip(2, "bottom");
 	};
 
-	const showCharHandler = (title: string) => {
-		playSound("page_flip", voiceVolume);
-		setFilterCharacter(title);
-		setShowNotes(false);
+	const showCharHandler = (index: number) => {
+		bookRef.current?.pageFlip().flip(4 + index * 2, "bottom");
 	};
 
 	return (
 		<div className='w-full absolute h-[60px] -top-9 z-0 flex items-end'>
-			<button onClick={showNotesHandler} className={stickerClass(showNotes)}>
+			<button onClick={showNotesHandler} className={stickerClass(page < 2)}>
 				<img src={detective} alt={t("notes.notes")} className='h-10 w-10 object-contain rounded-full' />
 			</button>
 
-			<button onClick={showAllHandler} className={stickerClass(!showNotes && !filterCharacter)}>
+			<button onClick={showAllHandler} className={stickerClass(page >= 2 && page < 4)}>
 				<img src={all} alt={t("notes.all")} className='h-10 w-10 object-contain rounded-full' />
 			</button>
 
 			{characters.map((ch, index) => (
-				<button key={ch.name} onClick={() => showCharHandler(ch.title)} className={`${stickerClass(filterCharacter === ch.title)} z-${10 + index}`}>
+				<button key={ch.name} onClick={() => showCharHandler(index)} className={`${stickerClass(page == 4 + index * 2)} z-${10 + index}`}>
 					<img src={getCharacterImage(ch.id)} alt={t(`characters.ch${ch.id}.title`)} className='h-10 w-10 object-contain rounded-full' />
 				</button>
 			))}
