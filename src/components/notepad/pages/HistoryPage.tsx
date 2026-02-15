@@ -5,7 +5,7 @@ import { useChatContext } from "../../../utils/context/chat-context/useChatConte
 const HistoryPage = React.forwardRef<HTMLDivElement>((_, ref) => {
 	const { history } = useChatContext();
 	return (
-		<div ref={ref} className='paper-bg h-full w-full p-2 overflow-y-auto flex flex-col gap-2 brightness-110'>
+		<div ref={ref} className='paper-bg h-full w-full book-scrollbar p-2 overflow-y-auto flex flex-col gap-2 brightness-110'>
 			{history.map((entry, index) => (
 				<Message key={index} entry={entry} />
 			))}

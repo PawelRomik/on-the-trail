@@ -13,7 +13,9 @@ const CharacterPage = React.forwardRef<HTMLDivElement, CharacterPageProps>((prop
 	return (
 		<div ref={ref} className='paper-bg h-full w-full p-4 overflow-y-auto flex flex-col brightness-110'>
 			<div className='flex flex-col justify-center w-full h-full text-center gap-4'>
-				<div className='w-[270px] shadow-lg bg-[rgba(255,255,0,0.2)] flex mx-auto items-center justify-center border-8 border-white -rotate-8'>
+				<div
+					className={`w-[270px] shadow-lg bg-[rgba(255,255,0,0.1)] flex mx-auto items-center justify-center border-8 border-white ${props.id % 2 === 1 ? "-rotate-" + props.id * 2 : "rotate-"} `}
+				>
 					<img src={`../assets/character/ch${characters[props.id].id}.png`} className='h-full w-full' />
 				</div>
 

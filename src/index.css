@@ -232,3 +232,41 @@ input[type="range"]::-moz-range-thumb {
 .glow-animate {
 	animation: purpleGlow 20s ease-in-out infinite;
 }
+
+/* ===== WebKit (Chrome, Edge, Safari) ===== */
+.book-scrollbar::-webkit-scrollbar {
+	width: 18px;
+}
+
+/* Tło (tor scrolla) */
+.book-scrollbar::-webkit-scrollbar-track {
+	border-radius: 0;
+}
+
+/* Uchwyt */
+.book-scrollbar::-webkit-scrollbar-thumb {
+	background-image: url("./assets/ui/scrollbar.png");
+
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+}
+
+.chat-scrollbar::-webkit-scrollbar {
+	width: 7px;
+	border-image-slice: 27 27 27 27;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch stretch;
+	border-image-source: url("https://img.glyphs.co/img?src=aHR0cHM6Ly9zMy5tZWRpYWxvb3QuY29tL3Jlc291cmNlcy9TZWFtbGVzc19Xb29kX1RleHR1cmVzX1ZvbF8yXzgwMHg1MTgtMS5qcGc&q=70&enlarge=true&h=777&w=1200");
+	border-left-style: solid;
+}
+
+.chat-scrollbar:-webkit-scrollbar-track {
+	background: linear-gradient(125deg, rgba(153, 27, 27, 1) 1%, rgba(79, 14, 14, 1) 98%);
+	border-radius: 30px;
+}
+
+/* Uchwyt */
+.chat-scrollbar::-webkit-scrollbar-thumb {
+	background: linear-gradient(125deg, rgba(153, 27, 27, 1) 1%, rgba(79, 14, 14, 1) 98%);
+	border-radius: 30px;
+}
