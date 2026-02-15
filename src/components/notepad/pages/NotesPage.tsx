@@ -5,7 +5,7 @@ import NotesArea from "../NotesArea";
 const NotesPage = React.forwardRef<HTMLDivElement>((_, ref) => {
 	const { notes, setNotes } = useNotepad();
 	return (
-		<div ref={ref} className='paper-bg h-full bg-cover w-full p-2 overflow-y-auto flex flex-col gap-2 brightness-110'>
+		<div ref={ref} className='paper-bg   h-full bg-cover w-full p-2 flex flex-col gap-2 brightness-110'>
 			<NotesArea notes={notes} setNotes={setNotes} />
 		</div>
 	);

@@ -11,7 +11,7 @@ const ChatPage = React.forwardRef<HTMLDivElement, ChatPageProps>((props, ref) =>
 	const { history } = useChatContext();
 	const { characters } = useCharactersContext();
 	return (
-		<div ref={ref} className='paper-bg h-full w-full p-2 overflow-y-auto flex flex-col gap-2 brightness-110'>
+		<div ref={ref} className='paper-bg h-full book-scrollbar w-full p-2 overflow-y-auto flex flex-col gap-2 brightness-110'>
 			{history
 				.filter((entry) => entry.character.title === characters[props.id].title)
 				.map((entry, index) => (

@@ -11,7 +11,7 @@ const StoryPage = React.forwardRef<HTMLDivElement>((_, ref) => {
 	return (
 		<div ref={ref} className='paper-bg h-full w-full p-4 overflow-y-auto flex flex-col brightness-110'>
 			<div className='flex flex-col justify-center w-full h-full text-center gap-4'>
-				<div className='w-[270px] shadow-lg bg-[rgba(255,255,0,0.2)] flex mx-auto items-center justify-center border-8 border-white -rotate-8'>
+				<div className='w-[470px] shadow-lg bg-[rgba(255,255,0,0.2)] flex mx-auto items-center justify-center border-8 border-white rotate-8'>
 					<img src={`../assets/background/${location}.jpg`} className='h-full w-full' />
 				</div>
 
