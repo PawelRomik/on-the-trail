@@ -2,8 +2,6 @@
 	{
 		"id": 1,
 		"title": "Poet",
-		"gender": true,
-		"color": "purple",
 		"age": [20, 60],
 		"traits": {
 			"nerfs": ["nerf_offtopic"],
@@ -14,8 +12,6 @@
 	{
 		"id": 2,
 		"title": "Angel",
-		"gender": false,
-		"color": "yellow",
 		"age": [60, 600],
 		"traits": {
 			"nerfs": ["nerf_harmlessspeech"],
@@ -26,8 +22,6 @@
 	{
 		"id": 3,
 		"title": "Zombie",
-		"gender": true,
-		"color": "green",
 		"age": [30, 150],
 		"traits": {
 			"nerfs": ["nerf_memoryloss"],
@@ -38,8 +32,6 @@
 	{
 		"id": 4,
 		"title": "Devil",
-		"gender": true,
-		"color": "red",
 		"age": [60, 600],
 		"traits": {
 			"nerfs": ["nerf_stresschars"],
@@ -50,8 +42,6 @@
 	{
 		"id": 5,
 		"title": "Grandma",
-		"gender": false,
-		"color": "brown",
 		"age": [55, 90],
 		"traits": {
 			"nerfs": ["nerf_offtopic"],
@@ -62,8 +52,6 @@
 	{
 		"id": 6,
 		"title": "Caveman",
-		"gender": true,
-		"color": "brown",
 		"age": [20, 70],
 		"traits": {
 			"nerfs": ["nerf_simplelanguage"],
@@ -74,8 +62,6 @@
 	{
 		"id": 7,
 		"title": "Police Officer",
-		"gender": true,
-		"color": "blue",
 		"age": [24, 60],
 		"traits": {
 			"nerfs": ["nerf_stresschars"],
@@ -86,8 +72,6 @@
 	{
 		"id": 8,
 		"title": "Knight",
-		"gender": true,
-		"color": "red",
 		"age": [16, 60],
 		"traits": {
 			"nerfs": ["nerf_harmlessspeech"],
@@ -98,8 +82,6 @@
 	{
 		"id": 9,
 		"title": "Narcissist",
-		"gender": true,
-		"color": "pink",
 		"age": [20, 40],
 		"traits": {
 			"nerfs": ["nerf_faststress"],
@@ -110,8 +92,6 @@
 	{
 		"id": 10,
 		"title": "Ghost",
-		"gender": false,
-		"color": "black",
 		"age": [50, 500],
 		"traits": {
 			"special": ["special_bravevoice"],
@@ -121,8 +101,6 @@
 	{
 		"id": 11,
 		"title": "Santa Claus",
-		"gender": true,
-		"color": "red",
 		"age": [100, 1000],
 		"traits": {
 			"nerfs": ["nerf_stresslies"],
@@ -133,8 +111,6 @@
 	{
 		"id": 12,
 		"title": "Hunter",
-		"gender": false,
-		"color": "brown",
 		"age": [25, 60],
 		"traits": {
 			"nerfs": ["nerf_faststress"],
@@ -145,8 +121,6 @@
 	{
 		"id": 13,
 		"title": "Clown",
-		"gender": true,
-		"color": "purple",
 		"age": [25, 60],
 		"traits": {
 			"special": ["special_truthliecycle"],
@@ -156,8 +130,6 @@
 	{
 		"id": 14,
 		"title": "Priest",
-		"gender": true,
-		"color": "black",
 		"age": [30, 80],
 		"traits": {
 			"nerfs": ["nerf_harmlessspeech"],
@@ -168,8 +140,6 @@
 	{
 		"id": 15,
 		"title": "Faulty Robot",
-		"gender": true,
-		"color": "black",
 		"age": [1, 20],
 		"traits": {
 			"nerfs": ["nerf_corruptedchat"],
@@ -180,8 +150,6 @@
 	{
 		"id": 16,
 		"title": "Actor",
-		"gender": true,
-		"color": "gold",
 		"age": [20, 60],
 		"traits": {
 			"special": ["special_borrowedtrait"],
@@ -191,8 +159,6 @@
 	{
 		"id": 17,
 		"title": "Chef",
-		"gender": true,
-		"color": "orange",
 		"age": [25, 65],
 		"traits": {
 			"nerfs": ["nerf_offtopic"],
@@ -203,8 +169,6 @@
 	{
 		"id": 18,
 		"title": "Pirate",
-		"gender": true,
-		"color": "darkgreen",
 		"age": [30, 70],
 		"traits": {
 			"nerfs": ["nerf_memoryloss"],
@@ -216,8 +180,6 @@
 	{
 		"id": 19,
 		"title": "Scientist",
-		"gender": true,
-		"color": "white",
 		"age": [30, 80],
 		"traits": {
 			"nerfs": ["nerf_offtopic"],
@@ -228,8 +190,6 @@
 	{
 		"id": 20,
 		"title": "Vampire",
-		"gender": true,
-		"color": "darkred",
 		"age": [100, 800],
 		"traits": {
 			"nerfs": ["nerf_stresschars"],

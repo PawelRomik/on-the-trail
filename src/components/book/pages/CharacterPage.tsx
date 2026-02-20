@@ -16,7 +16,7 @@ const CharacterPage = React.forwardRef<HTMLDivElement, CharacterPageProps>((prop
 				<div
 					className={`w-[270px] shadow-lg bg-[rgba(255,255,0,0.1)] flex mx-auto items-center justify-center border-8 border-white ${props.id % 2 === 1 ? "-rotate-" + props.id * 2 : "rotate-"} `}
 				>
-					<img src={`../assets/character/ch${characters[props.id].id}.png`} className='h-full w-full' />
+					<img src={`../assets/character/ch${character.id}/default_${character.gender ? "male" : "female"}.png`} className='h-full w-full' />
 				</div>
 
 				<h2 className='italic text-4xl underline'>{t(`characters.ch${characters[props.id].id}.title`)}</h2>

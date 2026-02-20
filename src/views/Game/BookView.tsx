@@ -1,4 +1,4 @@
-import Book from "../../components/notepad/Book";
+import Book from "../../components/book/Book";
 
 export default function BookView() {
 	return <Book />;
