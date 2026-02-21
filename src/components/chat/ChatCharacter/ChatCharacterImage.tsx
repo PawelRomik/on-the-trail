@@ -11,7 +11,7 @@ type CharacterImageProps = {
 };
 
 export default function ChatCharacterImage({ character, onClick, setHovered }: CharacterImageProps) {
-	const characterImage = `../assets/character/ch${character.id}.png`;
+	const characterImage = `../assets/character/ch${character.id}/default_${character.gender ? "male" : "female"}.png`;
 	const { t } = useTranslation();
 	const { setActiveView } = useViewContext();
 

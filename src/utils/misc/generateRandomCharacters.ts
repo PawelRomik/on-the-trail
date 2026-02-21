@@ -8,7 +8,6 @@ export default function generateRandomCharacters(): CharacterType[] {
 	let characters = getRandomCharacters(charactersData, 4);
 	const usedNames = new Set<string>();
 
-	// --- special_borrowedtrait ---
 	characters = characters.map((c) => {
 		if (!c.traits?.special?.includes("special_borrowedtrait")) return c;
 
@@ -36,7 +35,6 @@ export default function generateRandomCharacters(): CharacterType[] {
 		};
 	});
 
-	// --- buff_innocent: max 1 ---
 	let innocentAlreadyUsed = false;
 
 	characters = characters.map((c) => {
@@ -55,12 +53,10 @@ export default function generateRandomCharacters(): CharacterType[] {
 		return c;
 	});
 
-	// --- traitor: no buff_innocent ---
 	const traitorCandidates = characters.map((c, index) => ({ c, index })).filter(({ c }) => !c.traits?.buffs?.includes("buff_innocent"));
 
 	const traitorIndex = traitorCandidates.length > 0 ? traitorCandidates[getRandomInt(0, traitorCandidates.length - 1)].index : -1;
 
-	// --- nerf_stresschars ---
 	const stressNerfCount = characters.filter((c) => c.traits?.nerfs?.includes("nerf_stresschars")).length;
 
 	const stressPenalty = stressNerfCount * 10;
@@ -72,14 +68,13 @@ export default function generateRandomCharacters(): CharacterType[] {
 		do {
 			name = getRandomName(gender);
 			safety++;
-			if (safety > 50) break; // zabezpieczenie awaryjne
+			if (safety > 50) break;
 		} while (usedNames.has(name));
 
 		usedNames.add(name);
 		return name;
 	};
 
-	// --- final ---
 	return characters.map((c, index) => {
 		let baseStress = 0;
 
@@ -87,10 +82,13 @@ export default function generateRandomCharacters(): CharacterType[] {
 			baseStress += stressPenalty;
 		}
 
+		const gender = Math.random() < 0.5;
+
 		return {
 			...c,
+			gender,
 			age: getRandomInt(c.age[0], c.age[1]),
-			name: getUniqueRandomName(c.gender),
+			name: getUniqueRandomName(gender),
 			stressMeter: Math.min(baseStress, 100),
 			traitor: index === traitorIndex,
 			jesterTruth: c.traits?.special?.includes("special_truthliecycle") ? (Math.random() < 0.5 ? "truth" : "lie") : "lie"

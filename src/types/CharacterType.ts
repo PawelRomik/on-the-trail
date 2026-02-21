@@ -4,7 +4,6 @@ export type CharacterType = {
 	title: string;
 	age: number | number[];
 	stressMeter: number;
-	color: string;
 	gender: boolean;
 	traits: {
 		buffs?: string[];
