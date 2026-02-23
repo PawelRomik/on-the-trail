@@ -106,7 +106,9 @@
 			"nerfs": ["nerf_stresslies"],
 			"buffs": ["buff_slowstresschars"],
 			"behaviour": ["Speaks in a cheerful, warm tone."]
-		}
+		},
+		"setGender": true,
+		"setName": "Mikołaj"
 	},
 	{
 		"id": 12,
