@@ -27,11 +27,11 @@ export default function CharactersView() {
 	};
 
 	return (
-		<div className='flex items-center justify-center w-full h-full'>
-			<div className='flex-col w-full items-center justify-center h-full'>
+		<div className='flex items-center justify-center flex-col lg:flex-row w-full h-full'>
+			<div className='flex-col w-full   items-center justify-center h-full'>
 				<Story />
 				{endScreen && <EndScreen />}
-				<div className='w-[80%] m-auto h-[800px] flex gap-4 items-center justify-center'>
+				<div className='md:w-[80%] gap-y-10 md:gap-y-0 m-auto lg:h-[800px] md:h-[80%]    flex flex-wrap md:gap-4 items-center justify-center py-6 lg:py-0'>
 					{characters.map((char) => (
 						<Character key={char.id} character={char} onClick={(c: CharacterType) => selectCharacter(c)} />
 					))}

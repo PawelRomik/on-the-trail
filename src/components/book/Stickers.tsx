@@ -19,7 +19,7 @@ export default function Stickers({ bookRef, page }: StickersProps) {
 	const { characters } = useCharactersContext();
 	const { t } = useTranslation();
 
-	const getCharacterImage = (id: number) => `../assets/character/ch${id}.png`;
+	const getCharacterImage = (id: number, gender: boolean) => `../assets/character/ch${id}/default_${gender ? "male" : "female"}.png`;
 
 	useEffect(() => {
 		console.log(page);
@@ -49,7 +49,7 @@ export default function Stickers({ bookRef, page }: StickersProps) {
 
 			{characters.map((ch, index) => (
 				<button key={ch.name} onClick={() => showCharHandler(index)} className={`${stickerClass(page == 4 + index * 2)} z-${10 + index}`}>
-					<img src={getCharacterImage(ch.id)} alt={t(`characters.ch${ch.id}.title`)} className='h-10 w-10 object-contain rounded-full' />
+					<img src={getCharacterImage(ch.id, ch.gender)} alt={t(`characters.ch${ch.id}.title`)} className='h-10 w-10 object-contain rounded-full' />
 				</button>
 			))}
 		</div>

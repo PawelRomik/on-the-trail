@@ -1,11 +1,12 @@
 export type CharacterType = {
 	id: number;
 	name?: string;
+	setName?: string;
 	title: string;
 	age: number | number[];
 	stressMeter: number;
-	color: string;
 	gender: boolean;
+	setGender?: boolean;
 	traits: {
 		buffs?: string[];
 		nerfs?: string[];

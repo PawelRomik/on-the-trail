@@ -27,23 +27,27 @@ export default function Navbar() {
 		setKnifeActive((prev) => !prev);
 	};
 	return (
-		<nav className='w-[200px] h-full bg-black flex flex-col p-5 text-6xl gap-5 items-center justify-center'>
-			<button onClick={openNotepad} style={{ backgroundImage: `url(${stone})` }} className='hover:brightness-125 bg-zinc-800 group  hover:cursor-pointer flex-1  w-full text-white'>
-				<img src={book} className='w-full p-3 group-hover:p-0 transition-all' />
+		<nav className='w-full h-20 md:h-[150px] lg:w-[200px] lg:h-full bg-black flex lg:flex-col p-5 text-6xl gap-3 md:gap-5 items-center justify-center'>
+			<button
+				onClick={openNotepad}
+				style={{ backgroundImage: `url(${stone})` }}
+				className='hover:brightness-125  flex items-center justify-center bg-zinc-800 group  hover:cursor-pointer flex-1  w-full text-white'
+			>
+				<img src={book} className=' w-[45px] md:w-25 lg:w-full md:p-3 group-hover:p-0 transition-all' />
 			</button>
 			<button
 				onClick={setKnife}
 				style={{ backgroundImage: `url(${knifeActive ? stone_a : stone})` }}
-				className={`group bg-zinc-800 hover:brightness-125 hover:cursor-pointer flex-1  w-full text-white `}
+				className={`group bg-zinc-800 hover:brightness-125 hover:cursor-pointer flex-1 flex items-center justify-center  w-full text-white `}
 			>
-				<img src={knifeActive ? knife_a : knife} className={`w-full p-3 ${knifeActive && "rotate-180"} group-hover:p-0 transition-all`} />
+				<img src={knifeActive ? knife_a : knife} className={`w-[45px] md:w-25 lg:w-full md:p-3 ${knifeActive && "rotate-180"} group-hover:p-0 transition-all`} />
 			</button>
 			<button
 				style={{ backgroundImage: `url(${stone})` }}
 				onClick={openSettings}
-				className='bg-zinc-800 group hover:brightness-125 transition hover:cursor-pointer flex-1  w-full text-white'
+				className='bg-zinc-800 group hover:brightness-125 transition hover:cursor-pointer  flex items-center justify-center flex-1  w-full text-white'
 			>
-				<img src={settings} className='w-full p-3 group-hover:p-0 transition-all' />
+				<img src={settings} className=' w-[45px] md:w-25 lg:w-full md:p-3 group-hover:p-0 transition-all' />
 			</button>
 		</nav>
 	);
