@@ -12,11 +12,11 @@ type CharacterImageProps = {
 };
 
 export default function CharacterImage({ character, setHovered, onClick }: CharacterImageProps) {
-	const characterImage = `../assets/character/ch${character.id}/default_${character.gender ? "male" : "female"}.png`;
 	const { knifeActive } = useViewContext();
 	const { t } = useTranslation();
 
 	const traitsSource = character?.actorTraits ?? character?.traits;
+	const characterImage = `../assets/character/ch${character.id}/${character.stressMeter === 100 && !traitsSource.buffs?.includes("buff_nostoptalking") ? "anger" : "default"}_${character.gender ? "male" : "female"}.png`;
 
 	const handleCharacterClick = () => {
 		onClick?.(character);
