@@ -17,7 +17,8 @@
 			"nerfs": ["nerf_harmlessspeech"],
 			"buffs": ["buff_innocent"],
 			"behaviour": ["Speaks gently, with empathy and calm."]
-		}
+		},
+		"setGender": "female"
 	},
 	{
 		"id": 3,
@@ -107,7 +108,7 @@
 			"buffs": ["buff_slowstresschars"],
 			"behaviour": ["Speaks in a cheerful, warm tone."]
 		},
-		"setGender": true,
+		"setGender": "male",
 		"setName": "Mikołaj"
 	},
 	{

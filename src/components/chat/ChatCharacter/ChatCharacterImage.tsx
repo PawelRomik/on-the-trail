@@ -11,11 +11,11 @@ type CharacterImageProps = {
 };
 
 export default function ChatCharacterImage({ character, onClick, setHovered }: CharacterImageProps) {
-	const characterImage = `../assets/character/ch${character.id}/default_${character.gender ? "male" : "female"}.png`;
 	const { t } = useTranslation();
 	const { setActiveView } = useViewContext();
 
 	const traitsSource = character?.actorTraits ?? character?.traits;
+	const characterImage = `../assets/character/ch${character.id}/${character.stressMeter === 100 && !traitsSource.buffs?.includes("buff_nostoptalking") ? "anger" : "default"}_${character.gender ? "male" : "female"}.png`;
 
 	const openNotepad = () => {
 		setActiveView("book");

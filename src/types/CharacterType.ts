@@ -6,7 +6,7 @@ export type CharacterType = {
 	age: number | number[];
 	stressMeter: number;
 	gender: boolean;
-	setGender?: boolean;
+	setGender?: string;
 	traits: {
 		buffs?: string[];
 		nerfs?: string[];

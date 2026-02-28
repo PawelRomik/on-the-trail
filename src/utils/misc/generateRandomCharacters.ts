@@ -86,9 +86,9 @@ export default function generateRandomCharacters(): CharacterType[] {
 
 		return {
 			...c,
-			gender: c.setGender ? c.setGender : gender,
+			gender: c.setGender ? (c.setGender === "female" ? false : true) : gender,
 			age: getRandomInt(c.age[0], c.age[1]),
-			name: c.setName ? c.setName : getUniqueRandomName(gender),
+			name: c.setName ? c.setName : getUniqueRandomName(c.setGender ? (c.setGender === "female" ? false : true) : gender),
 			stressMeter: Math.min(baseStress, 100),
 			traitor: index === traitorIndex,
 			jesterTruth: c.traits?.special?.includes("special_truthliecycle") ? (Math.random() < 0.5 ? "truth" : "lie") : "lie"
