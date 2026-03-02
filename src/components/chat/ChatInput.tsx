@@ -21,14 +21,14 @@ export default function ChatInput({ inputText, character, setInputText, onSend, 
 				value={inputText}
 				onChange={(e) => setInputText(e.target.value)}
 				placeholder={isDisabled ? "..." : "Napisz wiadomość"}
-				className='flex-1 disabled:opacity-30 p-3 bg-zinc-950 rounded-xl outline-none text-white'
+				className='flex-1 disabled:opacity-30 p-3 text-[10px] md:text-lg bg-zinc-950 rounded-xl outline-none text-white'
 				onKeyDown={(e) => e.key === "Enter" && !isDisabled && onSend()}
 			/>
 
 			<button
 				disabled={isDisabled}
 				onClick={onSend}
-				className='px-4 py-2 cursor-pointer bg-red-800 hover:bg-red-700 disabled:opacity-30 disabled:hover:bg-red-800 transition text-xl rounded-xl font-bold'
+				className='px-4 py-2 cursor-pointer bg-red-800 text-[10px] md:text-lg hover:bg-red-700 disabled:opacity-30 disabled:hover:bg-red-800 transition text-xl rounded-xl font-bold'
 			>
 				<i className='ri-send-plane-fill'></i>
 			</button>
