@@ -23,7 +23,7 @@ export default function CharacterImage({ character, setHovered, onClick }: Chara
 	};
 
 	return (
-		<div className='relative bg-[rgba(0,0,0,0.7)] aspect-square lg:bg-[rgba(0,0,0,0)] w-40 h-40  md:w-[300px] md:h-[300px]  lg:border-none lg:rounded-none rounded-full lg:h-full lg:w-full flex overflow-hidden justify-center group'>
+		<div className='relative bg-[rgba(0,0,0,0.7)] aspect-square lg:bg-[rgba(0,0,0,0)] w-40 h-40  md:w-[33vw] md:h-[33vw]   lg:border-none lg:rounded-none rounded-full lg:h-full lg:w-full flex overflow-hidden justify-center group'>
 			<StressRing value={character.stressMeter} />
 			<KnifeBackground active={knifeActive} />
 
