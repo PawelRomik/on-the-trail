@@ -23,15 +23,15 @@ export default function TraitList({ items, type }: TraitListProps) {
 	return (
 		<div className='w-full flex flex-col text-left'>
 			{items.map((item) => (
-				<div className='p-2 flex gap-3 items-start' key={item.id}>
-					<img src={`/assets/perks/${item.id}.png`} alt={item.name} className='w-8 h-8 mt-1' />
+				<div className='lg:p-2 flex gap-3 items-start' key={item.id}>
+					<img src={`/assets/perks/${item.id}.png`} alt={item.name} className='w-6 md:w-12 h-6 md:h-12 mt-1' />
 
 					<div>
-						<span className='text-sm font-bold' style={{ color: TYPE_COLOR[type] }}>
+						<span className=' text-[10px]  md:text-sm font-bold' style={{ color: TYPE_COLOR[type] }}>
 							{item.name}
 						</span>
 
-						<p className='text-xs opacity-80'>{item.desc}</p>
+						<p className='text-[9px] md:text-xs opacity-80'>{item.desc}</p>
 					</div>
 				</div>
 			))}
