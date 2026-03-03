@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { type CharacterType } from "../../types/CharacterType";
 import ChatCloseButton from "./ChatCloseButton";
 import TraitList from "../character/character-tooltip/TraitList";
+import StressMeter from "../character/StressMeter";
 
 type ChatHeaderProps = {
 	character: CharacterType;
@@ -23,6 +24,10 @@ export default function ChatHeader({ character, onClose }: ChatHeaderProps) {
 					<p className='w-full text-[10px] md:text-[14px] lg:hidden text-yellow-500 italic px-3 font-bold  py-1'>{t(`characters.ch${character.id}.behaviour`)}</p>
 				</div>
 			</div>
+			<div className='lg:hidden'>
+				<StressMeter meter={character.stressMeter} />
+			</div>
+
 			<div className='flex lg:hidden p-1 md:p-3 bg-[rgba(0,0,0,0.4)] items-center justify-between'>
 				{traits.buffs && (
 					<TraitList

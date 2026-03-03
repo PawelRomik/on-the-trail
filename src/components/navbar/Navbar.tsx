@@ -31,7 +31,7 @@ export default function Navbar() {
 			<button
 				onClick={openNotepad}
 				style={{ backgroundImage: `url(${stone})` }}
-				className='hover:brightness-125  flex items-center justify-center h-full bg-zinc-800 group  hover:cursor-pointer flex-1  w-full text-white'
+				className='hover:brightness-125  hidden lg:flex items-center justify-center h-full bg-zinc-800 group  hover:cursor-pointer flex-1  w-full text-white'
 			>
 				<img src={book} className=' h-full lg:h-auto lg:w-full lg:p-3 group-hover:p-0 transition-all' />
 			</button>

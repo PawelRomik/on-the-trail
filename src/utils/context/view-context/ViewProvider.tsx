@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 import { type ReactNode } from "react";
 
 type ViewType = "game" | "character" | "book" | "settings";
@@ -22,11 +22,32 @@ export default function ViewProvider({ children }: { children: ReactNode }) {
 	const [lastView, setLastView] = useState<ViewType | null>(null);
 	const [musicMode, setMusicMode] = useState<MusicMode>("menu");
 
-	const setActiveView = (view: ViewType) => {
-		setLastView(activeView);
-		setActiveViewState(view);
-		setKnifeActive(false);
-	};
+	const setActiveView = useCallback(
+		(view: ViewType) => {
+			setLastView(activeView);
+			setActiveViewState(view);
+			setKnifeActive(false);
+		},
+		[activeView]
+	);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+		const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+			if (e.matches && activeView === "book") {
+				setActiveView("game");
+			}
+		};
+
+		handleChange(mediaQuery);
+
+		mediaQuery.addEventListener("change", handleChange);
+
+		return () => {
+			mediaQuery.removeEventListener("change", handleChange);
+		};
+	}, [activeView, setActiveView]);
 
 	return <ViewContext.Provider value={{ activeView, knifeActive, setKnifeActive, lastView, setActiveView, musicMode, setMusicMode }}>{children}</ViewContext.Provider>;
 }
