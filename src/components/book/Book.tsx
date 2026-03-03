@@ -42,10 +42,10 @@ export default function Book() {
 	};
 
 	return (
-		<div onClick={(e) => closeNotes(e)} className='w-full relative h-full flex items-center justify-center pt-5 bg-[rgba(0,0,0,0.8)]'>
+		<div onClick={(e) => closeNotes(e)} className='w-full  relative h-full flex items-center pt-10 justify-center bg-[rgba(0,0,0,0.8)]'>
 			<div
 				style={{ backgroundImage: `url(${cover})` }}
-				className='w-[60%] caveat-regular h-[90%] p-2 z-10 relative rounded-lg m-auto flex glow-animate items-center justify-center'
+				className='w-[95%] lg:w-[60%] caveat-regular  p-2 z-10 relative rounded-lg m-auto flex glow-animate items-center justify-center'
 			>
 				<Stickers bookRef={bookRef} page={page} />
 				{/* @ts-expect-error react-pageflip */}
@@ -55,8 +55,8 @@ export default function Book() {
 					onFlip={handleFlip}
 					className='cursor-grab '
 					usePortrait={false}
-					width={500}
-					height={750}
+					width={5000}
+					height={7500}
 					showPageCorners={false}
 					size='stretch'
 					showCover={false}
