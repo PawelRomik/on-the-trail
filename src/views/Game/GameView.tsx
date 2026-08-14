@@ -26,7 +26,7 @@ export default function GameView() {
 	if (!intro || !location || !charactersStory || !characters) return <LoadingScreen />;
 
 	return (
-		<div className='w-screen h-screen bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${bgImage})` }}>
+		<div className='w-dvw h-dvh bg-cover bg-center items-center flex overflow-hidden' style={{ backgroundImage: `url(${bgImage})` }}>
 			{activeView === "book" ? <BookView /> : activeView === "settings" ? <SettingsView /> : activeView === "character" && selectedCharacter ? <ChatView /> : <CharactersView />}
 		</div>
 	);

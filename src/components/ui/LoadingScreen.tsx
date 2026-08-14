@@ -7,7 +7,7 @@ export default function LoadingScreen() {
 	const { loadingText, tipText } = useRandomTexts();
 
 	return (
-		<div style={{ backgroundImage: `url(${bgImage})` }} className='bg-cover relative w-screen text-3xl gap-5 h-screen'>
+		<div style={{ backgroundImage: `url(${bgImage})` }} className='bg-cover relative w-dwv text-3xl gap-5 h-dvh'>
 			<div className='w-full h-full bg-[rgba(0,0,0,0.7)] flex items-center flex-col justify-center gap-10'>
 				<h2 className='text-white font-bold uppercase text-2xl text-center md:text-4xl z-30 border-b-4 p-3 py-2 border-b-red-800 rounded-full'>{loadingText}</h2>
 				<img src={kosa} className='w-[100px] md:w-[200px] lg:w-[150px] rotating' />

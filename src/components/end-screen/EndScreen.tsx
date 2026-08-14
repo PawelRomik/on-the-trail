@@ -7,6 +7,7 @@ import { useStoryContext } from "../../utils/context/story-context/useStoryConte
 import { useViewContext } from "../../utils/context/view-context/useViewContext";
 import generateRandomCharacters from "../../utils/misc/generateRandomCharacters";
 import { useTranslation } from "react-i18next";
+import type { CharacterType } from "../../types/CharacterType";
 
 export default function EndScreen() {
 	const { characters, selectedCharacter, setCharacters, setSelectedCharacter } = useCharactersContext();
@@ -17,8 +18,16 @@ export default function EndScreen() {
 	const { resetChats } = useChatContext();
 	const culprit = characters.find((c) => c.traitor);
 	if (!culprit || !selectedCharacter) return;
-	const characterImage = `../assets/character/ch${selectedCharacter.id}.png`;
-	const culpritImage = `../assets/character/ch${culprit.id}.png`;
+	const getCharacterImage = (character: CharacterType) => {
+		const traitsSource = character?.actorTraits ?? character?.traits;
+
+		return `../assets/character/ch${character.id}/${
+			character.stressMeter === 100 && !traitsSource?.buffs?.includes("buff_nostoptalking") ? "anger" : "default"
+		}_${character.gender ? "male" : "female"}.png`;
+	};
+
+	const characterImage = getCharacterImage(selectedCharacter);
+	const culpritImage = getCharacterImage(culprit);
 	const state = culprit.title === selectedCharacter?.title;
 
 	const closeGame = () => {
